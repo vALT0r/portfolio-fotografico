@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fotográfico</title>
+    <meta name="description" content="Portfolio de fotografía profesional - Sesiones, eventos y trabajos creativos">
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="camera-icon">
+                <i class="fas fa-camera"></i>
+            </div>
+            <p>Cargando portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-camera"></i>
+                    <span>Mi Portfolio</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Capturando Momentos</h1>
+            <p class="hero-subtitle">Fotógrafo profesional especializado en retratos, eventos y paisajes</p>
+            <a href="#galeria" class="cta-button">Ver Portfolio</a>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder para imagen principal -->
+            <div class="hero-placeholder">
+                <i class="fas fa-camera fa-4x"></i>
+                <p>Tu foto principal aquí</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Mi Trabajo</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="retratos">Retratos</button>
+                <button class="filter-btn" data-filter="eventos">Eventos</button>
+                <button class="filter-btn" data-filter="paisajes">Paisajes</button>
+                <button class="filter-btn" data-filter="bodas">Bodas</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Las imágenes se cargarán dinámicamente aquí -->
+                <div class="gallery-placeholder">
+                    <i class="fas fa-images fa-3x"></i>
+                    <p>Tus fotos aparecerán aquí una vez configuradas</p>
+                    <p class="placeholder-note">Configura Cloudinary para mostrar tu galería</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <p class="about-description">
+                        Soy un fotógrafo apasionado con [X años] de experiencia capturando momentos únicos. 
+                        Mi objetivo es contar historias a través de imágenes que perduren en el tiempo.
+                    </p>
+                    <p class="about-description">
+                        Especializado en fotografía de retratos, eventos sociales y paisajes naturales, 
+                        trabajo con equipos profesionales para garantizar la máxima calidad en cada sesión.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Sesiones Realizadas</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Clientes Satisfechos</p>
+                        </div>
+                        <div class="stat">
+                            <h3>3</h3>
+                            <p>Años de Experiencia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        <i class="fas fa-user-circle fa-4x"></i>
+                        <p>Tu foto de perfil aquí</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Listo para tu sesión?</h3>
+                    <p>Estoy disponible para sesiones de retratos, eventos, bodas y proyectos creativos.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>tu-email@ejemplo.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 234 567 8900</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Tu Ciudad, País</span>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Tu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Teléfono (opcional)">
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required>
+                            <option value="">Tipo de Sesión</option>
+                            <option value="retrato">Sesión de Retratos</option>
+                            <option value="evento">Cobertura de Evento</option>
+                            <option value="boda">Fotografía de Boda</option>
+                            <option value="comercial">Fotografía Comercial</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mi Portfolio Fotográfico. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para vista ampliada de imágenes -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
