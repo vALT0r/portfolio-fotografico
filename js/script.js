@@ -1,56 +1,72 @@
 // Configuración de Cloudinary (reemplaza con tu cloud name)
-const CLOUDINARY_CLOUD_NAME = 'tu-cloud-name'; // Cambia esto por tu cloud name
-const CLOUDINARY_UPLOAD_PRESET = 'tu-upload-preset'; // Cambia esto por tu upload preset
+const CLOUDINARY_CLOUD_NAME = 'daerbon-photography'; // Cambia esto por tu cloud name real cuando lo tengas
+const CLOUDINARY_UPLOAD_PRESET = 'daerbon-portfolio'; // Cambia esto por tu upload preset
 
-// Datos de ejemplo para las fotos (reemplaza con tus imágenes de Cloudinary)
+// Datos de ejemplo para las fotos (reemplaza con tus imágenes reales de Cloudinary)
 const galleryData = [
     {
         id: 1,
-        title: "Retrato Urbano",
-        description: "Sesión de retratos en entorno urbano",
-        category: "retratos",
-        image: "https://images.unsplash.com/photo-1494790108755-2616c64eed4e?w=400&h=600&fit=crop", // Placeholder
-        fullImage: "https://images.unsplash.com/photo-1494790108755-2616c64eed4e?w=800&h=1200&fit=crop"
+        title: "Arquitectura Colonial",
+        description: "Detalles arquitectónicos del centro de Santa Fe",
+        category: "arquitectura",
+        image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=1200&fit=crop"
     },
     {
         id: 2,
-        title: "Paisaje Natural",
-        description: "Amanecer en las montañas",
+        title: "Paisaje Pampeano",
+        description: "Atardecer en los campos de Santa Fe",
         category: "paisajes",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=1200&fit=crop"
+        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=1200&fit=crop"
     },
     {
         id: 3,
-        title: "Evento Corporativo",
-        description: "Cobertura de evento empresarial",
-        category: "eventos",
-        image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=1200&fit=crop"
+        title: "Fútbol Local",
+        description: "Acción en el fútbol regional de Santa Fe",
+        category: "deportes",
+        image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=1200&fit=crop"
     },
     {
         id: 4,
-        title: "Ceremonia Romántica",
-        description: "Momento especial de boda",
-        category: "bodas",
-        image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=1200&fit=crop"
+        title: "Flora Nativa",
+        description: "Naturaleza de la región pampeana",
+        category: "naturaleza",
+        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=1200&fit=crop"
     },
     {
         id: 5,
-        title: "Retrato Profesional",
-        description: "Sesión corporativa ejecutiva",
-        category: "retratos",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1200&fit=crop"
+        title: "Evento Familiar",
+        description: "Celebración familiar en Acebal",
+        category: "eventos",
+        image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=1200&fit=crop"
     },
     {
         id: 6,
-        title: "Atardecer Costero",
-        description: "Colores del atardecer en la playa",
+        title: "Cielo Estrellado",
+        description: "Astrofotografía desde el campo santafesino",
         category: "paisajes",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=1200&fit=crop"
+        image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&h=1200&fit=crop"
+    },
+    {
+        id: 7,
+        title: "Detalles Modernos",
+        description: "Arquitectura contemporánea en la región",
+        category: "arquitectura",
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=1200&fit=crop"
+    },
+    {
+        id: 8,
+        title: "Carrera Regional",
+        description: "Automovilismo en pistas de Santa Fe",
+        category: "deportes",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop"
     }
 ];
 
@@ -272,26 +288,19 @@ function initializeContactForm() {
     });
 }
 
-// Función para enviar formulario (integra con FormSubmit, Formspree, etc.)
+// Función para enviar formulario con FormSubmit
 async function submitForm(formData) {
-    // Aquí integrarías con tu servicio de formularios preferido
-    // Ejemplo con FormSubmit:
-    // const response = await fetch('https://formsubmit.co/tu-email@ejemplo.com', {
-    //     method: 'POST',
-    //     body: formData
-    // });
-    
-    // Por ahora, simulamos el envío
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            // Simular éxito (90% de probabilidad)
-            if (Math.random() > 0.1) {
-                resolve();
-            } else {
-                reject(new Error('Error simulado'));
-            }
-        }, 2000);
+    // Configuración para FormSubmit
+    const response = await fetch('https://formsubmit.co/daerbon@gmail.com', {
+        method: 'POST',
+        body: formData
     });
+    
+    if (!response.ok) {
+        throw new Error('Error al enviar formulario');
+    }
+    
+    return response;
 }
 
 // Función para mostrar notificaciones
