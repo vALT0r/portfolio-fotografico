@@ -267,10 +267,10 @@
         <div class="main-content">
             <div class="color-panel">
                 <div class="preset-buttons">
-                    <button class="preset-btn" onclick="applyPreset('favorite1')" style="background: linear-gradient(45deg, #0A1A31, #48C7FC, #F27405);">Azul Profundo</button>
-                    <button class="preset-btn" onclick="applyPreset('favorite2')" style="background: linear-gradient(45deg, #F27405, #0D0D0D, #49C2F2);">Naranja Dominante</button>
-                    <button class="preset-btn" onclick="applyPreset('favorite3')" style="background: linear-gradient(45deg, #49C2F2, #091626, #F27405);">Azul Vibrante</button>
-                    <button class="preset-btn" onclick="applyPreset('favorite4')" style="background: linear-gradient(45deg, #091626, #F27405, #112540);">Oscuro Elegante</button>
+                    <button class="preset-btn" onclick="applyPreset('favorite1')" style="background: linear-gradient(45deg, #FF8000, #47C7FC, #0E131F);">Naranja Brillante</button>
+                    <button class="preset-btn" onclick="applyPreset('favorite2')" style="background: linear-gradient(45deg, #0E131F, #FF8000, #47C7FC);">Azul Dominante</button>
+                    <button class="preset-btn" onclick="applyPreset('favorite3')" style="background: linear-gradient(45deg, #47C7FC, #0E131F, #FF8000);">Cielo Vibrante</button>
+                    <button class="preset-btn" onclick="applyPreset('favorite4')" style="background: linear-gradient(45deg, #0E131F, #FAD8D6, #FF8000);">Rosa Elegante</button>
                 </div>
 
                 <h3 style="margin: 30px 0 15px 0; color: #2c3e50;"><i class="fas fa-random"></i> Generador de Variaciones</h3>
@@ -494,28 +494,28 @@
             const presets = {
                 // Paletas Favoritas de David
                 favorite1: {
-                    primary: '#0A1A31',
-                    secondary: '#48C7FC',
-                    accent: '#F27405',
-                    bg: '#F2F2F2'
+                    primary: '#FF8000',
+                    secondary: '#47C7FC',
+                    accent: '#0E131F',
+                    bg: '#FAD8D6'
                 },
                 favorite2: {
-                    primary: '#F27405',
-                    secondary: '#0D0D0D',
-                    accent: '#49C2F2',
-                    bg: '#F2F2F2'
+                    primary: '#0E131F',
+                    secondary: '#FF8000',
+                    accent: '#47C7FC',
+                    bg: '#FAD8D6'
                 },
                 favorite3: {
-                    primary: '#49C2F2',
-                    secondary: '#F2F2F2',
-                    accent: '#091626',
-                    bg: '#F27405'
+                    primary: '#47C7FC',
+                    secondary: '#0E131F',
+                    accent: '#FF8000',
+                    bg: '#FAD8D6'
                 },
                 favorite4: {
-                    primary: '#091626',
-                    secondary: '#F27405',
-                    accent: '#112540',
-                    bg: '#F2F2F2'
+                    primary: '#0E131F',
+                    secondary: '#FAD8D6',
+                    accent: '#FF8000',
+                    bg: '#47C7FC'
                 }
             };
             
@@ -700,12 +700,12 @@ Fondo: ${colors.bg}`);
             
             // Pool de tus colores favoritos y similares
             const colorPool = [
-                '#0A1A31', '#48C7FC', '#F27405', '#F21F0C', '#49C2F2',
-                '#091626', '#112540', '#0D0D0D', '#F2F2F2',
-                // Variaciones cercanas a tus favoritos
-                '#0B1B32', '#47C6FB', '#F37406', '#F32010', '#4AC3F3',
-                '#0A1727', '#113641', '#0E0E0E', '#F1F1F1', '#F3F3F3',
-                '#083455', '#5ACCFF', '#E86D04', '#E01E0B', '#3AB8E8'
+                '#FF8000', '#47C7FC', '#0E131F', '#FAD8D6',
+                // Variaciones cercanas a tus nuevos favoritos
+                '#FF7700', '#FF9000', '#48C8FD', '#46C6FB', 
+                '#0F141F', '#0D121E', '#FBDAD7', '#F9D6D4',
+                '#FF6600', '#FF9900', '#45C5FA', '#49C9FE',
+                '#101520', '#0C111D', '#FCD9D7', '#F8D7D5'
             ];
             
             // Seleccionar 4 colores aleatorios
@@ -719,7 +719,7 @@ Fondo: ${colors.bg}`);
             }
             
             // Asegurar que tengamos un fondo claro
-            const lightColors = ['#F2F2F2', '#F1F1F1', '#F3F3F3', '#FAFAFA', '#EEEEEE'];
+            const lightColors = ['#FAD8D6', '#FBDAD7', '#F9D6D4', '#FCD9D7', '#F8D7D5'];
             selectedColors[3] = lightColors[Math.floor(Math.random() * lightColors.length)];
             
             // Aplicar colores
