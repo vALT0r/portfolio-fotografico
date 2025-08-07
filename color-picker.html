@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker Dinámico - Daerbon Photography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            min-height: 70vh;
+        }
+
+        .color-panel {
+            padding: 40px;
+            background: #f8f9fa;
+        }
+
+        .preview-panel {
+            padding: 40px;
+            background: white;
+            border-left: 3px solid #e9ecef;
+        }
+
+        .color-section {
+            margin-bottom: 30px;
+        }
+
+        .color-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .color-input-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .color-input-group label {
+            font-weight: 500;
+            color: #34495e;
+            min-width: 80px;
+        }
+
+        input[type="color"] {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        input[type="text"] {
+            padding: 10px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            width: 120px;
+            text-transform: uppercase;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .preview-mockup {
+            background: var(--bg-color, #ffffff);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .mockup-header {
+            background: var(--primary-color, #2c3e50);
+            color: var(--text-color, white);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .mockup-nav {
+            background: var(--secondary-color, #34495e);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .mockup-nav a {
+            color: var(--accent-color, #3498db);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .mockup-nav a:hover {
+            background: var(--accent-color, #3498db);
+            color: white;
+        }
+
+        .mockup-content {
+            padding: 30px;
+            background: var(--bg-color, white);
+        }
+
+        .mockup-button {
+            background: var(--accent-color, #3498db);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+
+        .mockup-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .color-values {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .color-values h4 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .color-value {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .preset-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .preset-btn {
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .preset-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .export-section {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .export-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .export-btn:hover {
+            background: #219a52;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .color-panel, .preview-panel {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-palette"></i> Color Picker Dinámico</h1>
+            <p>Crea tu paleta perfecta para Daerbon Photography en tiempo real</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="color-panel">
+                <div class="preset-buttons">
+                    <button class="preset-btn" onclick="applyPreset('favorite1')" style="background: linear-gradient(45deg, #0A1A31, #48C7FC, #F27405);">Azul Profundo</button>
+                    <button class="preset-btn" onclick="applyPreset('favorite2')" style="background: linear-gradient(45deg, #F27405, #0D0D0D, #49C2F2);">Naranja Dominante</button>
+                    <button class="preset-btn" onclick="applyPreset('favorite3')" style="background: linear-gradient(45deg, #49C2F2, #091626, #F27405);">Azul Vibrante</button>
+                    <button class="preset-btn" onclick="applyPreset('favorite4')" style="background: linear-gradient(45deg, #091626, #F27405, #112540);">Oscuro Elegante</button>
+                </div>
+
+                <h3 style="margin: 30px 0 15px 0; color: #2c3e50;"><i class="fas fa-random"></i> Generador de Variaciones</h3>
+                <div class="preset-buttons">
+                    <button class="preset-btn" onclick="generateRandomVariation()" style="background: linear-gradient(45deg, #e74c3c, #f39c12, #9b59b6);">🎲 Variación Aleatoria</button>
+                    <button class="preset-btn" onclick="generateComplementaryColors()" style="background: linear-gradient(45deg, #3498db, #e67e22, #2ecc71);">🎨 Colores Complementarios</button>
+                    <button class="preset-btn" onclick="generateAnalogousColors()" style="background: linear-gradient(45deg, #9b59b6, #8e44ad, #6c3483);">🌈 Colores Análogos</button>
+                    <button class="preset-btn" onclick="shuffleCurrentColors()" style="background: linear-gradient(45deg, #34495e, #2c3e50, #95a5a6);">🔄 Mezclar Actuales</button>
+                    <button class="preset-btn" onclick="generateTonalVariation()" style="background: linear-gradient(45deg, #48C7FC, #49C2F2, #091626);">� Variación Tonal</button>
+                    <button class="preset-btn" onclick="generateContrastVariation()" style="background: linear-gradient(45deg, #F27405, #0A1A31, #F2F2F2);">⚡ Máximo Contraste</button>
+                </div>
+
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 15px; margin: 20px 0;">
+                    <p style="margin: 0; color: #856404; font-size: 0.9rem;">
+                        <i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Usa "Mezclar Actuales" para intercambiar los colores que ya tienes seleccionados, o prueba las otras opciones para generar paletas completamente nuevas.
+                    </p>
+                </div>
+
+                <div class="color-section">
+                    <h3><i class="fas fa-paint-brush"></i> Color Primario</h3>
+                    <div class="color-input-group">
+                        <label>Principal:</label>
+                        <input type="color" id="primary-picker" value="#2c3e50">
+                        <input type="text" id="primary-hex" value="#2c3e50" maxlength="7">
+                    </div>
+                </div>
+
+                <div class="color-section">
+                    <h3><i class="fas fa-palette"></i> Color Secundario</h3>
+                    <div class="color-input-group">
+                        <label>Secundario:</label>
+                        <input type="color" id="secondary-picker" value="#34495e">
+                        <input type="text" id="secondary-hex" value="#34495e" maxlength="7">
+                    </div>
+                </div>
+
+                <div class="color-section">
+                    <h3><i class="fas fa-star"></i> Color de Acento</h3>
+                    <div class="color-input-group">
+                        <label>Acento:</label>
+                        <input type="color" id="accent-picker" value="#3498db">
+                        <input type="text" id="accent-hex" value="#3498db" maxlength="7">
+                    </div>
+                </div>
+
+                <div class="color-section">
+                    <h3><i class="fas fa-file-alt"></i> Color de Fondo</h3>
+                    <div class="color-input-group">
+                        <label>Fondo:</label>
+                        <input type="color" id="bg-picker" value="#ffffff">
+                        <input type="text" id="bg-hex" value="#ffffff" maxlength="7">
+                    </div>
+                </div>
+
+                <div class="export-section">
+                    <h4><i class="fas fa-download"></i> Exportar Paleta</h4>
+                    <button class="export-btn" onclick="exportCSS()">
+                        <i class="fas fa-code"></i> Generar CSS
+                    </button>
+                    <button class="export-btn" onclick="exportJSON()">
+                        <i class="fas fa-file-code"></i> Descargar JSON
+                    </button>
+                    <button class="export-btn" onclick="applyToPortfolio()">
+                        <i class="fas fa-magic"></i> Aplicar al Portfolio
+                    </button>
+                </div>
+            </div>
+
+            <div class="preview-panel">
+                <h3><i class="fas fa-eye"></i> Vista Previa en Vivo</h3>
+                
+                <div class="preview-mockup" id="mockup">
+                    <div class="mockup-header">
+                        <h2>Daerbon Photography</h2>
+                        <p>Portfolio Profesional</p>
+                    </div>
+                    <div class="mockup-nav">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#sobre-mi">Sobre Mí</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                    <div class="mockup-content">
+                        <h3>Bienvenido a mi mundo fotográfico</h3>
+                        <p>Capturando momentos únicos con pasión y creatividad profesional.</p>
+                        <button class="mockup-button">Ver Portfolio</button>
+                        <button class="mockup-button">Contactar</button>
+                    </div>
+                </div>
+
+                <div class="color-values" id="color-info">
+                    <h4><i class="fas fa-info-circle"></i> Valores de Color Actuales</h4>
+                    <div class="color-value">
+                        <span>Primario:</span>
+                        <span id="primary-value">#2c3e50</span>
+                    </div>
+                    <div class="color-value">
+                        <span>Secundario:</span>
+                        <span id="secondary-value">#34495e</span>
+                    </div>
+                    <div class="color-value">
+                        <span>Acento:</span>
+                        <span id="accent-value">#3498db</span>
+                    </div>
+                    <div class="color-value">
+                        <span>Fondo:</span>
+                        <span id="bg-value">#ffffff</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales
+        const colorInputs = {
+            primary: {
+                picker: document.getElementById('primary-picker'),
+                hex: document.getElementById('primary-hex')
+            },
+            secondary: {
+                picker: document.getElementById('secondary-picker'),
+                hex: document.getElementById('secondary-hex')
+            },
+            accent: {
+                picker: document.getElementById('accent-picker'),
+                hex: document.getElementById('accent-hex')
+            },
+            bg: {
+                picker: document.getElementById('bg-picker'),
+                hex: document.getElementById('bg-hex')
+            }
+        };
+
+        // Inicializar eventos
+        document.addEventListener('DOMContentLoaded', function() {
+            Object.keys(colorInputs).forEach(key => {
+                const input = colorInputs[key];
+                
+                // Sincronizar picker con hex
+                input.picker.addEventListener('input', function() {
+                    input.hex.value = this.value.toUpperCase();
+                    updatePreview();
+                });
+                
+                // Sincronizar hex con picker
+                input.hex.addEventListener('input', function() {
+                    if (this.value.match(/^#[0-9A-Fa-f]{6}$/)) {
+                        input.picker.value = this.value;
+                        updatePreview();
+                    }
+                });
+                
+                // Validar formato hex
+                input.hex.addEventListener('blur', function() {
+                    if (!this.value.match(/^#[0-9A-Fa-f]{6}$/)) {
+                        this.value = input.picker.value.toUpperCase();
+                    }
+                });
+            });
+            
+            updatePreview();
+        });
+
+        // Actualizar vista previa
+        function updatePreview() {
+            console.log('Actualizando vista previa...');
+            
+            const mockup = document.getElementById('mockup');
+            if (!mockup) {
+                console.error('Mockup element not found');
+                return;
+            }
+            
+            const colors = {
+                primary: colorInputs.primary.picker.value,
+                secondary: colorInputs.secondary.picker.value,
+                accent: colorInputs.accent.picker.value,
+                bg: colorInputs.bg.picker.value
+            };
+            
+            console.log('Colores a aplicar:', colors);
+            
+            // Aplicar colores al mockup
+            mockup.style.setProperty('--primary-color', colors.primary);
+            mockup.style.setProperty('--secondary-color', colors.secondary);
+            mockup.style.setProperty('--accent-color', colors.accent);
+            mockup.style.setProperty('--bg-color', colors.bg);
+            
+            // Determinar color de texto basado en el fondo
+            const textColor = isLightColor(colors.bg) ? '#2c3e50' : '#ffffff';
+            mockup.style.setProperty('--text-color', textColor);
+            
+            // Actualizar valores mostrados
+            const primaryValue = document.getElementById('primary-value');
+            const secondaryValue = document.getElementById('secondary-value');
+            const accentValue = document.getElementById('accent-value');
+            const bgValue = document.getElementById('bg-value');
+            
+            if (primaryValue) primaryValue.textContent = colors.primary.toUpperCase();
+            if (secondaryValue) secondaryValue.textContent = colors.secondary.toUpperCase();
+            if (accentValue) accentValue.textContent = colors.accent.toUpperCase();
+            if (bgValue) bgValue.textContent = colors.bg.toUpperCase();
+            
+            console.log('Vista previa actualizada');
+        }
+
+        // Detectar si un color es claro u oscuro
+        function isLightColor(hex) {
+            const r = parseInt(hex.substr(1, 2), 16);
+            const g = parseInt(hex.substr(3, 2), 16);
+            const b = parseInt(hex.substr(5, 2), 16);
+            const brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+            return brightness > 128;
+        }
+
+        // Aplicar presets
+        function applyPreset(preset) {
+            console.log('Aplicando preset:', preset);
+            
+            const presets = {
+                // Paletas Favoritas de David
+                favorite1: {
+                    primary: '#0A1A31',
+                    secondary: '#48C7FC',
+                    accent: '#F27405',
+                    bg: '#F2F2F2'
+                },
+                favorite2: {
+                    primary: '#F27405',
+                    secondary: '#0D0D0D',
+                    accent: '#49C2F2',
+                    bg: '#F2F2F2'
+                },
+                favorite3: {
+                    primary: '#49C2F2',
+                    secondary: '#F2F2F2',
+                    accent: '#091626',
+                    bg: '#F27405'
+                },
+                favorite4: {
+                    primary: '#091626',
+                    secondary: '#F27405',
+                    accent: '#112540',
+                    bg: '#F2F2F2'
+                }
+            };
+            
+            const colors = presets[preset];
+            console.log('Colores encontrados:', colors);
+            
+            if (colors) {
+                // Aplicar colores a los inputs
+                if (colors.primary) {
+                    colorInputs.primary.picker.value = colors.primary;
+                    colorInputs.primary.hex.value = colors.primary.toUpperCase();
+                }
+                if (colors.secondary) {
+                    colorInputs.secondary.picker.value = colors.secondary;
+                    colorInputs.secondary.hex.value = colors.secondary.toUpperCase();
+                }
+                if (colors.accent) {
+                    colorInputs.accent.picker.value = colors.accent;
+                    colorInputs.accent.hex.value = colors.accent.toUpperCase();
+                }
+                if (colors.bg) {
+                    colorInputs.bg.picker.value = colors.bg;
+                    colorInputs.bg.hex.value = colors.bg.toUpperCase();
+                }
+                
+                // Forzar actualización de la vista previa
+                setTimeout(updatePreview, 100);
+            }
+        }
+
+        // Exportar CSS
+        function exportCSS() {
+            const colors = {
+                primary: colorInputs.primary.picker.value,
+                secondary: colorInputs.secondary.picker.value,
+                accent: colorInputs.accent.picker.value,
+                bg: colorInputs.bg.picker.value
+            };
+            
+            const css = `:root {
+  --primary-color: ${colors.primary};
+  --secondary-color: ${colors.secondary};
+  --accent-color: ${colors.accent};
+  --background-color: ${colors.bg};
+}
+
+/* Header */
+.header {
+  background: var(--primary-color);
+  color: ${isLightColor(colors.primary) ? '#2c3e50' : '#ffffff'};
+}
+
+/* Navigation */
+.nav {
+  background: var(--secondary-color);
+}
+
+.nav a {
+  color: var(--accent-color);
+}
+
+.nav a:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Background */
+body {
+  background-color: var(--background-color);
+}`;
+            
+            // Crear elemento para descargar
+            const blob = new Blob([css], { type: 'text/css' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'daerbon-colors.css';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Exportar JSON
+        function exportJSON() {
+            const colors = {
+                palette: "Daerbon Photography Colors",
+                colors: {
+                    primary: colorInputs.primary.picker.value,
+                    secondary: colorInputs.secondary.picker.value,
+                    accent: colorInputs.accent.picker.value,
+                    background: colorInputs.bg.picker.value
+                },
+                created: new Date().toISOString(),
+                usage: {
+                    primary: "Headers, main sections",
+                    secondary: "Navigation, secondary elements", 
+                    accent: "Buttons, links, highlights",
+                    background: "Page background"
+                }
+            };
+            
+            const blob = new Blob([JSON.stringify(colors, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'daerbon-palette.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Aplicar al portfolio (generar instrucciones)
+        function applyToPortfolio() {
+            const colors = {
+                primary: colorInputs.primary.picker.value,
+                secondary: colorInputs.secondary.picker.value,
+                accent: colorInputs.accent.picker.value,
+                bg: colorInputs.bg.picker.value
+            };
+            
+            const instructions = `¡Perfecto! Para aplicar estos colores a tu portfolio:
+
+COLORES SELECCIONADOS:
+- Primario: ${colors.primary}
+- Secundario: ${colors.secondary} 
+- Acento: ${colors.accent}
+- Fondo: ${colors.bg}
+
+PASOS PARA APLICAR:
+1. Copia este mensaje completo
+2. Pégalo en el chat con GitHub Copilot
+3. Di: "Aplica estos colores a mi portfolio"
+
+¡Copilot actualizará automáticamente tu CSS!`;
+
+            alert(instructions);
+            
+            // Copiar al portapapeles
+            navigator.clipboard.writeText(`Aplica estos colores a mi portfolio:
+Primario: ${colors.primary}
+Secundario: ${colors.secondary}
+Acento: ${colors.accent}
+Fondo: ${colors.bg}`);
+        }
+
+        // ====== NUEVAS FUNCIONES DE VARIACIONES ======
+
+        // Mezclar colores actuales aleatoriamente
+        function shuffleCurrentColors() {
+            console.log('Mezclando colores actuales...');
+            
+            const currentColors = [
+                colorInputs.primary.picker.value,
+                colorInputs.secondary.picker.value,
+                colorInputs.accent.picker.value,
+                colorInputs.bg.picker.value
+            ];
+            
+            // Mezclar array
+            const shuffled = [...currentColors].sort(() => Math.random() - 0.5);
+            
+            // Aplicar colores mezclados
+            colorInputs.primary.picker.value = shuffled[0];
+            colorInputs.primary.hex.value = shuffled[0].toUpperCase();
+            colorInputs.secondary.picker.value = shuffled[1];
+            colorInputs.secondary.hex.value = shuffled[1].toUpperCase();
+            colorInputs.accent.picker.value = shuffled[2];
+            colorInputs.accent.hex.value = shuffled[2].toUpperCase();
+            colorInputs.bg.picker.value = shuffled[3];
+            colorInputs.bg.hex.value = shuffled[3].toUpperCase();
+            
+            setTimeout(updatePreview, 100);
+        }
+
+        // Generar variación completamente aleatoria
+        function generateRandomVariation() {
+            console.log('Generando variación aleatoria...');
+            
+            // Pool de tus colores favoritos y similares
+            const colorPool = [
+                '#0A1A31', '#48C7FC', '#F27405', '#F21F0C', '#49C2F2',
+                '#091626', '#112540', '#0D0D0D', '#F2F2F2',
+                // Variaciones cercanas a tus favoritos
+                '#0B1B32', '#47C6FB', '#F37406', '#F32010', '#4AC3F3',
+                '#0A1727', '#113641', '#0E0E0E', '#F1F1F1', '#F3F3F3',
+                '#083455', '#5ACCFF', '#E86D04', '#E01E0B', '#3AB8E8'
+            ];
+            
+            // Seleccionar 4 colores aleatorios
+            const selectedColors = [];
+            const poolCopy = [...colorPool];
+            
+            for (let i = 0; i < 4; i++) {
+                const randomIndex = Math.floor(Math.random() * poolCopy.length);
+                selectedColors.push(poolCopy[randomIndex]);
+                poolCopy.splice(randomIndex, 1); // Evitar duplicados
+            }
+            
+            // Asegurar que tengamos un fondo claro
+            const lightColors = ['#F2F2F2', '#F1F1F1', '#F3F3F3', '#FAFAFA', '#EEEEEE'];
+            selectedColors[3] = lightColors[Math.floor(Math.random() * lightColors.length)];
+            
+            // Aplicar colores
+            colorInputs.primary.picker.value = selectedColors[0];
+            colorInputs.primary.hex.value = selectedColors[0].toUpperCase();
+            colorInputs.secondary.picker.value = selectedColors[1];
+            colorInputs.secondary.hex.value = selectedColors[1].toUpperCase();
+            colorInputs.accent.picker.value = selectedColors[2];
+            colorInputs.accent.hex.value = selectedColors[2].toUpperCase();
+            colorInputs.bg.picker.value = selectedColors[3];
+            colorInputs.bg.hex.value = selectedColors[3].toUpperCase();
+            
+            setTimeout(updatePreview, 100);
+        }
+
+        // Nueva función: Variación Tonal
+        function generateTonalVariation() {
+            console.log('Generando variación tonal...');
+            
+            // Tomar uno de tus colores favoritos como base
+            const baseColors = ['#0A1A31', '#48C7FC', '#F27405', '#091626'];
+            const baseColor = baseColors[Math.floor(Math.random() * baseColors.length)];
+            
+            // Generar tonalidades del color base
+            const variations = generateColorVariations(baseColor);
+            
+            // Aplicar colores
+            colorInputs.primary.picker.value = variations.dark;
+            colorInputs.primary.hex.value = variations.dark.toUpperCase();
+            colorInputs.secondary.picker.value = variations.medium;
+            colorInputs.secondary.hex.value = variations.medium.toUpperCase();
+            colorInputs.accent.picker.value = variations.bright;
+            colorInputs.accent.hex.value = variations.bright.toUpperCase();
+            colorInputs.bg.picker.value = variations.light;
+            colorInputs.bg.hex.value = variations.light.toUpperCase();
+            
+            setTimeout(updatePreview, 100);
+        }
+
+        // Nueva función: Máximo Contraste
+        function generateContrastVariation() {
+            console.log('Generando variación de máximo contraste...');
+            
+            // Combinaciones de alto contraste basadas en tus favoritos
+            const contrastPairs = [
+                { dark: '#0A1A31', light: '#F2F2F2', accent1: '#F27405', accent2: '#48C7FC' },
+                { dark: '#091626', light: '#F2F2F2', accent1: '#F27405', accent2: '#49C2F2' },
+                { dark: '#112540', light: '#F2F2F2', accent1: '#F27405', accent2: '#48C7FC' },
+                { dark: '#0D0D0D', light: '#F2F2F2', accent1: '#49C2F2', accent2: '#F27405' }
+            ];
+            
+            const pair = contrastPairs[Math.floor(Math.random() * contrastPairs.length)];
+            
+            // Aplicar colores con máximo contraste
+            colorInputs.primary.picker.value = pair.dark;
+            colorInputs.primary.hex.value = pair.dark.toUpperCase();
+            colorInputs.secondary.picker.value = pair.light;
+            colorInputs.secondary.hex.value = pair.light.toUpperCase();
+            colorInputs.accent.picker.value = pair.accent1;
+            colorInputs.accent.hex.value = pair.accent1.toUpperCase();
+            colorInputs.bg.picker.value = pair.light;
+            colorInputs.bg.hex.value = pair.light.toUpperCase();
+            
+            setTimeout(updatePreview, 100);
+        }
+
+        // Función auxiliar para generar variaciones de un color
+        function generateColorVariations(hexColor) {
+            const rgb = hexToRgb(hexColor);
+            const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+            
+            return {
+                dark: hslToHex(hsl.h, hsl.s, Math.max(hsl.l - 30, 10)),
+                medium: hslToHex(hsl.h, hsl.s, hsl.l),
+                bright: hslToHex(hsl.h, Math.min(hsl.s + 20, 100), Math.min(hsl.l + 20, 80)),
+                light: hslToHex(hsl.h, Math.max(hsl.s - 50, 10), Math.min(hsl.l + 60, 95))
+            };
+        }
+
+        // Función auxiliar para convertir HEX a RGB
+        function hexToRgb(hex) {
+            const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+
+        // Función auxiliar para convertir RGB a HSL
+        function rgbToHsl(r, g, b) {
+            r /= 255; g /= 255; b /= 255;
+            const max = Math.max(r, g, b), min = Math.min(r, g, b);
+            let h, s, l = (max + min) / 2;
+
+            if (max === min) {
+                h = s = 0;
+            } else {
+                const d = max - min;
+                s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                switch (max) {
+                    case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                    case g: h = (b - r) / d + 2; break;
+                    case b: h = (r - g) / d + 4; break;
+                }
+                h /= 6;
+            }
+
+            return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };
+        }
+
+        // Generar colores complementarios
+        function generateComplementaryColors() {
+            console.log('Generando colores complementarios...');
+            
+            // Color base aleatorio
+            const baseHue = Math.floor(Math.random() * 360);
+            
+            // Generar colores complementarios
+            const primary = hslToHex(baseHue, 70, 30); // Color base oscuro
+            const secondary = hslToHex(baseHue, 50, 50); // Color base medio
+            const accent = hslToHex((baseHue + 180) % 360, 70, 50); // Complementario
+            const bg = hslToHex(baseHue, 10, 95); // Fondo muy claro
+            
+            // Aplicar colores
+            colorInputs.primary.picker.value = primary;
+            colorInputs.primary.hex.value = primary.toUpperCase();
+            colorInputs.secondary.picker.value = secondary;
+            colorInputs.secondary.hex.value = secondary.toUpperCase();
+            colorInputs.accent.picker.value = accent;
+            colorInputs.accent.hex.value = accent.toUpperCase();
+            colorInputs.bg.picker.value = bg;
+            colorInputs.bg.hex.value = bg.toUpperCase();
+            
+            setTimeout(updatePreview, 100);
+        }
+
+        // Generar colores análogos
+        function generateAnalogousColors() {
+            console.log('Generando colores análogos...');
+            
+            // Color base aleatorio
+            const baseHue = Math.floor(Math.random() * 360);
+            
+            // Generar colores análogos (colores cercanos en el círculo cromático)
+            const primary = hslToHex(baseHue, 70, 30);
+            const secondary = hslToHex((baseHue + 30) % 360, 60, 45);
+            const accent = hslToHex((baseHue - 30 + 360) % 360, 80, 55);
+            const bg = hslToHex(baseHue, 15, 92);
+            
+            // Aplicar colores
+            colorInputs.primary.picker.value = primary;
+            colorInputs.primary.hex.value = primary.toUpperCase();
+            colorInputs.secondary.picker.value = secondary;
+            colorInputs.secondary.hex.value = secondary.toUpperCase();
+            colorInputs.accent.picker.value = accent;
+            colorInputs.accent.hex.value = accent.toUpperCase();
+            colorInputs.bg.picker.value = bg;
+            colorInputs.bg.hex.value = bg.toUpperCase();
+            
+            setTimeout(updatePreview, 100);
+        }
+
+        // Convertir HSL a HEX
+        function hslToHex(h, s, l) {
+            l /= 100;
+            const a = s * Math.min(l, 1 - l) / 100;
+            const f = n => {
+                const k = (n + h / 30) % 12;
+                const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+                return Math.round(255 * color).toString(16).padStart(2, '0');
+            };
+            return `#${f(0)}${f(8)}${f(4)}`;
+        }
+    </script>
+</body>
+</html>

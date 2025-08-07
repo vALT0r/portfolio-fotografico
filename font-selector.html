@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Fuentes - Daerbon Photography</title>
+    <!-- Importar múltiples fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Nunito:wght@300;400;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=Crimson+Text:wght@400;600;700&family=PT+Serif:wght@400;700&family=Lora:wght@400;500;600;700&family=Cabin:wght@400;500;600;700&family=Oswald:wght@300;400;500;600;700&family=Fjalla+One&family=Anton&family=Bebas+Neue&family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #F27405 0%, #49C2F2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #0D0D0D;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            color: #F2F2F2;
+        }
+
+        .main-content {
+            padding: 40px;
+            background: #F2F2F2;
+        }
+
+        .font-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .category {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .category h2 {
+            color: #0D0D0D;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .font-option {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid #F2F2F2;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .font-option:hover {
+            border-color: #49C2F2;
+            box-shadow: 0 5px 20px rgba(73, 194, 242, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .font-option.selected {
+            border-color: #F27405;
+            background: rgba(242, 116, 5, 0.05);
+            box-shadow: 0 5px 20px rgba(242, 116, 5, 0.3);
+        }
+
+        .font-name {
+            font-weight: 600;
+            color: #F27405;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .font-preview-large {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #0D0D0D;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .font-preview-normal {
+            font-size: 1rem;
+            color: #0D0D0D;
+            margin-bottom: 8px;
+        }
+
+        .font-preview-small {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .preview-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .preview-mockup {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background: white;
+        }
+
+        .mockup-header {
+            background: #F27405;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .mockup-nav {
+            background: #0D0D0D;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .mockup-nav a {
+            color: #49C2F2;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .mockup-nav a:hover {
+            background: #49C2F2;
+            color: white;
+        }
+
+        .mockup-content {
+            padding: 40px;
+            background: #F2F2F2;
+        }
+
+        .mockup-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #0D0D0D;
+        }
+
+        .mockup-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .mockup-paragraph {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #0D0D0D;
+            margin-bottom: 20px;
+        }
+
+        .mockup-button {
+            background: #49C2F2;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .mockup-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(73, 194, 242, 0.3);
+        }
+
+        .controls {
+            background: #0D0D0D;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: #F27405;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background: #49C2F2;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #49C2F2;
+            color: #49C2F2;
+        }
+
+        .btn-secondary:hover {
+            background: #49C2F2;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .font-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .mockup-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-font"></i> Selector de Fuentes</h1>
+            <p>Elige la tipografía perfecta para Daerbon Photography</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="font-categories">
+                <!-- Fuentes Sans Serif Modernas -->
+                <div class="category">
+                    <h2><i class="fas fa-laptop"></i> Sans Serif Modernas</h2>
+                    
+                    <div class="font-option" onclick="selectFont('Poppins')" data-font="Poppins">
+                        <div class="font-name">Poppins</div>
+                        <div class="font-preview-large" style="font-family: 'Poppins', sans-serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Poppins', sans-serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Poppins', sans-serif;">Fuente moderna, legible y versátil</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Inter')" data-font="Inter">
+                        <div class="font-name">Inter</div>
+                        <div class="font-preview-large" style="font-family: 'Inter', sans-serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Inter', sans-serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Inter', sans-serif;">Diseñada para pantallas, excelente legibilidad</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Montserrat')" data-font="Montserrat">
+                        <div class="font-name">Montserrat</div>
+                        <div class="font-preview-large" style="font-family: 'Montserrat', sans-serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Montserrat', sans-serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Montserrat', sans-serif;">Elegante y profesional, inspirada en Buenos Aires</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Raleway')" data-font="Raleway">
+                        <div class="font-name">Raleway</div>
+                        <div class="font-preview-large" style="font-family: 'Raleway', sans-serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Raleway', sans-serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Raleway', sans-serif;">Sofisticada y minimalista</div>
+                    </div>
+                </div>
+
+                <!-- Fuentes Clásicas -->
+                <div class="category">
+                    <h2><i class="fas fa-book"></i> Clásicas y Legibles</h2>
+                    
+                    <div class="font-option" onclick="selectFont('Roboto')" data-font="Roboto">
+                        <div class="font-name">Roboto</div>
+                        <div class="font-preview-large" style="font-family: 'Roboto', sans-serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Roboto', sans-serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Roboto', sans-serif;">La fuente de Google, confiable y universal</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Open Sans')" data-font="Open Sans">
+                        <div class="font-name">Open Sans</div>
+                        <div class="font-preview-large" style="font-family: 'Open Sans', sans-serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Open Sans', sans-serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Open Sans', sans-serif;">Friendly y accesible para todo público</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Lato')" data-font="Lato">
+                        <div class="font-name">Lato</div>
+                        <div class="font-preview-large" style="font-family: 'Lato', sans-serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Lato', sans-serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Lato', sans-serif;">Semi-redondeada, cálida y humana</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Source Sans Pro')" data-font="Source Sans Pro">
+                        <div class="font-name">Source Sans Pro</div>
+                        <div class="font-preview-large" style="font-family: 'Source Sans Pro', sans-serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Source Sans Pro', sans-serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Source Sans Pro', sans-serif;">Diseñada por Adobe, muy profesional</div>
+                    </div>
+                </div>
+
+                <!-- Fuentes Serif Elegantes -->
+                <div class="category">
+                    <h2><i class="fas fa-crown"></i> Serif Elegantes</h2>
+                    
+                    <div class="font-option" onclick="selectFont('Playfair Display')" data-font="Playfair Display">
+                        <div class="font-name">Playfair Display</div>
+                        <div class="font-preview-large" style="font-family: 'Playfair Display', serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Playfair Display', serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Playfair Display', serif;">Elegante y sofisticada para títulos</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Merriweather')" data-font="Merriweather">
+                        <div class="font-name">Merriweather</div>
+                        <div class="font-preview-large" style="font-family: 'Merriweather', serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Merriweather', serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Merriweather', serif;">Perfecta para lectura en pantalla</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Lora')" data-font="Lora">
+                        <div class="font-name">Lora</div>
+                        <div class="font-preview-large" style="font-family: 'Lora', serif;">Daerbon Photography</div>
+                        <div class="font-preview-normal" style="font-family: 'Lora', serif;">Capturando momentos únicos con pasión profesional</div>
+                        <div class="font-preview-small" style="font-family: 'Lora', serif;">Contemporánea con raíces caligráficas</div>
+                    </div>
+                </div>
+
+                <!-- Fuentes Display/Impactantes -->
+                <div class="category">
+                    <h2><i class="fas fa-fire"></i> Display e Impactantes</h2>
+                    
+                    <div class="font-option" onclick="selectFont('Oswald')" data-font="Oswald">
+                        <div class="font-name">Oswald</div>
+                        <div class="font-preview-large" style="font-family: 'Oswald', sans-serif;">DAERBON PHOTOGRAPHY</div>
+                        <div class="font-preview-normal" style="font-family: 'Oswald', sans-serif;">CAPTURANDO MOMENTOS ÚNICOS CON PASIÓN</div>
+                        <div class="font-preview-small" style="font-family: 'Oswald', sans-serif;">Condensada y potente para títulos</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Bebas Neue')" data-font="Bebas Neue">
+                        <div class="font-name">Bebas Neue</div>
+                        <div class="font-preview-large" style="font-family: 'Bebas Neue', cursive;">DAERBON PHOTOGRAPHY</div>
+                        <div class="font-preview-normal" style="font-family: 'Bebas Neue', cursive;">CAPTURANDO MOMENTOS ÚNICOS</div>
+                        <div class="font-preview-small" style="font-family: 'Bebas Neue', cursive;">Sans serif condensada, muy impactante</div>
+                    </div>
+
+                    <div class="font-option" onclick="selectFont('Anton')" data-font="Anton">
+                        <div class="font-name">Anton</div>
+                        <div class="font-preview-large" style="font-family: 'Anton', sans-serif;">DAERBON PHOTOGRAPHY</div>
+                        <div class="font-preview-normal" style="font-family: 'Anton', sans-serif;">CAPTURANDO MOMENTOS ÚNICOS</div>
+                        <div class="font-preview-small" style="font-family: 'Anton', sans-serif;">Bold y condensada para impacto máximo</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h2 style="color: #0D0D0D; margin-bottom: 20px; text-align: center;">
+                    <i class="fas fa-eye"></i> Vista Previa con Fuente Seleccionada
+                </h2>
+                
+                <div class="preview-mockup" id="preview-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-title" id="preview-title">Daerbon Photography</div>
+                        <div class="mockup-subtitle" id="preview-subtitle">Portfolio Profesional</div>
+                    </div>
+                    <div class="mockup-nav">
+                        <a href="#" id="nav-1">Inicio</a>
+                        <a href="#" id="nav-2">Portfolio</a>
+                        <a href="#" id="nav-3">Sobre Mí</a>
+                        <a href="#" id="nav-4">Contacto</a>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-title" id="content-title">Bienvenido a mi mundo fotográfico</div>
+                        <div class="mockup-paragraph" id="content-text">
+                            Soy un fotógrafo profesional especializado en capturar momentos únicos y emociones auténticas. 
+                            Mi pasión es contar historias a través de la lente, creando imágenes que perduren en el tiempo 
+                            y toquen el corazón de quienes las observan.
+                        </div>
+                        <button class="mockup-button" id="preview-button">Ver Portfolio</button>
+                        <button class="mockup-button" id="preview-button-2">Contactar Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="applyFontToPortfolio()">
+                <i class="fas fa-magic"></i> Aplicar al Portfolio
+            </button>
+            <button class="btn btn-secondary" onclick="resetFont()">
+                <i class="fas fa-undo"></i> Resetear
+            </button>
+            <button class="btn btn-secondary" onclick="downloadFontCSS()">
+                <i class="fas fa-download"></i> Descargar CSS
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let selectedFont = 'Poppins'; // Fuente por defecto
+
+        // Aplicar fuente seleccionada
+        function selectFont(fontName) {
+            selectedFont = fontName;
+            
+            // Remover selección anterior
+            document.querySelectorAll('.font-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Agregar selección actual
+            document.querySelector(`[data-font="${fontName}"]`).classList.add('selected');
+            
+            // Aplicar fuente al preview
+            applyFontToPreview(fontName);
+            
+            console.log('Fuente seleccionada:', fontName);
+        }
+
+        // Aplicar fuente al preview
+        function applyFontToPreview(fontName) {
+            const elements = [
+                'preview-title', 'preview-subtitle', 'nav-1', 'nav-2', 'nav-3', 'nav-4',
+                'content-title', 'content-text', 'preview-button', 'preview-button-2'
+            ];
+            
+            elements.forEach(elementId => {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.style.fontFamily = `'${fontName}', ${getFontFallback(fontName)}`;
+                }
+            });
+        }
+
+        // Obtener fallback apropiado para cada tipo de fuente
+        function getFontFallback(fontName) {
+            const serifFonts = ['Playfair Display', 'Merriweather', 'Crimson Text', 'PT Serif', 'Lora'];
+            const displayFonts = ['Oswald', 'Anton', 'Bebas Neue', 'Fjalla One', 'Archivo Black'];
+            
+            if (serifFonts.includes(fontName)) {
+                return 'serif';
+            } else if (displayFonts.includes(fontName)) {
+                return 'sans-serif';
+            } else {
+                return 'sans-serif';
+            }
+        }
+
+        // Aplicar fuente al portfolio real
+        function applyFontToPortfolio() {
+            if (!selectedFont) {
+                alert('Por favor selecciona una fuente primero');
+                return;
+            }
+            
+            const instructions = `¡Perfecto! Para aplicar la fuente ${selectedFont} a tu portfolio:
+
+FUENTE SELECCIONADA: ${selectedFont}
+
+PASOS PARA APLICAR:
+1. Copia este mensaje completo
+2. Pégalo en el chat con GitHub Copilot
+3. Di: "Aplica la fuente ${selectedFont} a mi portfolio"
+
+¡Copilot actualizará automáticamente tu CSS!`;
+
+            alert(instructions);
+            
+            // Copiar al portapapeles
+            navigator.clipboard.writeText(`Aplica la fuente ${selectedFont} a mi portfolio CSS`);
+        }
+
+        // Resetear fuente
+        function resetFont() {
+            selectFont('Poppins');
+        }
+
+        // Descargar CSS de la fuente
+        function downloadFontCSS() {
+            if (!selectedFont) {
+                alert('Por favor selecciona una fuente primero');
+                return;
+            }
+            
+            const css = `/* Importar fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=${selectedFont.replace(' ', '+')}:wght@300;400;500;600;700;800&display=swap');
+
+/* Aplicar fuente al body */
+body {
+    font-family: '${selectedFont}', ${getFontFallback(selectedFont)};
+}
+
+/* Aplicar fuente a títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: '${selectedFont}', ${getFontFallback(selectedFont)};
+}
+
+/* Aplicar fuente a botones */
+.btn, button {
+    font-family: '${selectedFont}', ${getFontFallback(selectedFont)};
+}`;
+            
+            // Descargar archivo
+            const blob = new Blob([css], { type: 'text/css' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${selectedFont.toLowerCase().replace(' ', '-')}-font.css`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Inicializar con Poppins seleccionado
+        document.addEventListener('DOMContentLoaded', function() {
+            selectFont('Poppins');
+        });
+    </script>
+</body>
+</html>
