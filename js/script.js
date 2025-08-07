@@ -249,66 +249,49 @@ function initializeContactForm() {
     const form = document.getElementById('contactForm');
     const submitBtn = form.querySelector('.submit-btn');
     
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Cambiar estado del botón
+    // Configurar la acción del formulario para FormSubmit
+    form.action = 'https://formsubmit.co/daerbon@gmail.com';
+    
+    form.addEventListener('submit', (e) => {
+        // Cambiar estado del botón mientras se envía
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
         submitBtn.disabled = true;
-
-        // Simular envío (aquí integrarías con tu servicio de formularios)
-        try {
-            await submitForm(new FormData(form));
-            
-            // Éxito
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Enviado!';
-            submitBtn.style.background = '#27ae60';
-            
-            // Resetear formulario
-            form.reset();
-            
-            // Mostrar mensaje de éxito
-            showNotification('¡Mensaje enviado correctamente! Te contactaré pronto.', 'success');
-            
-        } catch (error) {
-            // Error
-            submitBtn.innerHTML = '<i class="fas fa-times"></i> Error';
-            submitBtn.style.background = '#e74c3c';
-            
-            showNotification('Error al enviar el mensaje. Por favor, intenta de nuevo.', 'error');
-        }
         
-        // Restaurar botón después de 3 segundos
-        setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.style.background = '';
-            submitBtn.disabled = false;
-        }, 3000);
-    });
-}
-
-// Función para enviar formulario con FormSubmit
-async function submitForm(formData) {
-    // Configuración para FormSubmit
-    const response = await fetch('https://formsubmit.co/daerbon@gmail.com', {
-        method: 'POST',
-        body: formData
+        // Mostrar notificación de que se está enviando
+        showNotification('Enviando mensaje...', 'info');
+        
+        // Permitir que el formulario se envíe normalmente a FormSubmit
+        // FormSubmit se encargará del redirect automáticamente
     });
     
-    if (!response.ok) {
-        throw new Error('Error al enviar formulario');
+    // Verificar si venimos de un envío exitoso
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('mensaje') === 'enviado') {
+        showNotification('¡Mensaje enviado correctamente! Te contactaré pronto.', 'success');
+        // Limpiar la URL
+        window.history.replaceState({}, document.title, window.location.pathname);
     }
-    
-    return response;
 }
 
 // Función para mostrar notificaciones
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
+    
+    let iconClass = 'info-circle';
+    let bgColor = '#3498db';
+    
+    if (type === 'success') {
+        iconClass = 'check-circle';
+        bgColor = '#27ae60';
+    } else if (type === 'error') {
+        iconClass = 'exclamation-triangle';
+        bgColor = '#e74c3c';
+    }
+    
     notification.innerHTML = `
-        <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'}"></i>
+        <i class="fas fa-${iconClass}"></i>
         <span>${message}</span>
     `;
     
@@ -317,7 +300,7 @@ function showNotification(message, type = 'info') {
         position: 'fixed',
         top: '20px',
         right: '20px',
-        background: type === 'success' ? '#27ae60' : '#e74c3c',
+        background: bgColor,
         color: 'white',
         padding: '15px 20px',
         borderRadius: '8px',
