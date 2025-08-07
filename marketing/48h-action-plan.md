@@ -1,25 +1,30 @@
-# ⏰ Plan de Acción 48 Horas - Launch Daerbon Photography
+# ⏰ Plan de Acción ACTUALIZADO - Launch Daerbon Photography
+
+## ✅ **COMPLETADO:**
+- Paleta de colores definida (#FF8000, #47C7FC, #0E131F, #F2F3E2)
+- Tipografía Poppins implementada 
+- Portfolio técnicamente funcional
+- Formulario de contacto operativo
+- Layout responsive optimizado
+- Herramientas de diseño creadas
 
 ## 🚀 **HOY - PRIMERAS 4 HORAS**
 
 ### **⚡ PRIORIDAD MÁXIMA (Hacer AHORA):**
 
-#### **1️⃣ TEST DEL PORTFOLIO (30 minutos)**
+#### **1️⃣ CONFIGURAR DOMINIO daerbon.com.ar (45 minutos)**
 ```bash
-✅ TASK: Testear formulario de contacto
-🎯 GOAL: Confirmar que funciona 100%
+🌐 TASK: Conectar dominio personalizado
+🎯 GOAL: Portfolio accesible desde daerbon.com.ar
 📋 STEPS:
-   • Ir a: https://vALT0r.github.io/portfolio-fotografico
-   • Completar formulario con tus datos
-   • Enviar mensaje de prueba
-   • Verificar email en daerbon@gmail.com
-   • Screenshot del email recibido
+   • Configurar GitHub Pages custom domain
+   • Actualizar DNS en registrador
+   • Verificar SSL certificate
+   • Test completo con nueva URL
    
-📱 TEST MOBILE:
-   • Abrir en celular
-   • Verificar menú hamburger
-   • Test formulario en mobile
-   • Velocidad de carga
+� REFERENCIAS:
+   • Ver: marketing/dominio-personalizado.md
+   • Backup URL: https://vALT0r.github.io/portfolio-fotografico
 ```
 
 #### **2️⃣ INSTAGRAM LAUNCH POST (45 minutos)**
@@ -151,7 +156,7 @@
 🎯 GOAL: Professional polish
 
 🔧 IMPROVEMENTS:
-   • Analytics setup (Google Analytics)
+   • Analytics setup (Google Analytics) 
    • WhatsApp click-to-chat button  
    • "Servicios y Precios" section
    • Testimonials placeholder
@@ -167,23 +172,23 @@
 ✅ TASK: Definir precios concretos
 🎯 GOAL: Listo para primeras cotizaciones
 
-💰 PRICING TABLE (ARS - Marzo 2024):
+💰 PRICING TABLE (ARS - Agosto 2025):
    
    📸 SESIÓN BÁSICA:
-   • Familiar/Individual: $15,000
+   • Familiar/Individual: $25,000
    • Incluye: 1 hora + 15 fotos editadas
    
    🏠 INMOBILIARIA:
-   • Propiedad básica: $20,000  
-   • Incluye: Exterior + 6 ambientes
+   • Propiedad básica: $35,000  
+   • Incluye: Exterior + 8 ambientes
    
    🎉 EVENTOS:
-   • Medio día (4hs): $35,000
-   • Día completo (8hs): $45,000
+   • Medio día (4hs): $60,000
+   • Día completo (8hs): $80,000
    
    📦 PAQUETES:
-   • "Emprendedor": $25,000 (productos + local)
-   • "Familia Completa": $30,000 (sesión + evento)
+   • "Emprendedor": $45,000 (productos + local)
+   • "Familia Completa": $50,000 (sesión + evento)
 ```
 
 #### **🔟 FIRST CLIENT ACQUISITION (3 horas)**

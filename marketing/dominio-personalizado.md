@@ -37,49 +37,59 @@ daerbon.com.ar
 
 ---
 
-## 🌐 **PASO 2: CONFIGURAR DNS**
+## 🌐 **PASO 2: CONFIGURAR DNS EXTERNO (PARA NIC.AR)**
 
-### **2.1 Identificar tu Registrador**
+### **2.1 ¿Por qué DNS externo?**
+- NIC.ar solo registra dominios, no provee DNS
+- Necesitas un proveedor DNS gratuito
+- **Cloudflare es la mejor opción** (gratis + rápido + confiable)
 
-Los registradores más comunes en Argentina:
-- **NIC Argentina** (nic.ar)
-- **Donweb**
-- **Hostinger Argentina**  
-- **GoDaddy**
-- **Namecheap**
+### **2.2 Configurar Cloudflare (RECOMENDADO)**
 
-### **2.2 Acceder al Panel DNS**
+#### **Paso 2.2.1: Crear cuenta en Cloudflare**
+1. **Ir a:** https://cloudflare.com/
+2. **"Get started"** → **Sign up**
+3. **Verificar email**
 
-**Buscar en tu registrador:**
-- "DNS Management"
-- "Gestión DNS"
-- "Zone Management"
-- "DNS Records"
+#### **Paso 2.2.2: Agregar tu dominio**
+1. **"Add site"** → escribir `daerbon.com.ar`
+2. **Select plan:** **Free** (gratis)
+3. **Continue**
+4. Cloudflare escaneará DNS existente (probablemente vacío)
+5. **Continue**
 
-### **2.3 Configurar Registros DNS**
+#### **Paso 2.2.3: Obtener nameservers**
+Cloudflare te dará algo como:
+```
+ada.ns.cloudflare.com
+sven.ns.cloudflare.com
+```
+**⚠️ COPIA ESTOS NAMESERVERS** - los necesitas para NIC.ar
 
-#### **OPCIÓN A: Con Subdomain (www)**
+#### **Paso 2.2.4: Configurar nameservers en NIC.ar**
+1. **Login:** https://nic.ar/
+2. **"Mis dominios"** → `daerbon.com.ar`
+3. **"Modificar DNS"** o **"Cambiar DNS"**
+4. **Seleccionar "Usar otros DNS"**
+5. **Pegar nameservers de Cloudflare**
+6. **Guardar cambios**
 
-**Agregar estos registros:**
+### **2.3 Configurar Registros DNS en Cloudflare**
 
-| Tipo | Nombre/Host | Valor/Destino | TTL |
-|------|-------------|---------------|-----|
-| A    | @           | 185.199.108.153 | 3600 |
-| A    | @           | 185.199.109.153 | 3600 |
-| A    | @           | 185.199.110.153 | 3600 |
-| A    | @           | 185.199.111.153 | 3600 |
-| CNAME| www         | vALT0r.github.io | 3600 |
+**En el dashboard de Cloudflare:**
 
-#### **OPCIÓN B: Solo Apex Domain (sin www)**
+1. **Ir a "DNS" tab**
+2. **Agregar estos registros:**
 
-**Agregar estos registros:**
+| Tipo | Nombre | Contenido | TTL |
+|------|---------|-----------|-----|
+| A    | @       | 185.199.108.153 | Auto |
+| A    | @       | 185.199.109.153 | Auto |
+| A    | @       | 185.199.110.153 | Auto |
+| A    | @       | 185.199.111.153 | Auto |
+| CNAME| www     | vALT0r.github.io | Auto |
 
-| Tipo | Nombre/Host | Valor/Destino | TTL |
-|------|-------------|---------------|-----|
-| A    | @           | 185.199.108.153 | 3600 |
-| A    | @           | 185.199.109.153 | 3600 |
-| A    | @           | 185.199.110.153 | 3600 |
-| A    | @           | 185.199.111.153 | 3600 |
+3. **Proxy status:** OFF (🔄 gris) para todos los registros
 
 ---
 
@@ -120,14 +130,39 @@ Una vez configurado:
 
 ## 🔍 **CONFIGURACIONES ESPECÍFICAS POR REGISTRADOR**
 
-### **NIC Argentina (.com.ar)**
+### **NIC Argentina (.com.ar) - SOLO REGISTRADOR**
 
-**Panel:** https://nic.ar/
-1. Login con tus credenciales
-2. "Mis dominios" → `daerbon.com.ar`
-3. "DNS" o "Servidores DNS"
-4. Cambiar a "Usar DNS de NIC"
-5. Agregar registros A y CNAME como arriba
+⚠️ **IMPORTANTE:** NIC.ar NO provee servicios DNS, solo es registrador.
+
+**Necesitas configurar DNS externo. Opciones recomendadas:**
+
+#### **OPCIÓN 1: Cloudflare (RECOMENDADO - GRATIS)**
+1. **Crear cuenta:** https://cloudflare.com/
+2. **"Add site"** → `daerbon.com.ar`
+3. **Plan Free** (gratis)
+4. **Cloudflare te dará nameservers** como:
+   ```
+   ada.ns.cloudflare.com
+   sven.ns.cloudflare.com
+   ```
+5. **En NIC.ar panel:**
+   - Login → "Mis dominios" → `daerbon.com.ar`
+   - "Modificar DNS" → "Usar otros DNS"
+   - Poner los nameservers de Cloudflare
+6. **En Cloudflare Dashboard:**
+   - Agregar registros A y CNAME según tablas arriba
+
+#### **OPCIÓN 2: Google Domains DNS (GRATIS)**
+1. **Ir a:** https://domains.google.com/registrar/
+2. **"Use Google Domains DNS"** con dominio externo
+3. **Obtener nameservers Google**
+4. **Configurar en NIC.ar** igual que Cloudflare
+
+#### **OPCIÓN 3: FreeDNS (GRATIS)**
+1. **Crear cuenta:** https://freedns.afraid.org/
+2. **Add domain** → `daerbon.com.ar`
+3. **Obtener nameservers**
+4. **Configurar en NIC.ar**
 
 ### **Donweb**
 
@@ -264,33 +299,54 @@ if (window.location.href.includes(OLD_URL)) {
 
 ---
 
-## ⏱️ **TIMELINE ESTIMADO**
+## ⏱️ **TIMELINE ACTUALIZADO (CON DNS EXTERNO)**
 
 **DÍA 1:**
-- Configurar GitHub Pages (5 min)
-- Configurar DNS (15 min)
-- Iniciar propagación
+- Crear cuenta Cloudflare (5 min)
+- Agregar dominio y obtener nameservers (5 min)
+- Configurar nameservers en NIC.ar (10 min)
+- Agregar registros DNS en Cloudflare (5 min)
+- Configurar GitHub Pages custom domain (5 min)
+- **Esperar propagación:** 2-24 horas
 
 **DÍA 2:**
-- Verificar propagación (5 min)
-- Habilitar HTTPS (automático)
+- Verificar propagación DNS (5 min)
+- Verificar portfolio funciona (5 min)
+- Habilitar HTTPS en GitHub (automático)
 - Testing completo (15 min)
 
 **DÍA 3:**
 - Actualizar materiales marketing
-- Comunicar nuevo dominio
+- Comunicar nuevo dominio en redes
 
-**TOTAL: 30-45 minutos de trabajo real**
+**TOTAL TRABAJO REAL: 45 minutos**
+**TIEMPO DE ESPERA: 24-48 horas (propagación)**
 
 ---
 
-## 🎯 **PRÓXIMOS PASOS INMEDIATOS**
+## 🎯 **PRÓXIMOS PASOS INMEDIATOS (PARA TI)**
 
-1. **Acceder al panel** de tu registrador (15 min)
-2. **Configurar registros DNS** según las tablas (15 min)
-3. **Esperar propagación** (2-24 horas)
-4. **Testing y verificación** (10 min)
-5. **Actualizar bio de Instagram** (5 min)
+### **HOY (30 minutos de trabajo):**
+
+1. **Crear cuenta Cloudflare** → https://cloudflare.com/ (5 min)
+2. **Add site:** `daerbon.com.ar` + plan Free (5 min)
+3. **Copiar nameservers** que te dé Cloudflare (1 min)
+4. **En NIC.ar:** cambiar a esos nameservers (10 min)
+5. **En Cloudflare:** agregar registros A + CNAME (5 min)
+6. **En GitHub:** Settings > Pages > Custom domain: `daerbon.com.ar` (5 min)
+
+### **MAÑANA (verificar):**
+- Comprobar si `daerbon.com.ar` ya carga
+- Si funciona: habilitar HTTPS en GitHub
+- Testing completo
+
+### **¿Por qué Cloudflare?**
+✅ Gratis para siempre
+✅ DNS ultra rápido (1.1.1.1)
+✅ Panel simple y claro
+✅ SSL automático adicional
+✅ Protección DDoS gratis
+✅ Analytics básicos incluidos
 
 ---
 

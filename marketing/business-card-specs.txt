@@ -1,0 +1,155 @@
+/* DAERBON PHOTOGRAPHY - BUSINESS CARD SPECIFICATIONS */
+/* Archivo de configuración para copy-paste en Illustrator */
+
+/* === DOCUMENTO SETUP === */
+Document Size: 96mm x 56mm (with 3mm bleed)
+Color Mode: CMYK + Pantone Spot Colors
+Resolution: 300 PPI
+Profile: Coated FOGRA39 (ISO 12647-2:2004)
+
+/* === PANTONE COLORS === */
+Primary Orange: PANTONE 151 C
+  - RGB: 255, 128, 0
+  - CMYK: C:0 M:60 Y:100 K:0
+  - HEX: #FF8000
+
+Primary Blue: PANTONE 2985 C  
+  - RGB: 71, 199, 252
+  - CMYK: C:65 M:0 Y:0 K:0
+  - HEX: #47C7FC
+
+Black: PANTONE Neutral Black C
+  - RGB: 0, 0, 0  
+  - CMYK: C:0 M:0 Y:0 K:100
+  - HEX: #000000
+
+Cream: PANTONE 7485 C
+  - RGB: 242, 243, 226
+  - CMYK: C:5 M:0 Y:10 K:5  
+  - HEX: #F2F3E2
+
+/* === FRONTAL LAYOUT === */
+
+/* DAERBON - Main Logo */
+Text: "DAERBON"
+Font: Poppins Bold
+Size: 20pt  
+Color: PANTONE 151 C
+Position: X:48mm Y:35mm
+Alignment: Center Horizontal
+
+/* Subtitle */  
+Text: "Fotografía Profesional"
+Font: Poppins Regular
+Size: 9pt
+Color: PANTONE 2985 C  
+Position: X:48mm Y:30mm
+Alignment: Center Horizontal
+
+/* Name */
+Text: "David Eric Bonucci"  
+Font: Poppins Regular
+Size: 8pt
+Color: PANTONE Neutral Black C
+Position: X:48mm Y:26mm
+Alignment: Center Horizontal
+
+/* Contact Info Block */
+Text: "📧 daerbon@gmail.com
+📱 +54 341 357 8224
+📍 Acebal, Santa Fe"
+Font: Poppins Regular  
+Size: 7pt
+Color: PANTONE Neutral Black C
+Position: X:48mm Y:20mm (block center)
+Alignment: Center Horizontal
+Line Spacing: 1.2
+
+/* Services Block */
+Text: "Arquitectura • Naturaleza • Paisajes
+Deportes • Eventos • Astrofotografía"
+Font: Poppins Light
+Size: 7pt  
+Color: PANTONE 2985 C
+Position: X:48mm Y:12mm (block center)
+Alignment: Center Horizontal
+Line Spacing: 1.1
+
+/* === REVERSO LAYOUT === */
+
+/* Background */
+Rectangle: Full bleed (0,0 to 96,56mm)
+Fill: PANTONE 2985 C (100%)
+Stroke: None
+
+/* QR Code Area */
+Rectangle: 18x18mm
+Position: X:39mm Y:30mm (centered)
+Stroke: 2pt White
+Fill: None
+Note: Replace with actual QR code to daerbon.com.ar
+
+/* Portfolio Text */  
+Text: "Visita mi portfolio:"
+Font: Poppins Regular
+Size: 7pt
+Color: White (100%)
+Position: X:48mm Y:20mm
+Alignment: Center Horizontal
+
+/* Website URL */
+Text: "daerbon.com.ar"
+Font: Poppins Bold  
+Size: 8pt
+Color: White (100%)
+Position: X:48mm Y:17mm
+Alignment: Center Horizontal
+
+/* Instagram Text */
+Text: "Sígueme en Instagram:"
+Font: Poppins Regular
+Size: 7pt
+Color: White (100%)  
+Position: X:48mm Y:12mm
+Alignment: Center Horizontal
+
+/* Instagram Handle */
+Text: "@daerbonph"
+Font: Poppins Bold
+Size: 8pt
+Color: White (100%)
+Position: X:48mm Y:9mm  
+Alignment: Center Horizontal
+
+/* Quote */
+Text: "Capturando la belleza de lo cotidiano"
+Font: Poppins Italic
+Size: 6pt
+Color: White (100%)
+Position: X:48mm Y:4mm
+Alignment: Center Horizontal
+
+/* === GUIDES SETUP === */
+Safe Area Margins: 8mm from each edge (5mm + 3mm bleed)
+Vertical Center: 48mm
+Horizontal Center: 28mm  
+QR Safe Zone: 39-57mm horizontal, 21-39mm vertical
+
+/* === EXPORT SETTINGS === */
+Format: PDF/X-1a:2001
+Include: Crop Marks, Bleed Marks, Registration Marks  
+Color Management: Preserve Spot Colors
+Compression: Automatic (JPEG2000)
+Compatibility: Acrobat 4 (PDF 1.3)
+
+/* === PRINT SPECIFICATIONS === */
+Paper: Illustration 300gsm
+Finish: Semi-gloss  
+Cutting: 90x50mm final size
+Pantone Colors: 151 C, 2985 C, Neutral Black C, 7485 C
+Print Method: Offset with spot color separations
+
+/* === BACKUP INFO === */
+Fallback Fonts: If Poppins unavailable, use Montserrat or Helvetica Neue
+Email Backup: contacto@daerbon.com.ar (when domain email is ready)
+QR Backup: Link to GitHub Pages if domain fails
