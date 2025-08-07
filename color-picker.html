@@ -270,7 +270,7 @@
                     <button class="preset-btn" onclick="applyPreset('favorite1')" style="background: linear-gradient(45deg, #FF8000, #47C7FC, #0E131F);">Naranja Brillante</button>
                     <button class="preset-btn" onclick="applyPreset('favorite2')" style="background: linear-gradient(45deg, #0E131F, #FF8000, #47C7FC);">Azul Dominante</button>
                     <button class="preset-btn" onclick="applyPreset('favorite3')" style="background: linear-gradient(45deg, #47C7FC, #0E131F, #FF8000);">Cielo Vibrante</button>
-                    <button class="preset-btn" onclick="applyPreset('favorite4')" style="background: linear-gradient(45deg, #0E131F, #FAD8D6, #FF8000);">Rosa Elegante</button>
+                    <button class="preset-btn" onclick="applyPreset('favorite4')" style="background: linear-gradient(45deg, #0E131F, #F2F3E2, #FF8000);">Neutro Elegante</button>
                 </div>
 
                 <h3 style="margin: 30px 0 15px 0; color: #2c3e50;"><i class="fas fa-random"></i> Generador de Variaciones</h3>
@@ -497,23 +497,23 @@
                     primary: '#FF8000',
                     secondary: '#47C7FC',
                     accent: '#0E131F',
-                    bg: '#FAD8D6'
+                    bg: '#F2F3E2'
                 },
                 favorite2: {
                     primary: '#0E131F',
                     secondary: '#FF8000',
                     accent: '#47C7FC',
-                    bg: '#FAD8D6'
+                    bg: '#F2F3E2'
                 },
                 favorite3: {
                     primary: '#47C7FC',
                     secondary: '#0E131F',
                     accent: '#FF8000',
-                    bg: '#FAD8D6'
+                    bg: '#F2F3E2'
                 },
                 favorite4: {
                     primary: '#0E131F',
-                    secondary: '#FAD8D6',
+                    secondary: '#F2F3E2',
                     accent: '#FF8000',
                     bg: '#47C7FC'
                 }
@@ -700,12 +700,12 @@ Fondo: ${colors.bg}`);
             
             // Pool de tus colores favoritos y similares
             const colorPool = [
-                '#FF8000', '#47C7FC', '#0E131F', '#FAD8D6',
+                '#FF8000', '#47C7FC', '#0E131F', '#F2F3E2',
                 // Variaciones cercanas a tus nuevos favoritos
                 '#FF7700', '#FF9000', '#48C8FD', '#46C6FB', 
-                '#0F141F', '#0D121E', '#FBDAD7', '#F9D6D4',
+                '#0F141F', '#0D121E', '#F3F4E3', '#F1F2E1',
                 '#FF6600', '#FF9900', '#45C5FA', '#49C9FE',
-                '#101520', '#0C111D', '#FCD9D7', '#F8D7D5'
+                '#101520', '#0C111D', '#F4F5E4', '#F0F1E0'
             ];
             
             // Seleccionar 4 colores aleatorios
@@ -719,7 +719,7 @@ Fondo: ${colors.bg}`);
             }
             
             // Asegurar que tengamos un fondo claro
-            const lightColors = ['#FAD8D6', '#FBDAD7', '#F9D6D4', '#FCD9D7', '#F8D7D5'];
+            const lightColors = ['#F2F3E2', '#F3F4E3', '#F1F2E1', '#F4F5E4', '#F0F1E0'];
             selectedColors[3] = lightColors[Math.floor(Math.random() * lightColors.length)];
             
             // Aplicar colores
