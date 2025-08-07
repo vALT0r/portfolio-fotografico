@@ -661,6 +661,29 @@ body {
         max-width: 100%;
         padding: 0 20px;
     }
+    
+    /* Fix about section layout */
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+    
+    .about-image {
+        order: -1; /* Move image above text */
+    }
+    
+    .about-placeholder {
+        width: 250px;
+        height: 320px;
+        margin: 0 auto;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
