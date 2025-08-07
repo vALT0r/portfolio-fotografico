@@ -30,10 +30,10 @@
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo">
-                    <i class="fas fa-camera"></i>
+                <a href="#inicio" class="logo">
+                    <i class="fas fa-camera" aria-hidden="true"></i>
                     <span>Daerbon</span>
-                </div>
+                </a>
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
                     <li><a href="#galeria" class="nav-link">Galería</a></li>
@@ -177,7 +177,8 @@
                         <input type="tel" name="phone" placeholder="Teléfono (opcional)">
                     </div>
                     <div class="form-group">
-                        <select name="service" required>
+                        <label for="service-select" class="visually-hidden">Tipo de Servicio</label>
+                        <select id="service-select" name="service" required>
                             <option value="">Tipo de Servicio</option>
                             <option value="evento-familiar">Evento Familiar (Cumpleaños, Bautismo, Aniversario)</option>
                             <option value="productos">Fotografía de Productos para Comercio</option>

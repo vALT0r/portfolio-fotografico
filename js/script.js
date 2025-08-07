@@ -340,6 +340,16 @@ function initializeSmoothScroll() {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
+            
+            // Fix: Handle logo link to home
+            if (targetId === '#' || targetId === '#inicio') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+            
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
