@@ -1,159 +1,112 @@
-# 📋 Tareas Pendientes - P### **📸 2. ANALIZAR Y CATEGORIZAR FOTOS**
-- **Status:** 🔄 EN PROCESO (Google Photos subiendo 241GB NEF RAW)
-- **Tiempo:** 6-12 horas (subida automática)
-- **Descripción:** Google Photos AI procesará automáticamente
-- **Output:** Disponible mañana para categorización
-- **Siguiente:** Revisar categorización AI cuando termine
+# 📋 Tareas Pendientes - Portfolio Daerbon Photography
 
 *Actualizado: 7 de Agosto, 2025*
 
 ## ✅ **COMPLETADO**
-- ✅ Paleta de colores definida (#FF8000, #47C7FC, #0E131F, #F2F3E2)
+- ✅ Paleta de colores definida y aplicada (#FF8000, #47C7FC, #0E131F, #F2F3E2)
 - ✅ Tipografía Poppins implementada y optimizada
-- ✅ Portfolio técnicamente funcional
-- ✅ Formulario de contacto operativo
-- ✅ Layout responsive optimizado (tablet/mobile)
-- ✅ Herramientas de diseño creadas (color-picker.html, font-selector.html, palette-preview.html)
-- ✅ Galería de imágenes layout arreglado
-- ✅ Dominio daerbon.com.ar adquirido
-- ✅ DNS configurado en Cloudflare (propagando)
+- ✅ Portfolio técnicamente funcional en daerbon.com.ar
+- ✅ Dominio personalizado funcionando con HTTPS
+- ✅ Formulario de contacto operativo (FormSubmit)
+- ✅ Layout responsive optimizado (mobile/tablet/desktop)
+- ✅ Galería de imágenes corregida (heights y espacios)
+- ✅ Google Analytics configurado (G-8XBS134N7Y)
 - ✅ Business cards diseñadas en Illustrator
-- ✅ Dominio daerbon.com.ar funcionando con HTTPS
-- ✅ Google Analytics configurado y funcionando (G-8XBS134N7Y)
+- ✅ DNS configurado en Cloudflare
+- ✅ Email signature profesional preparada
+- ✅ Documentación de marketing organizada
 
 ---
 
 ## 🎯 **PRIORIDADES INMEDIATAS (HOY)**
 
-### **� 1. EMAIL SIGNATURE PROFESIONAL**
-- **Status:** 🎯 NUEVA PRIORIDAD
-- **Tiempo:** 15 minutos
-- **Descripción:** Gmail signature con daerbon.com.ar
-- **Beneficio:** Cada email promociona tu portfolio profesional
-- **Include:** Logo, contacto, nueva URL
+### 📧 **1. INSTALAR EMAIL SIGNATURE**
+- **Status:** 🚀 LISTO PARA INSTALAR
+- **Tiempo:** 5 minutos
+- **Archivo:** `marketing/email-signature.md`
+- **Acción:** Copiar HTML y pegar en Gmail Settings
+- **Beneficio:** Promoción automática en cada email
 
-### **� 2. ANALIZAR Y CATEGORIZAR FOTOS**
-- **Status:** 🆕 NUEVO
-- **Tiempo:** 2-3 horas
-- **Descripción:** Usar AI para clasificar fotos por especialización
-- **Tools:** Adobe Lightroom, Google Photos, apps AI especializadas
-- **Output:** Fotos organizadas por: Arquitectura, Paisajes, Deportes, etc.
+### 📸 **2. ANALIZAR FOTOS CATEGORIZADAS**
+- **Status:** 🔄 EN PROCESO (Google Photos subiendo 241GB NEF RAW)
+- **Tiempo:** 6-12 horas (automático)
+- **Próximo:** Revisar categorización AI mañana
+- **Output:** Fotos organizadas por especialización
 
-### **🖼️ 3. CARGAR PORTFOLIO CON MEJORES FOTOS**
-- **Status:** 🆕 DEPENDIENTE DE #2
-- **Tiempo:** 1 hora
-- **Descripción:** Seleccionar y subir 20-30 mejores fotos
-- **Criterio:** 5-8 fotos por especialización
-
-### **📱 4. INSTAGRAM STRATEGY & LAUNCH POST**
-- **Archivo:** `marketing/instagram-strategy.md`
-- **Status:** ⏸️ PAUSADO hasta portfolio cargado
-- **Descripción:** Primero necesitas portfolio con fotos + aprender Instagram
+### 🖼️ **3. CARGAR PORTFOLIO CON MEJORES FOTOS**
+- **Status:** ⏸️ DEPENDIENTE DE #2
+- **Tiempo:** 1-2 horas
+- **Criterio:** 6-8 fotos por categoría (30 fotos totales)
+- **Especialidades:** Arquitectura, Paisajes, Deportes, Eventos
 
 ---
 
 ## 📅 **ESTA SEMANA**
 
-### **📊 4. GOOGLE ANALYTICS SETUP**
-- **Status:** ⏳ PENDIENTE
+### ⚡ **4. PERFORMANCE OPTIMIZATION CHECK**
 - **Tiempo:** 30 minutos
-- **Descripción:** Tracking de visitantes y conversiones
-- **Beneficio:** Métricas de performance y fuentes de tráfico
+- **Descripción:** PageSpeed test con daerbon.com.ar
+- **Target:** Mobile 85+, Desktop 90+
+- **Tools:** Google PageSpeed Insights
 
-### **⚡ 5. VERIFICAR OPTIMIZACIÓN DE RENDIMIENTO**
-- **Status:** ⏳ PENDIENTE
-- **Tiempo:** 30 minutos
-- **Descripción:** PageSpeed test con dominio nuevo
-- **Target:** Mobile 80+, Desktop 90+
-
-### **📧 6. EMAIL SIGNATURE PROFESIONAL**
-- **Status:** ⏳ PENDIENTE
-- **Tiempo:** 20 minutos
-- **Descripción:** Gmail signature con marca y contacto
-- **Include:** Logo, contacto, portfolio URL
+### 📱 **5. INSTAGRAM STRATEGY & SETUP**
+- **Status:** ⏸️ PAUSADO hasta portfolio cargado
+- **Archivo:** `marketing/instagram-strategy.md`
+- **Prereq:** Portfolio con fotos + aprender Instagram básico
 
 ---
 
 ## 🚀 **PRÓXIMO MES**
 
-### **💳 7. FINALIZAR BUSINESS CARDS**
+### 💳 **6. FINALIZAR BUSINESS CARDS**
 - **Status:** 🔄 EN PAUSA
-- **Descripción:** Adaptar diseño a especificaciones de imprenta local
-- **Siguiente:** Consultar imprentas locales primero
+- **Acción pendiente:** Consultar imprentas locales
+- **Adaptar:** Diseño a specs de imprenta elegida
 
-### **☁️ 8. CLOUDINARY SETUP** *(cuando tengas más fotos)*
-- **Archivo:** `marketing/cloudinary-setup.md`
-- **Status:** 📋 EN LISTA
-- **Descripción:** Hosting y optimización automática de imágenes
-- **Beneficio:** CDN, carga más rápida, mejor SEO
+### ☁️ **7. CLOUDINARY SETUP**
+- **Status:** 📋 EN LISTA (cuando tengas más fotos)
+- **Beneficio:** CDN, carga más rápida, optimización automática
+- **Timeline:** Después de tener 50+ fotos organizadas
 
-### **💰 8. ESTRATEGIA COMERCIAL**
-- **Archivo:** `marketing/estrategia-comercial.md`
-- **Status:** 📋 EN LISTA
-- **Descripción:** Precios actualizados, paquetes, términos
-- **Include:** Pricing en ARS, contratos, facturación
+### 💰 **8. ESTRATEGIA COMERCIAL**
+- **Include:** Precios actualizados ARS, paquetes, contratos
+- **Timeline:** Antes del primer cliente
 
-### **🎯 9. LOCAL NETWORKING PLAN**
-- **Status:** 📋 EN LISTA
-- **Descripción:** Inmobiliarias, comercios locales, eventos
-- **Target:** 5 contactos comerciales por semana
+### 🎯 **9. LOCAL NETWORKING PLAN**
+- **Target:** Inmobiliarias, comercios locales, eventos
+- **Goal:** 5 contactos comerciales por semana
 
 ---
 
 ## 📋 **EN LISTA PARA FUTURO**
 
-### **📧 EMAIL MARKETING** *(no prioritario ahora)*
-- **Status:** 🔄 FUTURO
-- **Descripción:** Newsletter, automatizaciones
-- **Tools:** Mailchimp/ConvertKit cuando sea necesario
-
-### **🔍 SEO AVANZADO** *(no prioritario ahora)*
-- **Status:** 🔄 FUTURO
-- **Descripción:** Meta tags optimizados, structured data
-- **Beneficio:** Mejor ranking en Google
-
-### **💳 PAGOS ONLINE** *(no prioritario ahora)*
-- **Status:** 🔄 FUTURO
-- **Descripción:** MercadoPago, tarjetas de crédito
-- **Para:** Cuando tengas volumen de clientes
+- 📧 **Email marketing** (no prioritario)
+- 🔍 **SEO avanzado** (structured data, meta tags)
+- 💳 **Pagos online** (MercadoPago cuando tengas clientes)
+- 📊 **Pixel de Facebook** (para ads futuras)
 
 ---
 
 ## ❌ **DESCARTADO**
 
-### **📱 PWA (Progressive Web App)**
-- **Status:** ❌ DESCARTADO
-- **Razón:** Complejidad innecesaria para portfolio
-
-### **📊 Pixel de Facebook** *(Marketing ads)*
-- **Status:** 🔄 FUTURO LEJANO
-- **Descripción:** Para remarketing y publicidad paga
-- **Cuando:** Si decides hacer ads en Facebook/Instagram
+- ❌ **PWA** (complejidad innecesaria)
 
 ---
 
 ## 🎯 **MÉTRICAS DE ÉXITO ESPERADAS**
 
 ### **Esta Semana:**
-- 📧 1 email de consulta real
-- 📱 100+ interacciones en Instagram
-- 🌐 100+ visitantes únicos al portfolio
-- 💳 Business cards diseñadas y presupuestadas
+- 📧 Portfolio con email signature activa
+- 📸 Fotos categorizadas por AI  
+- 🌐 100+ visitantes únicos
+- ⚡ Performance score mejorado
 
 ### **Este Mes:**
 - 💰 Primera consulta seria de precio
-- 🤝 5 contactos comerciales establecidos  
-- 📈 200+ visitantes mensuales
+- 🤝 5 contactos comerciales establecidos
+- 📈 200+ visitantes mensuales al portfolio
 - 🎯 1 cliente confirmado
 
 ---
 
-## 📞 **PRÓXIMOS PASOS INMEDIATOS:**
-
-1. **Configura daerbon.com.ar** → Ver `dominio-personalizado.md`
-2. **Diseña las business cards** → Ver `tarjeta-presentacion.md`  
-3. **Publica el launch post** → Ver `instagram-strategy.md`
-
----
-
-*¿Por dónde empezamos? 🚀*
+**🎯 Próxima acción:** Instalar email signature (5 min) → Ver email-signature.md
