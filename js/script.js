@@ -2,71 +2,82 @@
 const CLOUDINARY_CLOUD_NAME = 'daerbon-photography'; // Cambia esto por tu cloud name real cuando lo tengas
 const CLOUDINARY_UPLOAD_PRESET = 'daerbon-portfolio'; // Cambia esto por tu upload preset
 
-// Datos de ejemplo para las fotos (reemplaza con tus imágenes reales de Cloudinary)
+// Portfolio David Eric Bonucci - Especialidades por orden de experiencia
 const galleryData = [
+    // ARQUITECTURA - Tu especialidad principal (10 meses experiencia)
     {
         id: 1,
-        title: "Arquitectura Colonial",
-        description: "Detalles arquitectónicos del centro de Santa Fe",
+        title: "Arquitectura Colonial Acebal",
+        description: "Detalles históricos de mi ciudad natal",
         category: "arquitectura",
         image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=600&fit=crop",
         fullImage: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=1200&fit=crop"
     },
     {
+        id: 7,
+        title: "Arquitectura Moderna Regional",
+        description: "Líneas contemporáneas en Santa Fe",
+        category: "arquitectura",
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=1200&fit=crop"
+    },
+    
+    // PAISAJES - Especialidad natural para ti
+    {
         id: 2,
-        title: "Paisaje Pampeano",
-        description: "Atardecer en los campos de Santa Fe",
+        title: "Paisajes Pampeanos",
+        description: "La belleza cotidiana de los campos santafesinos",
         category: "paisajes",
         image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=600&fit=crop",
         fullImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=1200&fit=crop"
     },
+    
+    // ASTROFOTOGRAFIA - Tu diferenciador único
+    {
+        id: 6,
+        title: "Cielos Estrellados Rurales",
+        description: "Astrofotografía desde el campo santafesino",
+        category: "astrofotografia",
+        image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&h=1200&fit=crop"
+    },
+    
+    // NATURALEZA - Extensión de paisajes
+    {
+        id: 4,
+        title: "Flora Nativa Pampeana",
+        description: "Detalles de la naturaleza regional",
+        category: "naturaleza",
+        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=1200&fit=crop"
+    },
+    
+    // DEPORTES - Potencial para credenciales
     {
         id: 3,
-        title: "Fútbol Local",
-        description: "Acción en el fútbol regional de Santa Fe",
+        title: "Fútbol Regional",
+        description: "Acción deportiva en ligas santafesinas",
         category: "deportes",
         image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=600&fit=crop",
         fullImage: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=1200&fit=crop"
     },
     {
-        id: 4,
-        title: "Flora Nativa",
-        description: "Naturaleza de la región pampeana",
-        category: "naturaleza",
-        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=1200&fit=crop"
-    },
-    {
-        id: 5,
-        title: "Evento Familiar",
-        description: "Celebración familiar en Acebal",
-        category: "eventos",
-        image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=1200&fit=crop"
-    },
-    {
-        id: 6,
-        title: "Cielo Estrellado",
-        description: "Astrofotografía desde el campo santafesino",
-        category: "paisajes",
-        image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&h=1200&fit=crop"
-    },
-    {
-        id: 7,
-        title: "Detalles Modernos",
-        description: "Arquitectura contemporánea en la región",
-        category: "arquitectura",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=1200&fit=crop"
-    },
-    {
         id: 8,
-        title: "Carrera Regional",
-        description: "Automovilismo en pistas de Santa Fe",
+        title: "Automovilismo Regional",
+        description: "Carreras en pistas de Santa Fe",
         category: "deportes",
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=600&fit=crop",
         fullImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop"
+    },
+    
+    // EVENTOS - Oportunidad comercial
+    {
+        id: 5,
+        title: "Eventos Rurales",
+        description: "Celebraciones tradicionales de Acebal",
+        category: "eventos",
+        image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=600&fit=crop",
+        fullImage: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=1200&fit=crop"
     }
 ];
 

@@ -13,28 +13,22 @@
 - ✅ Google Analytics configurado (G-8XBS134N7Y)
 - ✅ Business cards diseñadas en Illustrator
 - ✅ DNS configurado en Cloudflare
-- ✅ Email signature profesional preparada
+- ✅ Email signature profesional instalada en Gmail
+- ✅ Tarjetas de presentación finalizadas (color + B&N)
 - ✅ Documentación de marketing organizada
 
 ---
 
 ## 🎯 **PRIORIDADES INMEDIATAS (HOY)**
 
-### 📧 **1. INSTALAR EMAIL SIGNATURE**
-- **Status:** 🚀 LISTO PARA INSTALAR
-- **Tiempo:** 5 minutos
-- **Archivo:** `marketing/email-signature.md`
-- **Acción:** Copiar HTML y pegar en Gmail Settings
-- **Beneficio:** Promoción automática en cada email
-
-### 📸 **2. ANALIZAR FOTOS CATEGORIZADAS**
+### � **1. ANALIZAR FOTOS CATEGORIZADAS**
 - **Status:** 🔄 EN PROCESO (Google Photos subiendo 241GB NEF RAW)
 - **Tiempo:** 6-12 horas (automático)
 - **Próximo:** Revisar categorización AI mañana
 - **Output:** Fotos organizadas por especialización
 
-### 🖼️ **3. CARGAR PORTFOLIO CON MEJORES FOTOS**
-- **Status:** ⏸️ DEPENDIENTE DE #2
+### 🖼️ **2. CARGAR PORTFOLIO CON MEJORES FOTOS**
+- **Status:** ⏸️ DEPENDIENTE DE #1
 - **Tiempo:** 1-2 horas
 - **Criterio:** 6-8 fotos por categoría (30 fotos totales)
 - **Especialidades:** Arquitectura, Paisajes, Deportes, Eventos
@@ -43,7 +37,7 @@
 
 ## 📅 **ESTA SEMANA**
 
-### ⚡ **4. PERFORMANCE OPTIMIZATION CHECK**
+### ⚡ **3. PERFORMANCE OPTIMIZATION CHECK**
 - **Tiempo:** 30 minutos
 - **Descripción:** PageSpeed test con daerbon.com.ar
 - **Target:** Mobile 85+, Desktop 90+

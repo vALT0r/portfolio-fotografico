@@ -11,6 +11,11 @@ node_modules/
 *.temp
 *~
 
+# Herramientas de desarrollo completadas
+color-picker.html
+font-selector.html
+palette-preview.html
+
 # Thumbnails
 Thumbs.db
 

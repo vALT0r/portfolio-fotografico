@@ -11,27 +11,37 @@ Generar ingresos de $50.000-100.000 ARS mensuales en 6 meses mediante:
 
 ---
 
-## 💰 **ESTRUCTURA DE PRECIOS EN USD**
+## 💰 **ESTRUCTURA DE PRECIOS EN ARS (Actualizada 2025)**
 
-### **🏠 Servicios Inmobiliarios (Alta Demanda)**
-- **Propiedad básica** (5-10 fotos): USD 30-35
-- **Propiedad premium** (15-20 fotos): USD 50-60
-- **Alquiler temporal** (20+ fotos): USD 65-75
+### **🏠 Servicios Inmobiliarios (PRIORIDAD ALTA - De tu lista)**
+- **Propiedad básica** (5-10 fotos): $15.000-25.000 ARS
+- **Propiedad premium** (15-20 fotos): $35.000-45.000 ARS  
+- **Alquiler temporal** (20+ fotos): $45.000-55.000 ARS
 
-### **🎉 Eventos Familiares (Volumen)**
-- **Mini sesión** (1-2 horas, 30 fotos): USD 40-45
-- **Evento completo** (3-4 horas, 50+ fotos): USD 75-85
-- **Cumpleaños infantil** (2 horas): USD 50-55
+### **🎉 Eventos Familiares (De tu experiencia con Google Keep)**
+- **Mini sesión** (30 min-1 hora): $15.000-30.000 ARS
+- **Cumpleaños, bautismos, comuniones** (2-3 horas): $40.000-60.000 ARS
+- **Aniversarios** (3-4 horas): $50.000-80.000 ARS
 
-### **🏪 Fotografía Comercial**
-- **Productos para redes** (10-15 fotos): USD 50-60
-- **Menu restaurante** (20 fotos): USD 70-80
-- **Catálogo comercio** (por día): USD 90-110
+### **🏪 Fotografía Comercial (De tu lista)**
+- **Productos para redes sociales** (10-15 fotos): $25.000-50.000 ARS
+- **Menu restaurante** (20 fotos): $30.000-45.000 ARS
+- **Catálogo comercio** (por día): $60.000-90.000 ARS
 
-### **⚽ Deportes Locales**
-- **Partido de fútbol**: USD 60-70
-- **Carrera/evento deportivo**: USD 80-90
-- **Cobertura mensual club**: USD 160-180
+### **⚽ Deportes Locales (Tu especialidad para credenciales)**
+- **Partido de fútbol regional**: $30.000-50.000 ARS
+- **Carreras automovilísticas**: $50.000-70.000 ARS
+- **Cobertura mensual club**: $80.000-120.000 ARS
+
+### **🌾 Eventos Rurales (Específico de tu región)**
+- **Fiestas patronales**: $40.000-70.000 ARS
+- **Eventos escolares**: $25.000-40.000 ARS
+- **Actividades de clubes deportivos**: $35.000-55.000 ARS
+
+### **⭐ Servicios Especializados (Tu diferenciador)**
+- **Astrofotografía para eventos**: $60.000-90.000 ARS
+- **Arquitectura patrimonial**: $40.000-60.000 ARS
+- **Paisajes para turismo local**: $35.000-50.000 ARS
 
 ---
 
