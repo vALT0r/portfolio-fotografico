@@ -1,83 +1,188 @@
-// Configuración de Cloudinary (reemplaza con tu cloud name)
-const CLOUDINARY_CLOUD_NAME = 'daerbon-photography'; // Cambia esto por tu cloud name real cuando lo tengas
+﻿// ConfiguraciÃ³n de Cloudinary (reemplaza con tu cloud name)
+const CLOUDINARY_CLOUD_NAME = 'dunjl9u7y'; // Cambia esto por tu cloud name real cuando lo tengas
 const CLOUDINARY_UPLOAD_PRESET = 'daerbon-portfolio'; // Cambia esto por tu upload preset
 
-// Portfolio David Eric Bonucci - Especialidades por orden de experiencia
+// Portfolio David Eric Bonucci - Especialidades fotogrÃ¡ficas
 const galleryData = [
-    // ARQUITECTURA - Tu especialidad principal (10 meses experiencia)
+    // ARQUITECTURA
     {
         id: 1,
-        title: "Arquitectura Colonial Acebal",
-        description: "Detalles históricos de mi ciudad natal",
+        title: "Arquitectura ContemporÃ¡nea",
+        description: "LÃ­neas modernas y estructuras urbanas",
         category: "arquitectura",
-        image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=1200&fit=crop"
+        image: "images/Arquitectura/arq-001-thumb.jpg",
+        fullImage: "images/Arquitectura/arq-001.jpg"
+    },
+    {
+        id: 2,
+        title: "Detalles ArquitectÃ³nicos",
+        description: "Texturas y formas en la construcciÃ³n",
+        category: "arquitectura",
+        image: "images/Arquitectura/arq-002-thumb.jpg",
+        fullImage: "images/Arquitectura/arq-002.jpg"
+    },
+    
+    // PAISAJES
+    {
+        id: 3,
+        title: "Paisajes Naturales",
+        description: "La belleza de la naturaleza argentina",
+        category: "paisajes",
+        image: "images/Paisajes/paisaje-001-thumb.jpg",
+        fullImage: "images/Paisajes/paisaje-001.jpg"
+    },
+    {
+        id: 4,
+        title: "Horizontes",
+        description: "Amplitud y perspectiva natural",
+        category: "paisajes",
+        image: "images/Paisajes/paisaje-002-thumb.jpg",
+        fullImage: "images/Paisajes/paisaje-002.jpg"
+    },
+    
+    // ASTROFOTOGRAFÃA - Especialidad tÃ©cnica Ãºnica
+    {
+        id: 5,
+        title: "Luna en Detalle",
+        description: "Fotografía lunar con Nikon Z5 + 150-600mm",
+        category: "astrofotografia",
+        subcategory: "sistema-solar",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_800,c_limit,q_85,f_auto/astrofotografia/luna-001`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/astrofotografia/luna-001`
+    },
+    {
+        id: 6,
+        title: "Nebulosa de OriÃ³n",
+        description: "RegiÃ³n de formaciÃ³n estelar",
+        category: "astrofotografia",
+        subcategory: "espacio-profundo",
+        image: "images/Astrofotografia/orion-nebula-thumb.jpg",
+        fullImage: "images/Astrofotografia/orion-nebula.jpg"
     },
     {
         id: 7,
-        title: "Arquitectura Moderna Regional",
-        description: "Líneas contemporáneas en Santa Fe",
-        category: "arquitectura",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=1200&fit=crop"
-    },
-    
-    // PAISAJES - Especialidad natural para ti
-    {
-        id: 2,
-        title: "Paisajes Pampeanos",
-        description: "La belleza cotidiana de los campos santafesinos",
-        category: "paisajes",
-        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=1200&fit=crop"
-    },
-    
-    // ASTROFOTOGRAFIA - Tu diferenciador único
-    {
-        id: 6,
-        title: "Cielos Estrellados Rurales",
-        description: "Astrofotografía desde el campo santafesino",
+        title: "Eclipse Lunar",
+        description: "FenÃ³meno astronÃ³mico capturado",
         category: "astrofotografia",
-        image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&h=1200&fit=crop"
-    },
-    
-    // NATURALEZA - Extensión de paisajes
-    {
-        id: 4,
-        title: "Flora Nativa Pampeana",
-        description: "Detalles de la naturaleza regional",
-        category: "naturaleza",
-        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=1200&fit=crop"
-    },
-    
-    // DEPORTES - Potencial para credenciales
-    {
-        id: 3,
-        title: "Fútbol Regional",
-        description: "Acción deportiva en ligas santafesinas",
-        category: "deportes",
-        image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=1200&fit=crop"
+        subcategory: "fenomenos",
+        image: "images/Astrofotografia/eclipse-lunar-thumb.jpg",
+        fullImage: "images/Astrofotografia/eclipse-lunar.jpg"
     },
     {
         id: 8,
-        title: "Automovilismo Regional",
-        description: "Carreras en pistas de Santa Fe",
-        category: "deportes",
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop"
+        title: "Nebulosa Carina",
+        description: "Región de formación estelar del hemisferio sur (en proceso)",
+        category: "astrofotografia",
+        image: "https://via.placeholder.com/800x600/1a1a2e/ffffff?text=Nebulosa+Carina+%28Próximamente%29",
+        fullImage: "https://via.placeholder.com/1200x800/1a1a2e/ffffff?text=Nebulosa+Carina+%28En+Proceso%29"
     },
     
-    // EVENTOS - Oportunidad comercial
+    // NATURALEZA
     {
-        id: 5,
-        title: "Eventos Rurales",
-        description: "Celebraciones tradicionales de Acebal",
+        id: 10,
+        title: "Flora Nativa",
+        description: "Detalles de la vegetaciÃ³n local",
+        category: "naturaleza",
+        image: "images/Naturaleza/naturaleza-001-thumb.jpg",
+        fullImage: "images/Naturaleza/naturaleza-001.jpg"
+    },
+    {
+        id: 11,
+        title: "Fauna Silvestre",
+        description: "Vida animal en su hÃ¡bitat",
+        category: "naturaleza",
+        image: "images/Naturaleza/naturaleza-002-thumb.jpg",
+        fullImage: "images/Naturaleza/naturaleza-002.jpg"
+    },
+    
+    // MACRO
+    {
+        id: 12,
+        title: "Macro BotÃ¡nica",
+        description: "Detalles microscÃ³picos de plantas",
+        category: "macro",
+        image: "images/Macro/macro-001-thumb.jpg",
+        fullImage: "images/Macro/macro-001.jpg"
+    },
+    {
+        id: 13,
+        title: "Texturas Naturales",
+        description: "Patrones y formas en detalle",
+        category: "macro",
+        image: "images/Macro/macro-002-thumb.jpg",
+        fullImage: "images/Macro/macro-002.jpg"
+    },
+    
+    // OBJETOS
+    {
+        id: 14,
+        title: "Objetos Cotidianos",
+        description: "Belleza en lo simple",
+        category: "objetos",
+        image: "images/Objetos/objeto-001-thumb.jpg",
+        fullImage: "images/Objetos/objeto-001.jpg"
+    },
+    {
+        id: 15,
+        title: "ComposiciÃ³n ArtÃ­stica",
+        description: "Arreglos y formas creativas",
+        category: "objetos",
+        image: "images/Objetos/objeto-002-thumb.jpg",
+        fullImage: "images/Objetos/objeto-002.jpg"
+    },
+    
+    // RETRATOS
+    {
+        id: 16,
+        title: "Retrato Natural",
+        description: "Expresiones autÃ©nticas",
+        category: "people",
+        image: "images/People/people-001-thumb.jpg",
+        fullImage: "images/People/people-001.jpg"
+    },
+    {
+        id: 17,
+        title: "Retrato Creativo",
+        description: "Juegos de luz y sombra",
+        category: "people",
+        image: "images/People/people-002-thumb.jpg",
+        fullImage: "images/People/people-002.jpg"
+    },
+    
+    // ARTE
+    {
+        id: 18,
+        title: "FotografÃ­a ArtÃ­stica",
+        description: "ExploraciÃ³n visual creativa",
+        category: "arte",
+        image: "images/Arte/arte-001-thumb.jpg",
+        fullImage: "images/Arte/arte-001.jpg"
+    },
+    {
+        id: 19,
+        title: "ComposiciÃ³n Abstracta",
+        description: "Formas y conceptos abstractos",
+        category: "arte",
+        image: "images/Arte/arte-002-thumb.jpg",
+        fullImage: "images/Arte/arte-002.jpg"
+    },
+    
+    // EVENTOS
+    {
+        id: 20,
+        title: "Eventos Especiales",
+        description: "Momentos Ãºnicos capturados",
         category: "eventos",
-        image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=600&fit=crop",
-        fullImage: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=1200&fit=crop"
+        image: "images/Eventos/evento-001-thumb.jpg",
+        fullImage: "images/Eventos/evento-001.jpg"
+    },
+    {
+        id: 21,
+        title: "Celebraciones",
+        description: "AlegrÃ­a y emotividad",
+        category: "eventos",
+        image: "images/Eventos/evento-002-thumb.jpg",
+        fullImage: "images/Eventos/evento-002.jpg"
     }
 ];
 
@@ -85,9 +190,9 @@ const galleryData = [
 let currentImages = [...galleryData];
 let isLoading = false;
 
-// Inicialización cuando la página carga
+// InicializaciÃ³n cuando la pÃ¡gina carga
 document.addEventListener('DOMContentLoaded', function() {
-    // Ocultar loading screen después de un momento
+    // Ocultar loading screen despuÃ©s de un momento
     setTimeout(() => {
         const loadingScreen = document.getElementById('loading-screen');
         loadingScreen.style.opacity = '0';
@@ -104,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSmoothScroll();
 });
 
-// Navegación móvil
+// NavegaciÃ³n mÃ³vil
 function initializeNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -115,7 +220,7 @@ function initializeNavigation() {
         navMenu.classList.toggle('active');
     });
 
-    // Cerrar menú al hacer click en un link
+    // Cerrar menÃº al hacer click en un link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
@@ -145,12 +250,12 @@ function initializeNavigation() {
     });
 }
 
-// Inicializar galería
+// Inicializar galerÃ­a
 function initializeGallery() {
     const galleryGrid = document.getElementById('gallery-grid');
     const filterButtons = document.querySelectorAll('.filter-btn');
 
-    // Función para renderizar imágenes
+    // FunciÃ³n para renderizar imÃ¡genes
     function renderGallery(images) {
         // Limpiar placeholder si existe
         const placeholder = document.querySelector('.gallery-placeholder');
@@ -168,7 +273,7 @@ function initializeGallery() {
             </div>
         `).join('');
 
-        // Animación de entrada
+        // AnimaciÃ³n de entrada
         const galleryItems = document.querySelectorAll('.gallery-item');
         galleryItems.forEach((item, index) => {
             item.style.opacity = '0';
@@ -181,7 +286,7 @@ function initializeGallery() {
         });
     }
 
-    // Filtros de galería
+    // Filtros de galerÃ­a
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Actualizar botones activos
@@ -190,7 +295,7 @@ function initializeGallery() {
 
             const filter = button.getAttribute('data-filter');
             
-            // Filtrar imágenes
+            // Filtrar imÃ¡genes
             if (filter === 'all') {
                 currentImages = [...galleryData];
             } else {
@@ -201,13 +306,13 @@ function initializeGallery() {
         });
     });
 
-    // Renderizar galería inicial (solo si hay datos)
+    // Renderizar galerÃ­a inicial (solo si hay datos)
     if (galleryData.length > 0 && CLOUDINARY_CLOUD_NAME !== 'tu-cloud-name') {
         renderGallery(currentImages);
     }
 }
 
-// Modal para vista ampliada de imágenes
+// Modal para vista ampliada de imÃ¡genes
 function initializeModal() {
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
@@ -236,7 +341,7 @@ function initializeModal() {
     }
 }
 
-// Abrir modal (función global)
+// Abrir modal (funciÃ³n global)
 function openModal(imageId) {
     const image = galleryData.find(item => item.id === imageId);
     if (!image) return;
@@ -260,32 +365,32 @@ function initializeContactForm() {
     const form = document.getElementById('contactForm');
     const submitBtn = form.querySelector('.submit-btn');
     
-    // Configurar la acción del formulario para FormSubmit
+    // Configurar la acciÃ³n del formulario para FormSubmit
     form.action = 'https://formsubmit.co/daerbon@gmail.com';
     
     form.addEventListener('submit', (e) => {
-        // Cambiar estado del botón mientras se envía
+        // Cambiar estado del botÃ³n mientras se envÃ­a
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
         submitBtn.disabled = true;
         
-        // Mostrar notificación de que se está enviando
+        // Mostrar notificaciÃ³n de que se estÃ¡ enviando
         showNotification('Enviando mensaje...', 'info');
         
-        // Permitir que el formulario se envíe normalmente a FormSubmit
-        // FormSubmit se encargará del redirect automáticamente
+        // Permitir que el formulario se envÃ­e normalmente a FormSubmit
+        // FormSubmit se encargarÃ¡ del redirect automÃ¡ticamente
     });
     
-    // Verificar si venimos de un envío exitoso
+    // Verificar si venimos de un envÃ­o exitoso
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('mensaje') === 'enviado') {
-        showNotification('¡Mensaje enviado correctamente! Te contactaré pronto.', 'success');
+        showNotification('Â¡Mensaje enviado correctamente! Te contactarÃ© pronto.', 'success');
         // Limpiar la URL
         window.history.replaceState({}, document.title, window.location.pathname);
     }
 }
 
-// Función para mostrar notificaciones
+// FunciÃ³n para mostrar notificaciones
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
@@ -306,7 +411,7 @@ function showNotification(message, type = 'info') {
         <span>${message}</span>
     `;
     
-    // Estilos para la notificación
+    // Estilos para la notificaciÃ³n
     Object.assign(notification.style, {
         position: 'fixed',
         top: '20px',
@@ -326,12 +431,12 @@ function showNotification(message, type = 'info') {
 
     document.body.appendChild(notification);
 
-    // Animación de entrada
+    // AnimaciÃ³n de entrada
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
     }, 100);
 
-    // Remover después de 5 segundos
+    // Remover despuÃ©s de 5 segundos
     setTimeout(() => {
         notification.style.transform = 'translateX(100%)';
         setTimeout(() => {
@@ -376,7 +481,7 @@ function initializeSmoothScroll() {
     });
 }
 
-// Lazy loading para imágenes
+// Lazy loading para imÃ¡genes
 function lazyLoadImages() {
     const images = document.querySelectorAll('img[loading="lazy"]');
     
@@ -419,7 +524,7 @@ function initializeScrollAnimations() {
     });
 }
 
-// Función para configurar Cloudinary (llamar cuando tengas tu cuenta)
+// FunciÃ³n para configurar Cloudinary (llamar cuando tengas tu cuenta)
 function configureCloudinary(cloudName, uploadPreset) {
     // Actualizar variables
     window.CLOUDINARY_CLOUD_NAME = cloudName;
@@ -427,21 +532,21 @@ function configureCloudinary(cloudName, uploadPreset) {
     
     console.log('Cloudinary configurado:', { cloudName, uploadPreset });
     
-    // Aquí podrías cargar imágenes dinámicamente desde Cloudinary
+    // AquÃ­ podrÃ­as cargar imÃ¡genes dinÃ¡micamente desde Cloudinary
     loadImagesFromCloudinary();
 }
 
-// Cargar imágenes desde Cloudinary (cuando esté configurado)
+// Cargar imÃ¡genes desde Cloudinary (cuando estÃ© configurado)
 function loadImagesFromCloudinary() {
-    // Ejemplo de cómo cargar imágenes desde Cloudinary
-    // Esto requiere configurar tu cuenta y subir las imágenes primero
+    // Ejemplo de cÃ³mo cargar imÃ¡genes desde Cloudinary
+    // Esto requiere configurar tu cuenta y subir las imÃ¡genes primero
     
     if (CLOUDINARY_CLOUD_NAME === 'tu-cloud-name') {
-        console.log('Configura tu cuenta de Cloudinary para cargar las imágenes');
+        console.log('Configura tu cuenta de Cloudinary para cargar las imÃ¡genes');
         return;
     }
     
-    // Aquí implementarías la lógica para cargar tus imágenes reales
+    // AquÃ­ implementarÃ­as la lÃ³gica para cargar tus imÃ¡genes reales
     // desde Cloudinary usando su API
 }
 
@@ -484,7 +589,7 @@ const utils = {
     }
 };
 
-// Inicializar animaciones cuando el DOM esté listo
+// Inicializar animaciones cuando el DOM estÃ© listo
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         initializeScrollAnimations();
@@ -492,7 +597,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
 });
 
-// Optimización del scroll
+// OptimizaciÃ³n del scroll
 window.addEventListener('scroll', utils.throttle(() => {
-    // Aquí puedes añadir efectos de parallax o animaciones basadas en scroll
+    // AquÃ­ puedes aÃ±adir efectos de parallax o animaciones basadas en scroll
 }, 16)); // ~60fps
