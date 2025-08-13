@@ -1,197 +1,625 @@
-﻿// ConfiguraciÃ³n de Cloudinary (reemplaza    // ASTROFOTOGRAFÍA - Especialidad técnica única
-    {
-        id: 5,
-        title: "Luna en Detalle",
-        description: "Fotografía lunar con Nikon Z5 + 150-600mm Sigma",
-        category: "astrofotografia",
-        subcategory: "sistema-solar",
-        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/astrofotografia/001-DSC_9465.jpg`,
-        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/astrofotografia/001-DSC_9465.jpg`
-    },oud name)
-const CLOUDINARY_CLOUD_NAME = 'dunjl9u7y'; // Cambia esto por tu cloud name real cuando lo tengas
-const CLOUDINARY_UPLOAD_PRESET = 'daerbon-portfolio'; // Cambia esto por tu upload preset
+﻿// Configuración de Cloudinary
+const CLOUDINARY_CLOUD_NAME = 'dunjl9u7y';
+const CLOUDINARY_UPLOAD_PRESET = 'daerbon-portfolio';
 
-// Portfolio David Eric Bonucci - Especialidades fotogrÃ¡ficas
+// Portfolio David Eric Bonucci - Array generado automáticamente
 const galleryData = [
-    // ARQUITECTURA
+    // ARQUITECTURA - 10 imágenes
     {
         id: 1,
-        title: "Arquitectura Contemporánea",
-        description: "Líneas modernas y estructuras urbanas",
+        title: "Momento Arquitectura",
+        description: "Diseño arquitectónico en perfecta armonía",
         category: "arquitectura",
-        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/001-DSC_3018.JPG`,
-        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/001-DSC_3018.JPG`
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/001-DSC_7771.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/001-DSC_7771.jpg`
     },
     {
         id: 2,
-        title: "Detalles Arquitectónicos",
-        description: "Texturas y formas en la construcción",
+        title: "Captura Fotográfica Arquitectura",
+        description: "Espacios que inspiran y transforman",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/002-DSC_3140.JPG`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/002-DSC_3140.JPG`
     },
-    
-    // PAISAJES
     {
         id: 3,
-        title: "Horizontes Infinitos",
-        description: "La inmensidad de la naturaleza argentina",
+        title: "Fotografía Arquitectura",
+        description: "Perspectivas únicas de espacios urbanos",
+        category: "arquitectura",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/003-2024Oct13_141430.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/003-2024Oct13_141430.jpg`
+    },
+    {
+        id: 4,
+        title: "Momento Arquitectura",
+        description: "Elementos constructivos con carácter propio",
+        category: "arquitectura",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/004-DSC_0196-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/004-DSC_0196-Enhanced-NR.jpg`
+    },
+    {
+        id: 5,
+        title: "Imagen Arquitectura",
+        description: "Juego de luces y sombras en estructuras",
+        category: "arquitectura",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/005-DSC_5493-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/005-DSC_5493-Enhanced-NR.jpg`
+    },
+    {
+        id: 6,
+        title: "Momento Arquitectura",
+        description: "Líneas modernas y estructuras contemporáneas",
+        category: "arquitectura",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/006-DSC_5434-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/006-DSC_5434-Enhanced-NR.jpg`
+    },
+    {
+        id: 7,
+        title: "Imagen Arquitectura",
+        description: "Diseño arquitectónico en perfecta armonía",
+        category: "arquitectura",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/007-DSC_5462-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/007-DSC_5462-Enhanced-NR.jpg`
+    },
+    {
+        id: 8,
+        title: "Captura Fotográfica Arquitectura",
+        description: "Espacios que inspiran y transforman",
+        category: "arquitectura",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/008-DSC_3018.JPG`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/008-DSC_3018.JPG`
+    },
+    {
+        id: 9,
+        title: "Momento Arquitectura",
+        description: "Geometrías que definen la arquitectura moderna",
+        category: "arquitectura",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/009-DSC_3885.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/009-DSC_3885.jpg`
+    },
+    {
+        id: 10,
+        title: "Imagen Arquitectura",
+        description: "Juego de luces y sombras en estructuras",
+        category: "arquitectura",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/010-DSC_5004.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/010-DSC_5004.jpg`
+    },
+
+
+    // ARTE - 3 imágenes
+    {
+        id: 11,
+        title: "Momento Arte",
+        description: "Expresión artística a través del lente",
+        category: "arte",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arte/001-DSC_0910-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arte/001-DSC_0910-Enhanced-NR.jpg`
+    },
+    {
+        id: 12,
+        title: "Captura Fotográfica Arte",
+        description: "Expresión artística a través del lente",
+        category: "arte",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arte/002-DSC_2203.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arte/002-DSC_2203.jpg`
+    },
+    {
+        id: 13,
+        title: "Imagen Arte",
+        description: "Creatividad visual sin límites",
+        category: "arte",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arte/003-DSC_3878.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arte/003-DSC_3878.jpg`
+    },
+
+
+    // ASTROFOTOGRAFÍA - 1 imágenes
+    {
+        id: 14,
+        title: "Imagen Astrofotografia",
+        description: "Momentos celestiales únicos",
+        category: "astrofotografia",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/astrofotografia/001-DSC_9465.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/astrofotografia/001-DSC_9465.jpg`
+    },
+
+
+    // EVENTOS - 6 imágenes
+    {
+        id: 15,
+        title: "Captura Fotográfica Eventos",
+        description: "Emociones compartidas en grupo",
+        category: "eventos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/001-DSC_7930.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/001-DSC_7930.jpg`
+    },
+    {
+        id: 16,
+        title: "Fotografía Eventos",
+        description: "Historias humanas en imágenes",
+        category: "eventos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/002.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/002.jpg`
+    },
+    {
+        id: 17,
+        title: "Captura Fotográfica Eventos",
+        description: "Conexiones y encuentros memorables",
+        category: "eventos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/003-DSC_1199.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/003-DSC_1199.jpg`
+    },
+    {
+        id: 18,
+        title: "Escena Eventos",
+        description: "Conexiones y encuentros memorables",
+        category: "eventos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/004.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/004.jpg`
+    },
+    {
+        id: 19,
+        title: "Fotografía Eventos",
+        description: "Momentos especiales documentados",
+        category: "eventos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/005.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/005.jpg`
+    },
+    {
+        id: 20,
+        title: "Escena Eventos",
+        description: "Celebraciones llenas de vida",
+        category: "eventos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/006.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/006.jpg`
+    },
+
+
+    // MACRO - 2 imágenes
+    {
+        id: 21,
+        title: "Imagen Macro",
+        description: "Belleza en los elementos más pequeños",
+        category: "macro",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/macro/001-DSC_8179.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/macro/001-DSC_8179.jpg`
+    },
+    {
+        id: 22,
+        title: "Imagen Macro",
+        description: "Mundos ocultos revelados",
+        category: "macro",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/macro/002-DSC_8213.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/macro/002-DSC_8213.jpg`
+    },
+
+
+    // NATURALEZA - 17 imágenes
+    {
+        id: 23,
+        title: "Momento Naturaleza",
+        description: "Ecosistemas locales únicos",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/001-DSC_0059-Enhanced-NR-2.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/001-DSC_0059-Enhanced-NR-2.jpg`
+    },
+    {
+        id: 24,
+        title: "Momento Naturaleza",
+        description: "La riqueza de la fauna local",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/002-DSC_8881.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/002-DSC_8881.jpg`
+    },
+    {
+        id: 25,
+        title: "Momento Naturaleza",
+        description: "La riqueza de la fauna local",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/003-DSC_8856.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/003-DSC_8856.jpg`
+    },
+    {
+        id: 26,
+        title: "Captura Fotográfica Naturaleza",
+        description: "La riqueza de la fauna local",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/004-DSC_0466-Enhanced-NR-2.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/004-DSC_0466-Enhanced-NR-2.jpg`
+    },
+    {
+        id: 27,
+        title: "Momento Naturaleza",
+        description: "Encuentros especiales con la fauna",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/005-DSC_0628.JPG`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/005-DSC_0628.JPG`
+    },
+    {
+        id: 28,
+        title: "Momento Naturaleza",
+        description: "Momentos únicos con la naturaleza",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/006-DSC_0013.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/006-DSC_0013.jpg`
+    },
+    {
+        id: 29,
+        title: "Escena Naturaleza",
+        description: "Vida silvestre en su hábitat natural",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/007-2024Oct13_132750.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/007-2024Oct13_132750.jpg`
+    },
+    {
+        id: 30,
+        title: "Escena Naturaleza",
+        description: "Encuentros especiales con la fauna",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/008-2024Oct11_150354.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/008-2024Oct11_150354.jpg`
+    },
+    {
+        id: 31,
+        title: "Imagen Naturaleza",
+        description: "La belleza de la vida silvestre",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/009-DSC_0058.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/009-DSC_0058.jpg`
+    },
+    {
+        id: 32,
+        title: "Momento Naturaleza",
+        description: "Vida silvestre en su hábitat natural",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/010-DSC_4555.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/010-DSC_4555.jpg`
+    },
+    {
+        id: 33,
+        title: "Imagen Naturaleza",
+        description: "Ecosistemas locales únicos",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/011-DSC_4646-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/011-DSC_4646-Enhanced-NR.jpg`
+    },
+    {
+        id: 34,
+        title: "Captura Fotográfica Naturaleza",
+        description: "Comportamiento natural captado",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/012-DSC_1420.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/012-DSC_1420.jpg`
+    },
+    {
+        id: 35,
+        title: "Momento Naturaleza",
+        description: "La belleza de la vida silvestre",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/013-DSC_0078-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/013-DSC_0078-Enhanced-NR.jpg`
+    },
+    {
+        id: 36,
+        title: "Captura Fotográfica Naturaleza",
+        description: "Vida silvestre en su hábitat natural",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/014-DSC_8667-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/014-DSC_8667-Enhanced-NR.jpg`
+    },
+    {
+        id: 37,
+        title: "Captura Fotográfica Naturaleza",
+        description: "Momentos únicos con la naturaleza",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/016-DSC_0271.JPG`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/016-DSC_0271.JPG`
+    },
+    {
+        id: 38,
+        title: "Momento Naturaleza",
+        description: "Ecosistemas locales únicos",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/017-DSC_5512-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/017-DSC_5512-Enhanced-NR.jpg`
+    },
+    {
+        id: 39,
+        title: "Momento Naturaleza",
+        description: "Momentos únicos con la naturaleza",
+        category: "naturaleza",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/018-DSC_8863-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/018-DSC_8863-Enhanced-NR.jpg`
+    },
+
+
+    // OBJETOS - 5 imágenes
+    {
+        id: 40,
+        title: "Momento Objetos",
+        description: "Juegos de luz en objetos cotidianos",
+        category: "objetos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/001-DSC_5777.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/001-DSC_5777.jpg`
+    },
+    {
+        id: 41,
+        title: "Imagen Objetos",
+        description: "La belleza oculta en lo simple",
+        category: "objetos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/002-DSC_3816.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/002-DSC_3816.jpg`
+    },
+    {
+        id: 42,
+        title: "Captura Fotográfica Objetos",
+        description: "Arreglos creativos y únicos",
+        category: "objetos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/003-DSC_1493.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/003-DSC_1493.jpg`
+    },
+    {
+        id: 43,
+        title: "Momento Objetos",
+        description: "La belleza oculta en lo simple",
+        category: "objetos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/004-DSC_1468-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/004-DSC_1468-Enhanced-NR.jpg`
+    },
+    {
+        id: 44,
+        title: "Imagen Objetos",
+        description: "Detalles que cobran vida propia",
+        category: "objetos",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/005-DSC_5781.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/005-DSC_5781.jpg`
+    },
+
+
+    // PAISAJES - 24 imágenes
+    {
+        id: 45,
+        title: "Imagen Paisajes",
+        description: "La grandeza de los espacios abiertos",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/001-DSC_8764.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/001-DSC_8764.jpg`
     },
     {
-        id: 4,
-        title: "Amaneceres Dorados",
-        description: "La magia de los primeros rayos de sol",
+        id: 46,
+        title: "Imagen Paisajes",
+        description: "Composiciones naturales extraordinarias",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/002-DSC_9222-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/002-DSC_9222-Enhanced-NR.jpg`
     },
-    
-    // ASTROFOTOGRAFÃA - Especialidad tÃ©cnica Ãºnica
     {
-        id: 5,
-        title: "Luna en Detalle",
-        description: "Fotografía lunar con Nikon Z5 + 150-600mm",
-        category: "astrofotografia",
-        subcategory: "sistema-solar",
-        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_800,c_limit,q_85,f_auto/astrofotografia/luna-001`,
-        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/astrofotografia/luna-001`
+        id: 47,
+        title: "Captura Fotográfica Paisajes",
+        description: "Composiciones naturales extraordinarias",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/003-DSC_9214.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/003-DSC_9214.jpg`
     },
     {
-        id: 6,
-        title: "Nebulosa de OriÃ³n",
-        description: "RegiÃ³n de formaciÃ³n estelar",
-        category: "astrofotografia",
-        subcategory: "espacio-profundo",
-        image: "images/Astrofotografia/orion-nebula-thumb.jpg",
-        fullImage: "images/Astrofotografia/orion-nebula.jpg"
+        id: 48,
+        title: "Captura Fotográfica Paisajes",
+        description: "Momentos únicos en la naturaleza",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/004-DSC_8923-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/004-DSC_8923-Enhanced-NR.jpg`
     },
     {
-        id: 7,
-        title: "Eclipse Lunar",
-        description: "FenÃ³meno astronÃ³mico capturado",
-        category: "astrofotografia",
-        subcategory: "fenomenos",
-        image: "images/Astrofotografia/eclipse-lunar-thumb.jpg",
-        fullImage: "images/Astrofotografia/eclipse-lunar.jpg"
+        id: 49,
+        title: "Fotografía Paisajes",
+        description: "Vistas panorámicas de belleza incomparable",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/005-2024Oct11_224444.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/005-2024Oct11_224444.jpg`
     },
     {
-        id: 8,
-        title: "Nebulosa Carina",
-        description: "Región de formación estelar del hemisferio sur (en proceso)",
-        category: "astrofotografia",
-        image: "https://via.placeholder.com/800x600/1a1a2e/ffffff?text=Nebulosa+Carina+%28Próximamente%29",
-        fullImage: "https://via.placeholder.com/1200x800/1a1a2e/ffffff?text=Nebulosa+Carina+%28En+Proceso%29"
-    },
-    
-    // NATURALEZA
-    {
-        id: 10,
-        title: "Flora Nativa",
-        description: "Detalles de la vegetaciÃ³n local",
-        category: "naturaleza",
-        image: "images/Naturaleza/naturaleza-001-thumb.jpg",
-        fullImage: "images/Naturaleza/naturaleza-001.jpg"
+        id: 50,
+        title: "Imagen Paisajes",
+        description: "Paisajes que tocan el alma",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/006-DSC_8873-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/006-DSC_8873-Enhanced-NR.jpg`
     },
     {
-        id: 11,
-        title: "Fauna Silvestre",
-        description: "Vida animal en su hÃ¡bitat",
-        category: "naturaleza",
-        image: "images/Naturaleza/naturaleza-002-thumb.jpg",
-        fullImage: "images/Naturaleza/naturaleza-002.jpg"
-    },
-    
-    // MACRO
-    {
-        id: 12,
-        title: "Macro BotÃ¡nica",
-        description: "Detalles microscÃ³picos de plantas",
-        category: "macro",
-        image: "images/Macro/macro-001-thumb.jpg",
-        fullImage: "images/Macro/macro-001.jpg"
+        id: 51,
+        title: "Momento Paisajes",
+        description: "La grandeza de los espacios abiertos",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/007-DSC_9273-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/007-DSC_9273-Enhanced-NR.jpg`
     },
     {
-        id: 13,
-        title: "Texturas Naturales",
-        description: "Patrones y formas en detalle",
-        category: "macro",
-        image: "images/Macro/macro-002-thumb.jpg",
-        fullImage: "images/Macro/macro-002.jpg"
-    },
-    
-    // OBJETOS
-    {
-        id: 14,
-        title: "Objetos Cotidianos",
-        description: "Belleza en lo simple",
-        category: "objetos",
-        image: "images/Objetos/objeto-001-thumb.jpg",
-        fullImage: "images/Objetos/objeto-001.jpg"
+        id: 52,
+        title: "Momento Paisajes",
+        description: "La magia de los colores naturales",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/008-DSC_9326-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/008-DSC_9326-Enhanced-NR.jpg`
     },
     {
-        id: 15,
-        title: "ComposiciÃ³n ArtÃ­stica",
-        description: "Arreglos y formas creativas",
-        category: "objetos",
-        image: "images/Objetos/objeto-002-thumb.jpg",
-        fullImage: "images/Objetos/objeto-002.jpg"
+        id: 53,
+        title: "Momento Paisajes",
+        description: "Paisajes que tocan el alma",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/009-DSC_0401-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/009-DSC_0401-Enhanced-NR.jpg`
     },
-    
-    // RETRATOS
     {
-        id: 16,
-        title: "Retrato Natural",
-        description: "Expresiones autÃ©nticas",
+        id: 54,
+        title: "Fotografía Paisajes",
+        description: "Vistas panorámicas de belleza incomparable",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/010-2024Oct13_162447.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/010-2024Oct13_162447.jpg`
+    },
+    {
+        id: 55,
+        title: "Fotografía Paisajes",
+        description: "La grandeza de los espacios abiertos",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/011-2024Oct13_162425.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/011-2024Oct13_162425.jpg`
+    },
+    {
+        id: 56,
+        title: "Captura Fotográfica Paisajes",
+        description: "La grandeza de los espacios abiertos",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/012-DSC_8761-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/012-DSC_8761-Enhanced-NR.jpg`
+    },
+    {
+        id: 57,
+        title: "Momento Paisajes",
+        description: "Composiciones naturales extraordinarias",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/013-DSC_8686-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/013-DSC_8686-Enhanced-NR.jpg`
+    },
+    {
+        id: 58,
+        title: "Momento Paisajes",
+        description: "Paisajes que tocan el alma",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/014-DSC_8684-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/014-DSC_8684-Enhanced-NR.jpg`
+    },
+    {
+        id: 59,
+        title: "Imagen Paisajes",
+        description: "Paisajes que tocan el alma",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/015-DSC_8593.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/015-DSC_8593.jpg`
+    },
+    {
+        id: 60,
+        title: "Momento Paisajes",
+        description: "Momentos únicos en la naturaleza",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/016-DSC_4175-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/016-DSC_4175-Enhanced-NR.jpg`
+    },
+    {
+        id: 61,
+        title: "Imagen Paisajes",
+        description: "Composiciones naturales extraordinarias",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/017-DSC_9052-Pano-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/017-DSC_9052-Pano-Enhanced-NR.jpg`
+    },
+    {
+        id: 62,
+        title: "Momento Paisajes",
+        description: "Paisajes que capturan la esencia del lugar",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/018-DSC_4751.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/018-DSC_4751.jpg`
+    },
+    {
+        id: 63,
+        title: "Captura Fotográfica Paisajes",
+        description: "La magia de los colores naturales",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/019-DSC_4680.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/019-DSC_4680.jpg`
+    },
+    {
+        id: 64,
+        title: "Momento Paisajes",
+        description: "La magia de los colores naturales",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/020-DSC_4589.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/020-DSC_4589.jpg`
+    },
+    {
+        id: 65,
+        title: "Captura Fotográfica Paisajes",
+        description: "Vistas panorámicas de belleza incomparable",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/021-DSC_8715-Pano-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/021-DSC_8715-Pano-Enhanced-NR.jpg`
+    },
+    {
+        id: 66,
+        title: "Momento Paisajes",
+        description: "Horizontes que inspiran y conmueven",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/022-DSC_9354-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/022-DSC_9354-Enhanced-NR.jpg`
+    },
+    {
+        id: 67,
+        title: "Momento Paisajes",
+        description: "La magia de los colores naturales",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/023-DSC_9121-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/023-DSC_9121-Enhanced-NR.jpg`
+    },
+    {
+        id: 68,
+        title: "Momento Paisajes",
+        description: "La inmensidad de la naturaleza argentina",
+        category: "paisajes",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/024-DSC_9268.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/024-DSC_9268.jpg`
+    },
+
+
+    // RETRATOS - 6 imágenes
+    {
+        id: 69,
+        title: "Imagen People",
+        description: "La belleza de la expresión humana",
         category: "people",
-        image: "images/People/people-001-thumb.jpg",
-        fullImage: "images/People/people-001.jpg"
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/001-DSC_2444.JPG`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/001-DSC_2444.JPG`
     },
     {
-        id: 17,
-        title: "Retrato Creativo",
-        description: "Juegos de luz y sombra",
+        id: 70,
+        title: "Momento People",
+        description: "La esencia humana en cada imagen",
         category: "people",
-        image: "images/People/people-002-thumb.jpg",
-        fullImage: "images/People/people-002.jpg"
-    },
-    
-    // ARTE
-    {
-        id: 18,
-        title: "FotografÃ­a ArtÃ­stica",
-        description: "ExploraciÃ³n visual creativa",
-        category: "arte",
-        image: "images/Arte/arte-001-thumb.jpg",
-        fullImage: "images/Arte/arte-001.jpg"
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/002-Tigre-DSC_5684.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/002-Tigre-DSC_5684.jpg`
     },
     {
-        id: 19,
-        title: "ComposiciÃ³n Abstracta",
-        description: "Formas y conceptos abstractos",
-        category: "arte",
-        image: "images/Arte/arte-002-thumb.jpg",
-        fullImage: "images/Arte/arte-002.jpg"
-    },
-    
-    // EVENTOS
-    {
-        id: 20,
-        title: "Eventos Especiales",
-        description: "Momentos Ãºnicos capturados",
-        category: "eventos",
-        image: "images/Eventos/evento-001-thumb.jpg",
-        fullImage: "images/Eventos/evento-001.jpg"
+        id: 71,
+        title: "Captura Fotográfica People",
+        description: "Expresiones que cuentan historias",
+        category: "people",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/003-Tigre-DSC_5670.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/003-Tigre-DSC_5670.jpg`
     },
     {
-        id: 21,
-        title: "Celebraciones",
-        description: "AlegrÃ­a y emotividad",
-        category: "eventos",
-        image: "images/Eventos/evento-002-thumb.jpg",
-        fullImage: "images/Eventos/evento-002.jpg"
+        id: 72,
+        title: "Momento People",
+        description: "La belleza de la expresión humana",
+        category: "people",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/004-DSC_2540.JPG`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/004-DSC_2540.JPG`
+    },
+    {
+        id: 73,
+        title: "Imagen People",
+        description: "Momentos íntimos y personales",
+        category: "people",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/005-DSC_5975.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/005-DSC_5975.jpg`
+    },
+    {
+        id: 74,
+        title: "Fotografía People",
+        description: "La belleza de la expresión humana",
+        category: "people",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/006-2024Oct11_125747.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/006-2024Oct11_125747.jpg`
     }
 ];
 
@@ -199,9 +627,9 @@ const galleryData = [
 let currentImages = [...galleryData];
 let isLoading = false;
 
-// InicializaciÃ³n cuando la pÃ¡gina carga
+// Inicialización cuando la página carga
 document.addEventListener('DOMContentLoaded', function() {
-    // Ocultar loading screen despuÃ©s de un momento
+    // Ocultar loading screen después de un momento
     setTimeout(() => {
         const loadingScreen = document.getElementById('loading-screen');
         loadingScreen.style.opacity = '0';
@@ -218,7 +646,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSmoothScroll();
 });
 
-// NavegaciÃ³n mÃ³vil
+// Navegación móvil
 function initializeNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -229,7 +657,7 @@ function initializeNavigation() {
         navMenu.classList.toggle('active');
     });
 
-    // Cerrar menÃº al hacer click en un link
+    // Cerrar menú al hacer click en un link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
@@ -277,11 +705,11 @@ let currentCategory = '';
 let currentImageIndex = 0;
 let currentCategoryImages = [];
 
-// Inicializar galería de categorías
+// Inicializar galer�a de categor�as
 function initializeGallery() {
     const categoryGrid = document.getElementById('category-grid');
 
-    // Agrupar imágenes por categoría
+    // Agrupar im�genes por categor�a
     const categorizedImages = {};
     galleryData.forEach(image => {
         if (!categorizedImages[image.category]) {
@@ -290,7 +718,7 @@ function initializeGallery() {
         categorizedImages[image.category].push(image);
     });
 
-    // Crear tarjetas de categorías
+    // Crear tarjetas de categor�as
     const categoryCards = Object.keys(categorizedImages).map(category => {
         const images = categorizedImages[category];
         const config = categoryConfig[category];
@@ -308,7 +736,7 @@ function initializeGallery() {
 
     categoryGrid.innerHTML = categoryCards;
 
-    // Animación de entrada
+    // Animaci�n de entrada
     const categoryElements = document.querySelectorAll('.category-card');
     categoryElements.forEach((card, index) => {
         card.style.opacity = '0';
@@ -324,7 +752,7 @@ function initializeGallery() {
     initializeCategoryModal();
 }
 
-// Inicializar modal de categoría
+// Inicializar modal de categor�a
 function initializeCategoryModal() {
     const modal = document.getElementById('category-modal');
     const closeBtn = document.getElementById('modal-close');
@@ -338,7 +766,7 @@ function initializeCategoryModal() {
         element.addEventListener('click', closeCategoryModal);
     });
 
-    // Navegación con botones (solo desktop)
+    // Navegaci�n con botones (solo desktop)
     prevBtn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -357,9 +785,9 @@ function initializeCategoryModal() {
     let isDragging = false;
     let hasSwipeStarted = false;
 
-    // Touch events para swipe (móvil/tablet)
+    // Touch events para swipe (m�vil/tablet)
     modalGallery.addEventListener('touchstart', (e) => {
-        // Solo si no es un botón
+        // Solo si no es un bot�n
         if (e.target.closest('.modal-nav-btn')) return;
         
         startX = e.touches[0].clientX;
@@ -393,7 +821,7 @@ function initializeCategoryModal() {
 
     // Mouse events para swipe (desktop como alternativa)
     modalGallery.addEventListener('mousedown', (e) => {
-        // Solo si no es un botón y no es click derecho
+        // Solo si no es un bot�n y no es click derecho
         if (e.target.closest('.modal-nav-btn') || e.button !== 0) return;
         
         startX = e.clientX;
@@ -431,7 +859,7 @@ function initializeCategoryModal() {
         hasSwipeStarted = false;
     });
 
-    // Prevenir el arrastre de imágenes
+    // Prevenir el arrastre de im�genes
     modalGallery.addEventListener('dragstart', (e) => {
         e.preventDefault();
     });
@@ -440,7 +868,7 @@ function initializeCategoryModal() {
     const modalImage = document.getElementById('modal-image');
     const modalImageInfo = document.querySelector('.modal-image-info');
     
-    // Función para toggle del info
+    // Funci�n para toggle del info
     const toggleImageInfo = (e) => {
         e.stopPropagation();
         modalImageInfo.classList.toggle('hidden');
@@ -450,7 +878,7 @@ function initializeCategoryModal() {
     modalImage.addEventListener('click', toggleImageInfo);
     modalImageInfo.addEventListener('click', toggleImageInfo);
 
-    // Cerrar con ESC y navegación con teclado
+    // Cerrar con ESC y navegaci�n con teclado
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeCategoryModal();
@@ -462,7 +890,7 @@ function initializeCategoryModal() {
     });
 }
 
-// Abrir modal de categoría
+// Abrir modal de categor�a
 function openCategoryModal(category) {
     const modal = document.getElementById('category-modal');
     const modalTitle = document.getElementById('modal-title');
@@ -475,7 +903,7 @@ function openCategoryModal(category) {
     
     modalTitle.textContent = categoryConfig[category].name;
     
-    // Detectar si es dispositivo móvil/tablet
+    // Detectar si es dispositivo m�vil/tablet
     const isMobile = window.innerWidth <= 768;
     
     if (!isMobile) {
@@ -485,7 +913,7 @@ function openCategoryModal(category) {
         modalNav.classList.remove('desktop');
         modalGallery.style.cursor = 'default';
         
-        // Mostrar indicador de swipe solo en móvil y solo la primera vez
+        // Mostrar indicador de swipe solo en m�vil y solo la primera vez
         if (currentCategoryImages.length > 1) {
             showSwipeIndicator();
         }
@@ -506,7 +934,7 @@ function showSwipeIndicator() {
     
     modalGallery.appendChild(indicator);
     
-    // Remover después de 3 segundos
+    // Remover despu�s de 3 segundos
     setTimeout(() => {
         if (indicator.parentNode) {
             indicator.remove();
@@ -514,7 +942,7 @@ function showSwipeIndicator() {
     }, 3000);
 }
 
-// Cerrar modal de categoría
+// Cerrar modal de categor�a
 function closeCategoryModal() {
     const modal = document.getElementById('category-modal');
     modal.classList.remove('active');
@@ -550,7 +978,7 @@ function updateModalImage() {
     };
     preloadImage.src = currentImage.fullImage;
     
-    // Actualizar información
+    // Actualizar informaci�n
     modalImageTitle.textContent = currentImage.title;
     modalImageDescription.textContent = currentImage.description;
     
@@ -598,7 +1026,7 @@ function initializeModal() {
 }
 */
 
-// Función openModal original (comentada - ahora usamos openCategoryModal)
+// Funci�n openModal original (comentada - ahora usamos openCategoryModal)
 /*
 function openModal(imageId) {
     const image = galleryData.find(item => item.id === imageId);
@@ -624,32 +1052,32 @@ function initializeContactForm() {
     const form = document.getElementById('contactForm');
     const submitBtn = form.querySelector('.submit-btn');
     
-    // Configurar la acciÃ³n del formulario para FormSubmit
+    // Configurar la acción del formulario para FormSubmit
     form.action = 'https://formsubmit.co/daerbon@gmail.com';
     
     form.addEventListener('submit', (e) => {
-        // Cambiar estado del botÃ³n mientras se envÃ­a
+        // Cambiar estado del botón mientras se envía
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
         submitBtn.disabled = true;
         
-        // Mostrar notificaciÃ³n de que se estÃ¡ enviando
+        // Mostrar notificación de que se está enviando
         showNotification('Enviando mensaje...', 'info');
         
-        // Permitir que el formulario se envÃ­e normalmente a FormSubmit
-        // FormSubmit se encargarÃ¡ del redirect automÃ¡ticamente
+        // Permitir que el formulario se envíe normalmente a FormSubmit
+        // FormSubmit se encargará del redirect automáticamente
     });
     
-    // Verificar si venimos de un envÃ­o exitoso
+    // Verificar si venimos de un envío exitoso
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('mensaje') === 'enviado') {
-        showNotification('Â¡Mensaje enviado correctamente! Te contactarÃ© pronto.', 'success');
+        showNotification('¡Mensaje enviado correctamente! Te contactaré pronto.', 'success');
         // Limpiar la URL
         window.history.replaceState({}, document.title, window.location.pathname);
     }
 }
 
-// FunciÃ³n para mostrar notificaciones
+// Función para mostrar notificaciones
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
@@ -670,7 +1098,7 @@ function showNotification(message, type = 'info') {
         <span>${message}</span>
     `;
     
-    // Estilos para la notificaciÃ³n
+    // Estilos para la notificación
     Object.assign(notification.style, {
         position: 'fixed',
         top: '20px',
@@ -690,12 +1118,12 @@ function showNotification(message, type = 'info') {
 
     document.body.appendChild(notification);
 
-    // AnimaciÃ³n de entrada
+    // Animación de entrada
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
     }, 100);
 
-    // Remover despuÃ©s de 5 segundos
+    // Remover después de 5 segundos
     setTimeout(() => {
         notification.style.transform = 'translateX(100%)';
         setTimeout(() => {
@@ -740,7 +1168,7 @@ function initializeSmoothScroll() {
     });
 }
 
-// Lazy loading para imÃ¡genes
+// Lazy loading para imágenes
 function lazyLoadImages() {
     const images = document.querySelectorAll('img[loading="lazy"]');
     
@@ -783,7 +1211,7 @@ function initializeScrollAnimations() {
     });
 }
 
-// FunciÃ³n para configurar Cloudinary (llamar cuando tengas tu cuenta)
+// Función para configurar Cloudinary (llamar cuando tengas tu cuenta)
 function configureCloudinary(cloudName, uploadPreset) {
     // Actualizar variables
     window.CLOUDINARY_CLOUD_NAME = cloudName;
@@ -791,21 +1219,21 @@ function configureCloudinary(cloudName, uploadPreset) {
     
     console.log('Cloudinary configurado:', { cloudName, uploadPreset });
     
-    // AquÃ­ podrÃ­as cargar imÃ¡genes dinÃ¡micamente desde Cloudinary
+    // Aquí podrías cargar imágenes dinámicamente desde Cloudinary
     loadImagesFromCloudinary();
 }
 
-// Cargar imÃ¡genes desde Cloudinary (cuando estÃ© configurado)
+// Cargar imágenes desde Cloudinary (cuando esté configurado)
 function loadImagesFromCloudinary() {
-    // Ejemplo de cÃ³mo cargar imÃ¡genes desde Cloudinary
-    // Esto requiere configurar tu cuenta y subir las imÃ¡genes primero
+    // Ejemplo de cómo cargar imágenes desde Cloudinary
+    // Esto requiere configurar tu cuenta y subir las imágenes primero
     
     if (CLOUDINARY_CLOUD_NAME === 'tu-cloud-name') {
-        console.log('Configura tu cuenta de Cloudinary para cargar las imÃ¡genes');
+        console.log('Configura tu cuenta de Cloudinary para cargar las imágenes');
         return;
     }
     
-    // AquÃ­ implementarÃ­as la lÃ³gica para cargar tus imÃ¡genes reales
+    // Aquí implementarías la lógica para cargar tus imágenes reales
     // desde Cloudinary usando su API
 }
 
@@ -848,7 +1276,7 @@ const utils = {
     }
 };
 
-// Inicializar animaciones cuando el DOM estÃ© listo
+// Inicializar animaciones cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         initializeScrollAnimations();
@@ -856,7 +1284,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
 });
 
-// OptimizaciÃ³n del scroll
+// Optimización del scroll
 window.addEventListener('scroll', utils.throttle(() => {
-    // AquÃ­ puedes aÃ±adir efectos de parallax o animaciones basadas en scroll
+    // Aquí puedes añadir efectos de parallax o animaciones basadas en scroll
 }, 16)); // ~60fps

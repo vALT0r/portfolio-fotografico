@@ -87,6 +87,20 @@
             <div class="category-grid" id="category-grid">
                 <!-- Las categorías se cargarán dinámicamente aquí -->
             </div>
+            
+            <!-- Gallery Images Container -->
+            <div class="gallery-container" id="gallery-container" style="display: none;">
+                <div class="gallery-header">
+                    <h3 id="gallery-title">Todas las Fotografías</h3>
+                    <button class="back-to-categories" id="back-to-categories">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver a Categorías
+                    </button>
+                </div>
+                <div class="gallery-images" id="gallery">
+                    <!-- Las imágenes se cargarán dinámicamente aquí -->
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,6 +133,20 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="image-modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-image">
+            <img id="modal-image" class="modal-image" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+        <button class="prev" onclick="previousImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
     </div>
 
     <!-- About Section -->
