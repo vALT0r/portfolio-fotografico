@@ -330,29 +330,45 @@ function initializeCategoryModal() {
     });
 
     // Navegación con botones (solo desktop)
-    prevBtn.addEventListener('click', () => navigateModal(-1));
-    nextBtn.addEventListener('click', () => navigateModal(1));
+    prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        navigateModal(-1);
+    });
+    
+    nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        navigateModal(1);
+    });
 
     // Variables para swipe
     let startX = 0;
     let currentX = 0;
     let isDragging = false;
+    let hasSwipeStarted = false;
 
     // Touch events para swipe (móvil/tablet)
     modalGallery.addEventListener('touchstart', (e) => {
+        // Solo si no es un botón
+        if (e.target.closest('.modal-nav-btn')) return;
+        
         startX = e.touches[0].clientX;
         isDragging = true;
+        hasSwipeStarted = false;
     });
 
     modalGallery.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
         currentX = e.touches[0].clientX;
+        hasSwipeStarted = true;
         e.preventDefault();
     });
 
     modalGallery.addEventListener('touchend', (e) => {
-        if (!isDragging) return;
+        if (!isDragging || !hasSwipeStarted) return;
         isDragging = false;
+        hasSwipeStarted = false;
         
         const diff = startX - currentX;
         const threshold = 50;
@@ -368,14 +384,20 @@ function initializeCategoryModal() {
 
     // Mouse events para swipe (desktop como alternativa)
     modalGallery.addEventListener('mousedown', (e) => {
+        // Solo si no es un botón y no es click derecho
+        if (e.target.closest('.modal-nav-btn') || e.button !== 0) return;
+        
         startX = e.clientX;
         isDragging = true;
+        hasSwipeStarted = false;
         modalGallery.style.cursor = 'grabbing';
+        e.preventDefault();
     });
 
     modalGallery.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         currentX = e.clientX;
+        hasSwipeStarted = true;
     });
 
     modalGallery.addEventListener('mouseup', (e) => {
@@ -383,16 +405,26 @@ function initializeCategoryModal() {
         isDragging = false;
         modalGallery.style.cursor = 'grab';
         
-        const diff = startX - currentX;
-        const threshold = 50;
-        
-        if (Math.abs(diff) > threshold) {
-            if (diff > 0) {
-                navigateModal(1);
-            } else {
-                navigateModal(-1);
+        // Solo navegar si realmente hubo un arrastre significativo
+        if (hasSwipeStarted) {
+            const diff = startX - currentX;
+            const threshold = 50;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    navigateModal(1);
+                } else {
+                    navigateModal(-1);
+                }
             }
         }
+        
+        hasSwipeStarted = false;
+    });
+
+    // Prevenir el arrastre de imágenes
+    modalGallery.addEventListener('dragstart', (e) => {
+        e.preventDefault();
     });
 
     // Cerrar con ESC y navegación con teclado
