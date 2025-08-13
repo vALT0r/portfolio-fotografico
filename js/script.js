@@ -427,6 +427,20 @@ function initializeCategoryModal() {
         e.preventDefault();
     });
 
+    // Toggle del modal-image-info al tocar imagen o texto
+    const modalImage = document.getElementById('modal-image');
+    const modalImageInfo = document.querySelector('.modal-image-info');
+    
+    // Función para toggle del info
+    const toggleImageInfo = (e) => {
+        e.stopPropagation();
+        modalImageInfo.classList.toggle('hidden');
+    };
+    
+    // Event listeners para toggle
+    modalImage.addEventListener('click', toggleImageInfo);
+    modalImageInfo.addEventListener('click', toggleImageInfo);
+
     // Cerrar con ESC y navegación con teclado
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
@@ -530,6 +544,12 @@ function updateModalImage() {
     // Actualizar información
     modalImageTitle.textContent = currentImage.title;
     modalImageDescription.textContent = currentImage.description;
+    
+    // Mostrar el modal-image-info por defecto
+    const modalImageInfo = document.querySelector('.modal-image-info');
+    if (modalImageInfo) {
+        modalImageInfo.classList.remove('hidden');
+    }
     
     // Remover indicador de swipe si existe
     const swipeIndicator = document.querySelector('.swipe-indicator');
