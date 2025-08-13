@@ -292,7 +292,6 @@ function initializeGallery() {
                 <img class="category-card-image" src="${firstImage.image}" alt="${config.name}" loading="lazy">
                 <div class="category-overlay">
                     <h3 class="category-title">${config.name}</h3>
-                    <p class="category-count">${images.length} ${images.length === 1 ? 'imagen' : 'imágenes'}</p>
                 </div>
             </div>
         `;
@@ -323,17 +322,80 @@ function initializeCategoryModal() {
     const prevBtn = document.getElementById('modal-prev');
     const nextBtn = document.getElementById('modal-next');
     const background = document.querySelector('.modal-background');
+    const modalGallery = document.querySelector('.modal-gallery');
 
     // Cerrar modal
     [closeBtn, background].forEach(element => {
         element.addEventListener('click', closeCategoryModal);
     });
 
-    // Navegación
+    // Navegación con botones (solo desktop)
     prevBtn.addEventListener('click', () => navigateModal(-1));
     nextBtn.addEventListener('click', () => navigateModal(1));
 
-    // Cerrar con ESC
+    // Variables para swipe
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+
+    // Touch events para swipe (móvil/tablet)
+    modalGallery.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    });
+
+    modalGallery.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+        e.preventDefault();
+    });
+
+    modalGallery.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const diff = startX - currentX;
+        const threshold = 50;
+        
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                navigateModal(1); // Swipe left - next image
+            } else {
+                navigateModal(-1); // Swipe right - previous image
+            }
+        }
+    });
+
+    // Mouse events para swipe (desktop como alternativa)
+    modalGallery.addEventListener('mousedown', (e) => {
+        startX = e.clientX;
+        isDragging = true;
+        modalGallery.style.cursor = 'grabbing';
+    });
+
+    modalGallery.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        currentX = e.clientX;
+    });
+
+    modalGallery.addEventListener('mouseup', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        modalGallery.style.cursor = 'grab';
+        
+        const diff = startX - currentX;
+        const threshold = 50;
+        
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                navigateModal(1);
+            } else {
+                navigateModal(-1);
+            }
+        }
+    });
+
+    // Cerrar con ESC y navegación con teclado
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeCategoryModal();
@@ -349,16 +411,52 @@ function initializeCategoryModal() {
 function openCategoryModal(category) {
     const modal = document.getElementById('category-modal');
     const modalTitle = document.getElementById('modal-title');
+    const modalNav = document.querySelector('.modal-nav');
+    const modalGallery = document.querySelector('.modal-gallery');
     
     currentCategory = category;
     currentCategoryImages = galleryData.filter(img => img.category === category);
     currentImageIndex = 0;
     
     modalTitle.textContent = categoryConfig[category].name;
+    
+    // Detectar si es dispositivo móvil/tablet
+    const isMobile = window.innerWidth <= 768;
+    
+    if (!isMobile) {
+        modalNav.classList.add('desktop');
+        modalGallery.style.cursor = 'grab';
+    } else {
+        modalNav.classList.remove('desktop');
+        modalGallery.style.cursor = 'default';
+        
+        // Mostrar indicador de swipe solo en móvil y solo la primera vez
+        if (currentCategoryImages.length > 1) {
+            showSwipeIndicator();
+        }
+    }
+    
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     
     updateModalImage();
+}
+
+// Mostrar indicador de swipe
+function showSwipeIndicator() {
+    const modalGallery = document.querySelector('.modal-gallery');
+    const indicator = document.createElement('div');
+    indicator.className = 'swipe-indicator';
+    indicator.innerHTML = '<i class="fas fa-hand-paper"></i><br>Desliza para navegar';
+    
+    modalGallery.appendChild(indicator);
+    
+    // Remover después de 3 segundos
+    setTimeout(() => {
+        if (indicator.parentNode) {
+            indicator.remove();
+        }
+    }, 3000);
 }
 
 // Cerrar modal de categoría
@@ -390,11 +488,24 @@ function updateModalImage() {
     
     const currentImage = currentCategoryImages[currentImageIndex];
     
-    modalImage.src = currentImage.fullImage;
-    modalImage.alt = currentImage.title;
+    // Precargar imagen para evitar saltos
+    const preloadImage = new Image();
+    preloadImage.onload = function() {
+        modalImage.src = currentImage.fullImage;
+        modalImage.alt = currentImage.title;
+    };
+    preloadImage.src = currentImage.fullImage;
+    
+    // Actualizar información
     modalImageTitle.textContent = currentImage.title;
     modalImageDescription.textContent = currentImage.description;
     modalCounter.textContent = `${currentImageIndex + 1} / ${currentCategoryImages.length}`;
+    
+    // Remover indicador de swipe si existe
+    const swipeIndicator = document.querySelector('.swipe-indicator');
+    if (swipeIndicator) {
+        swipeIndicator.remove();
+    }
 }
 
 // Modal original (comentado - ahora usamos initializeCategoryModal)
