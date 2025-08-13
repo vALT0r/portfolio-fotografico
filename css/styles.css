@@ -504,11 +504,11 @@ p {
 }
 
 .modal-nav {
-    display: none; /* Oculto por defecto, se mostrará en desktop */
+    display: none; /* Oculto por defecto en móvil */
 }
 
 .modal-nav.desktop {
-    display: flex;
+    display: flex !important;
     position: absolute;
     top: 50%;
     left: 0;
@@ -518,6 +518,7 @@ p {
     align-items: center;
     padding: 0 2rem;
     pointer-events: none;
+    z-index: 1004;
 }
 
 .modal-prev,
@@ -535,6 +536,7 @@ p {
     transition: var(--transition);
     pointer-events: all;
     backdrop-filter: blur(10px);
+    z-index: 1005;
 }
 
 .modal-prev:hover,
@@ -649,12 +651,6 @@ p {
     
     .modal-image {
         max-height: 65vh;
-    }
-}
-
-@media (min-width: 769px) {
-    .modal-nav.desktop {
-        display: flex;
     }
 }
 
