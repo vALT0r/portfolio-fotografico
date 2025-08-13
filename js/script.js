@@ -516,7 +516,6 @@ function updateModalImage() {
     const modalImage = document.getElementById('modal-image');
     const modalImageTitle = document.getElementById('modal-image-title');
     const modalImageDescription = document.getElementById('modal-image-description');
-    const modalCounter = document.getElementById('modal-counter');
     
     const currentImage = currentCategoryImages[currentImageIndex];
     
@@ -531,7 +530,6 @@ function updateModalImage() {
     // Actualizar información
     modalImageTitle.textContent = currentImage.title;
     modalImageDescription.textContent = currentImage.description;
-    modalCounter.textContent = `${currentImageIndex + 1} / ${currentCategoryImages.length}`;
     
     // Remover indicador de swipe si existe
     const swipeIndicator = document.querySelector('.swipe-indicator');

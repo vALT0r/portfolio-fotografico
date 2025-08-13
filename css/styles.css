@@ -544,20 +544,6 @@ p {
     color: var(--primary-color);
 }
 
-.modal-counter {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--white);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 500;
-    font-size: 0.9rem;
-    backdrop-filter: blur(10px);
-}
-
 .modal-gallery {
     flex: 1;
     display: flex;
@@ -658,12 +644,6 @@ p {
     
     .modal-image {
         max-height: 65vh;
-    }
-    
-    .modal-counter {
-        bottom: 1rem;
-        padding: 0.3rem 0.8rem;
-        font-size: 0.8rem;
     }
 }
 
