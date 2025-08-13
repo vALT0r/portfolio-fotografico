@@ -1,4 +1,13 @@
-﻿// ConfiguraciÃ³n de Cloudinary (reemplaza con tu cloud name)
+﻿// ConfiguraciÃ³n de Cloudinary (reemplaza    // ASTROFOTOGRAFÍA - Especialidad técnica única
+    {
+        id: 5,
+        title: "Luna en Detalle",
+        description: "Fotografía lunar con Nikon Z5 + 150-600mm Sigma",
+        category: "astrofotografia",
+        subcategory: "sistema-solar",
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/astrofotografia/001-DSC_9465.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/astrofotografia/001-DSC_9465.jpg`
+    },oud name)
 const CLOUDINARY_CLOUD_NAME = 'dunjl9u7y'; // Cambia esto por tu cloud name real cuando lo tengas
 const CLOUDINARY_UPLOAD_PRESET = 'daerbon-portfolio'; // Cambia esto por tu upload preset
 
@@ -7,37 +16,37 @@ const galleryData = [
     // ARQUITECTURA
     {
         id: 1,
-        title: "Arquitectura ContemporÃ¡nea",
-        description: "LÃ­neas modernas y estructuras urbanas",
+        title: "Arquitectura Contemporánea",
+        description: "Líneas modernas y estructuras urbanas",
         category: "arquitectura",
-        image: "images/Arquitectura/arq-001-thumb.jpg",
-        fullImage: "images/Arquitectura/arq-001.jpg"
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/001-DSC_3018.JPG`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/001-DSC_3018.JPG`
     },
     {
         id: 2,
-        title: "Detalles ArquitectÃ³nicos",
-        description: "Texturas y formas en la construcciÃ³n",
+        title: "Detalles Arquitectónicos",
+        description: "Texturas y formas en la construcción",
         category: "arquitectura",
-        image: "images/Arquitectura/arq-002-thumb.jpg",
-        fullImage: "images/Arquitectura/arq-002.jpg"
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/002-DSC_3140.JPG`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/002-DSC_3140.JPG`
     },
     
     // PAISAJES
     {
         id: 3,
-        title: "Paisajes Naturales",
-        description: "La belleza de la naturaleza argentina",
+        title: "Horizontes Infinitos",
+        description: "La inmensidad de la naturaleza argentina",
         category: "paisajes",
-        image: "images/Paisajes/paisaje-001-thumb.jpg",
-        fullImage: "images/Paisajes/paisaje-001.jpg"
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/001-DSC_8764.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/001-DSC_8764.jpg`
     },
     {
         id: 4,
-        title: "Horizontes",
-        description: "Amplitud y perspectiva natural",
+        title: "Amaneceres Dorados",
+        description: "La magia de los primeros rayos de sol",
         category: "paisajes",
-        image: "images/Paisajes/paisaje-002-thumb.jpg",
-        fullImage: "images/Paisajes/paisaje-002.jpg"
+        image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/002-DSC_9222-Enhanced-NR.jpg`,
+        fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/002-DSC_9222-Enhanced-NR.jpg`
     },
     
     // ASTROFOTOGRAFÃA - Especialidad tÃ©cnica Ãºnica
