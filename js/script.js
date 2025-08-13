@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeGallery();
     initializeContactForm();
-    initializeModal();
+    // initializeModal(); // Comentado - ahora usamos initializeCategoryModal
     initializeSmoothScroll();
 });
 
@@ -250,69 +250,155 @@ function initializeNavigation() {
     });
 }
 
-// Inicializar galerÃ­a
+// Configuración de categorías
+const categoryConfig = {
+    arquitectura: { name: 'Arquitectura', icon: 'fas fa-building' },
+    paisajes: { name: 'Paisajes', icon: 'fas fa-mountain' },
+    astrofotografia: { name: 'Astrofotografía', icon: 'fas fa-moon' },
+    naturaleza: { name: 'Naturaleza', icon: 'fas fa-leaf' },
+    macro: { name: 'Macro', icon: 'fas fa-search-plus' },
+    objetos: { name: 'Objetos', icon: 'fas fa-cube' },
+    people: { name: 'Retratos', icon: 'fas fa-user' },
+    arte: { name: 'Arte', icon: 'fas fa-palette' },
+    eventos: { name: 'Eventos', icon: 'fas fa-calendar' }
+};
+
+// Variables globales para el modal
+let currentCategory = '';
+let currentImageIndex = 0;
+let currentCategoryImages = [];
+
+// Inicializar galería de categorías
 function initializeGallery() {
-    const galleryGrid = document.getElementById('gallery-grid');
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    const categoryGrid = document.getElementById('category-grid');
 
-    // FunciÃ³n para renderizar imÃ¡genes
-    function renderGallery(images) {
-        // Limpiar placeholder si existe
-        const placeholder = document.querySelector('.gallery-placeholder');
-        if (placeholder) {
-            placeholder.remove();
+    // Agrupar imágenes por categoría
+    const categorizedImages = {};
+    galleryData.forEach(image => {
+        if (!categorizedImages[image.category]) {
+            categorizedImages[image.category] = [];
         }
-
-        galleryGrid.innerHTML = images.map(item => `
-            <div class="gallery-item" data-category="${item.category}" onclick="openModal(${item.id})">
-                <img src="${item.image}" alt="${item.title}" loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>${item.title}</h3>
-                    <p>${item.description}</p>
-                </div>
-            </div>
-        `).join('');
-
-        // AnimaciÃ³n de entrada
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        galleryItems.forEach((item, index) => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                item.style.transition = 'all 0.5s ease';
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
-            }, index * 100);
-        });
-    }
-
-    // Filtros de galerÃ­a
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Actualizar botones activos
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            const filter = button.getAttribute('data-filter');
-            
-            // Filtrar imÃ¡genes
-            if (filter === 'all') {
-                currentImages = [...galleryData];
-            } else {
-                currentImages = galleryData.filter(item => item.category === filter);
-            }
-
-            renderGallery(currentImages);
-        });
+        categorizedImages[image.category].push(image);
     });
 
-    // Renderizar galerÃ­a inicial (solo si hay datos)
-    if (galleryData.length > 0 && CLOUDINARY_CLOUD_NAME !== 'tu-cloud-name') {
-        renderGallery(currentImages);
-    }
+    // Crear tarjetas de categorías
+    const categoryCards = Object.keys(categorizedImages).map(category => {
+        const images = categorizedImages[category];
+        const config = categoryConfig[category];
+        const firstImage = images[0];
+        
+        return `
+            <div class="category-card" onclick="openCategoryModal('${category}')" data-category="${category}">
+                <img class="category-card-image" src="${firstImage.image}" alt="${config.name}" loading="lazy">
+                <div class="category-overlay">
+                    <h3 class="category-title">${config.name}</h3>
+                    <p class="category-count">${images.length} ${images.length === 1 ? 'imagen' : 'imágenes'}</p>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    categoryGrid.innerHTML = categoryCards;
+
+    // Animación de entrada
+    const categoryElements = document.querySelectorAll('.category-card');
+    categoryElements.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        setTimeout(() => {
+            card.style.transition = 'all 0.6s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, index * 150);
+    });
+
+    // Inicializar modal
+    initializeCategoryModal();
 }
 
-// Modal para vista ampliada de imÃ¡genes
+// Inicializar modal de categoría
+function initializeCategoryModal() {
+    const modal = document.getElementById('category-modal');
+    const closeBtn = document.getElementById('modal-close');
+    const prevBtn = document.getElementById('modal-prev');
+    const nextBtn = document.getElementById('modal-next');
+    const background = document.querySelector('.modal-background');
+
+    // Cerrar modal
+    [closeBtn, background].forEach(element => {
+        element.addEventListener('click', closeCategoryModal);
+    });
+
+    // Navegación
+    prevBtn.addEventListener('click', () => navigateModal(-1));
+    nextBtn.addEventListener('click', () => navigateModal(1));
+
+    // Cerrar con ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeCategoryModal();
+        }
+        if (modal.classList.contains('active')) {
+            if (e.key === 'ArrowLeft') navigateModal(-1);
+            if (e.key === 'ArrowRight') navigateModal(1);
+        }
+    });
+}
+
+// Abrir modal de categoría
+function openCategoryModal(category) {
+    const modal = document.getElementById('category-modal');
+    const modalTitle = document.getElementById('modal-title');
+    
+    currentCategory = category;
+    currentCategoryImages = galleryData.filter(img => img.category === category);
+    currentImageIndex = 0;
+    
+    modalTitle.textContent = categoryConfig[category].name;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    updateModalImage();
+}
+
+// Cerrar modal de categoría
+function closeCategoryModal() {
+    const modal = document.getElementById('category-modal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Navegar en el modal
+function navigateModal(direction) {
+    currentImageIndex += direction;
+    
+    if (currentImageIndex < 0) {
+        currentImageIndex = currentCategoryImages.length - 1;
+    } else if (currentImageIndex >= currentCategoryImages.length) {
+        currentImageIndex = 0;
+    }
+    
+    updateModalImage();
+}
+
+// Actualizar imagen del modal
+function updateModalImage() {
+    const modalImage = document.getElementById('modal-image');
+    const modalImageTitle = document.getElementById('modal-image-title');
+    const modalImageDescription = document.getElementById('modal-image-description');
+    const modalCounter = document.getElementById('modal-counter');
+    
+    const currentImage = currentCategoryImages[currentImageIndex];
+    
+    modalImage.src = currentImage.fullImage;
+    modalImage.alt = currentImage.title;
+    modalImageTitle.textContent = currentImage.title;
+    modalImageDescription.textContent = currentImage.description;
+    modalCounter.textContent = `${currentImageIndex + 1} / ${currentCategoryImages.length}`;
+}
+
+// Modal original (comentado - ahora usamos initializeCategoryModal)
+/*
 function initializeModal() {
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
@@ -340,8 +426,10 @@ function initializeModal() {
         document.body.style.overflow = 'auto';
     }
 }
+*/
 
-// Abrir modal (funciÃ³n global)
+// Función openModal original (comentada - ahora usamos openCategoryModal)
+/*
 function openModal(imageId) {
     const image = galleryData.find(item => item.id === imageId);
     if (!image) return;
@@ -359,6 +447,7 @@ function openModal(imageId) {
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
+*/
 
 // Formulario de contacto
 function initializeContactForm() {

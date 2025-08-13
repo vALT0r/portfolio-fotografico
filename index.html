@@ -81,28 +81,45 @@
     <section id="galeria" class="gallery-section">
         <div class="container">
             <h2 class="section-title">Mi Trabajo</h2>
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="arquitectura">Arquitectura</button>
-                <button class="filter-btn" data-filter="paisajes">Paisajes</button>
-                <button class="filter-btn" data-filter="astrofotografia">Astrofotografía</button>
-                <button class="filter-btn" data-filter="naturaleza">Naturaleza</button>
-                <button class="filter-btn" data-filter="macro">Macro</button>
-                <button class="filter-btn" data-filter="objetos">Objetos</button>
-                <button class="filter-btn" data-filter="people">Retratos</button>
-                <button class="filter-btn" data-filter="arte">Arte</button>
-                <button class="filter-btn" data-filter="eventos">Eventos</button>
-            </div>
-            <div class="gallery-grid" id="gallery-grid">
-                <!-- Las imágenes se cargarán dinámicamente aquí -->
-                <div class="gallery-placeholder">
-                    <i class="fas fa-images fa-3x"></i>
-                    <p>Tus fotos aparecerán aquí una vez configuradas</p>
-                    <p class="placeholder-note">Configura Cloudinary para mostrar tu galería</p>
-                </div>
+            <p class="section-subtitle">Explora mis especialidades fotográficas</p>
+            
+            <!-- Category Cards Grid -->
+            <div class="category-grid" id="category-grid">
+                <!-- Las categorías se cargarán dinámicamente aquí -->
             </div>
         </div>
     </section>
+
+    <!-- Category Gallery Modal -->
+    <div class="category-modal" id="category-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title"></h3>
+                <div class="modal-nav">
+                    <button class="modal-prev" id="modal-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span class="modal-counter" id="modal-counter"></span>
+                    <button class="modal-next" id="modal-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-gallery">
+                <div class="modal-image-container">
+                    <img class="modal-image" id="modal-image" src="" alt="">
+                    <div class="modal-image-info">
+                        <h4 id="modal-image-title"></h4>
+                        <p id="modal-image-description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section id="sobre-mi" class="about-section">
