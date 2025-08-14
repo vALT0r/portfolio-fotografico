@@ -50,17 +50,16 @@ portfolio-fotografico/
 │   └── script.js                # Sistema completo de galerías y precarga
 ├── images/
 │   └── me.jpg                   # Imagen personal del fotógrafo
-├── generate_gallery_data.py      # Script Python para generar datos
-├── gallery-data-generated.js     # Datos generados automáticamente
-├── marketing/                   # Documentación de estrategias
+├── ROADMAP.md                   # Plan maestro de tareas pendientes
+├── MARKETING-GUIDE.md           # Estrategia comercial y marketing
 ├── .github/
 │   └── copilot-instructions.md
 └── README.md
 ```
 
 ### Archivos Generados Automáticamente:
-- `gallery-data-generated.js`: Arrays JavaScript con URLs de Cloudinary
-- `gallery_data_backup.json`: Respaldo en formato JSON
+- Arrays JavaScript integrados en `js/script.js`
+- Respaldos JSON para recuperación de datos
 - Logs de generación con estadísticas por categoría
 
 ## 🛠️ Uso del Sistema
@@ -239,6 +238,11 @@ Este portfolio fue desarrollado específicamente para **Daerbon Photography**. L
 - 🖼️ Navegación entre imágenes: Instantánea (con precarga)
 - 📱 Responsive: Optimizado para todos los dispositivos  
 - 🔍 SEO Score: Optimizado para búsqueda local
+
+## 📋 Documentación de Proyecto
+
+- **`ROADMAP.md`**: Plan maestro de tareas pendientes organizadas por prioridad
+- **`MARKETING-GUIDE.md`**: Estrategia comercial completa, precios, templates y targets
 
 ---
 
