@@ -705,6 +705,11 @@ let currentCategory = '';
 let currentImageIndex = 0;
 let currentCategoryImages = [];
 
+// Sistema de cache y precarga de imágenes
+const imageCache = new Map();
+const preloadQueue = new Set();
+let isPreloading = false;
+
 // Inicializar galer�a de categor�as
 function initializeGallery() {
     const categoryGrid = document.getElementById('category-grid');
@@ -750,6 +755,11 @@ function initializeGallery() {
 
     // Inicializar modal
     initializeCategoryModal();
+    
+    // Precargar de forma inteligente las primeras imágenes de las categorías más populares
+    setTimeout(() => {
+        preloadCategoryHighlights();
+    }, 2000); // Esperar 2 segundos después de la carga inicial
 }
 
 // Inicializar modal de categor�a
@@ -923,6 +933,20 @@ function openCategoryModal(category) {
     document.body.style.overflow = 'hidden';
     
     updateModalImage();
+    
+    // Precargar la primera imagen y las siguientes de forma anticipada
+    if (currentCategoryImages.length > 0) {
+        // Precargar inmediatamente las primeras 3 imágenes de la categoría
+        const imagesToPreload = currentCategoryImages
+            .slice(0, Math.min(3, currentCategoryImages.length))
+            .map(img => img.fullImage);
+            
+        imagesToPreload.forEach(src => {
+            if (!imageCache.has(src)) {
+                preloadImage(src).catch(err => console.warn('Error precargando:', src));
+            }
+        });
+    }
 }
 
 // Mostrar indicador de swipe
@@ -947,6 +971,15 @@ function closeCategoryModal() {
     const modal = document.getElementById('category-modal');
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
+    
+    // Limpiar cache si tiene más de 20 imágenes para ahorrar memoria
+    if (imageCache.size > 20) {
+        // Mantener solo las últimas 10 imágenes más usadas
+        const entries = Array.from(imageCache.entries());
+        entries.slice(0, entries.length - 10).forEach(([key]) => {
+            imageCache.delete(key);
+        });
+    }
 }
 
 // Navegar en el modal
@@ -967,32 +1000,204 @@ function updateModalImage() {
     const modalImage = document.getElementById('modal-image');
     const modalImageTitle = document.getElementById('modal-image-title');
     const modalImageDescription = document.getElementById('modal-image-description');
+    const modalImageContainer = document.querySelector('.modal-image-container');
     
     const currentImage = currentCategoryImages[currentImageIndex];
     
-    // Precargar imagen para evitar saltos
-    const preloadImage = new Image();
-    preloadImage.onload = function() {
-        modalImage.src = currentImage.fullImage;
-        modalImage.alt = currentImage.title;
-    };
-    preloadImage.src = currentImage.fullImage;
+    // Mostrar loading spinner solo si la imagen no está en cache
+    if (!imageCache.has(currentImage.fullImage)) {
+        showModalLoading(modalImageContainer);
+    }
     
-    // Actualizar informaci�n
-    modalImageTitle.textContent = currentImage.title;
-    modalImageDescription.textContent = currentImage.description;
-    
-    // Mostrar el modal-image-info por defecto
+    // Ocultar información mientras carga
     const modalImageInfo = document.querySelector('.modal-image-info');
     if (modalImageInfo) {
-        modalImageInfo.classList.remove('hidden');
+        modalImageInfo.classList.add('hidden');
     }
+    
+    // Usar sistema de cache para obtener imagen
+    getImageFromCache(currentImage.fullImage)
+        .then((cachedImage) => {
+            // Ocultar loading spinner
+            hideModalLoading();
+            
+            modalImage.src = currentImage.fullImage;
+            modalImage.alt = currentImage.title;
+            
+            // Si la imagen estaba en cache, mostrar inmediatamente
+            if (imageCache.has(currentImage.fullImage)) {
+                modalImage.style.opacity = '1';
+            } else {
+                // Fade in para imágenes nuevas
+                modalImage.style.opacity = '0';
+                setTimeout(() => {
+                    modalImage.style.transition = 'opacity 0.3s ease';
+                    modalImage.style.opacity = '1';
+                }, 50);
+            }
+            
+            // Actualizar información
+            modalImageTitle.textContent = currentImage.title;
+            modalImageDescription.textContent = currentImage.description;
+            
+            // Mostrar información después de cargar
+            if (modalImageInfo) {
+                modalImageInfo.classList.remove('hidden');
+            }
+            
+            // Precargar imágenes adyacentes después de mostrar la actual
+            setTimeout(() => preloadAdjacentImages(), 100);
+        })
+        .catch((error) => {
+            // Ocultar loading spinner en caso de error
+            hideModalLoading();
+            console.error('Error cargando imagen:', currentImage.fullImage, error);
+            
+            // Mostrar información incluso si hay error
+            if (modalImageInfo) {
+                modalImageInfo.classList.remove('hidden');
+            }
+        });
     
     // Remover indicador de swipe si existe
     const swipeIndicator = document.querySelector('.swipe-indicator');
     if (swipeIndicator) {
         swipeIndicator.remove();
     }
+}
+
+// Mostrar loading spinner en el modal
+function showModalLoading(container) {
+    // Remover loading anterior si existe
+    hideModalLoading();
+    
+    const loadingDiv = document.createElement('div');
+    loadingDiv.className = 'modal-loading';
+    loadingDiv.innerHTML = `
+        <div class="modal-loading-spinner"></div>
+        <div class="modal-loading-text">Cargando imagen...</div>
+    `;
+    
+    container.appendChild(loadingDiv);
+}
+
+// Ocultar loading spinner
+function hideModalLoading() {
+    const existingLoading = document.querySelector('.modal-loading');
+    if (existingLoading) {
+        existingLoading.remove();
+    }
+}
+
+// Sistema de precarga de imágenes
+function preloadImage(src) {
+    return new Promise((resolve, reject) => {
+        // Si ya está en cache, resolver inmediatamente
+        if (imageCache.has(src)) {
+            resolve(imageCache.get(src));
+            return;
+        }
+        
+        const img = new Image();
+        img.onload = () => {
+            imageCache.set(src, img);
+            resolve(img);
+        };
+        img.onerror = reject;
+        img.src = src;
+    });
+}
+
+// Precargar imágenes adyacentes
+function preloadAdjacentImages() {
+    if (currentCategoryImages.length <= 1 || isPreloading) return;
+    
+    isPreloading = true;
+    const imagesToPreload = [];
+    
+    // Imagen siguiente
+    const nextIndex = (currentImageIndex + 1) % currentCategoryImages.length;
+    if (nextIndex !== currentImageIndex) {
+        imagesToPreload.push(currentCategoryImages[nextIndex].fullImage);
+    }
+    
+    // Imagen anterior
+    const prevIndex = currentImageIndex === 0 ? currentCategoryImages.length - 1 : currentImageIndex - 1;
+    if (prevIndex !== currentImageIndex && prevIndex !== nextIndex) {
+        imagesToPreload.push(currentCategoryImages[prevIndex].fullImage);
+    }
+    
+    // Precargar las siguientes 2 imágenes si hay suficientes
+    if (currentCategoryImages.length > 3) {
+        const nextNext = (nextIndex + 1) % currentCategoryImages.length;
+        if (nextNext !== currentImageIndex && !imagesToPreload.includes(currentCategoryImages[nextNext].fullImage)) {
+            imagesToPreload.push(currentCategoryImages[nextNext].fullImage);
+        }
+    }
+    
+    // Ejecutar precarga de forma asíncrona
+    Promise.allSettled(
+        imagesToPreload
+            .filter(src => !imageCache.has(src) && !preloadQueue.has(src))
+            .map(src => {
+                preloadQueue.add(src);
+                return preloadImage(src).finally(() => preloadQueue.delete(src));
+            })
+    ).finally(() => {
+        isPreloading = false;
+    });
+}
+
+// Obtener imagen del cache o cargar
+function getImageFromCache(src) {
+    if (imageCache.has(src)) {
+        return Promise.resolve(imageCache.get(src));
+    }
+    return preloadImage(src);
+}
+
+// Precargar imágenes destacadas de las categorías
+function preloadCategoryHighlights() {
+    // Definir prioridad de categorías (las más visitadas primero)
+    const priorityCategories = ['paisajes', 'arquitectura', 'naturaleza', 'people'];
+    const imagesToPreload = [];
+    
+    // Precargar la primera imagen de cada categoría prioritaria
+    priorityCategories.forEach(category => {
+        const categoryImages = galleryData.filter(img => img.category === category);
+        if (categoryImages.length > 0) {
+            imagesToPreload.push(categoryImages[0].fullImage);
+            // Precargar también la segunda imagen si existe
+            if (categoryImages.length > 1) {
+                imagesToPreload.push(categoryImages[1].fullImage);
+            }
+        }
+    });
+    
+    // Precargar de forma secuencial para no saturar la red
+    let preloadIndex = 0;
+    const preloadNext = () => {
+        if (preloadIndex >= imagesToPreload.length) return;
+        
+        const src = imagesToPreload[preloadIndex];
+        if (!imageCache.has(src)) {
+            preloadImage(src)
+                .then(() => {
+                    preloadIndex++;
+                    // Pequeño delay entre precargas para no interferir con la navegación
+                    setTimeout(preloadNext, 500);
+                })
+                .catch(() => {
+                    preloadIndex++;
+                    setTimeout(preloadNext, 100);
+                });
+        } else {
+            preloadIndex++;
+            setTimeout(preloadNext, 50);
+        }
+    };
+    
+    preloadNext();
 }
 
 // Modal original (comentado - ahora usamos initializeCategoryModal)
