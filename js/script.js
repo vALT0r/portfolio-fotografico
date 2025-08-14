@@ -7,620 +7,605 @@ const galleryData = [
     // ARQUITECTURA - 10 imágenes
     {
         id: 1,
-        title: "Momento Arquitectura",
-        description: "Diseño arquitectónico en perfecta armonía",
+        title: "Edificio de noche - Exposición larga",
+        description: "Captura de larga exposición durante noche sin luna en Rosario.",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/001-DSC_7771.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/001-DSC_7771.jpg`
     },
     {
         id: 2,
-        title: "Captura Fotográfica Arquitectura",
-        description: "Espacios que inspiran y transforman",
+        title: "Torre Grande - Embalse",
+        description: "Toma con encuadre simetrico del puente y Torre en lago de Embalse.",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/002-DSC_3140.JPG`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/002-DSC_3140.JPG`
     },
     {
         id: 3,
-        title: "Fotografía Arquitectura",
-        description: "Perspectivas únicas de espacios urbanos",
+        title: "Planta Nuclear Embalse - Exterior",
+        description: "Captura de arquitectura y entorno exterior.",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/003-2024Oct13_141430.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/003-2024Oct13_141430.jpg`
     },
     {
         id: 4,
-        title: "Momento Arquitectura",
-        description: "Elementos constructivos con carácter propio",
+        title: "Molino, tanque de agua y campo - Arquitectura",
+        description: "Un poco de campo, un poco de urbanización. Evolución.",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/004-DSC_0196-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/004-DSC_0196-Enhanced-NR.jpg`
     },
     {
         id: 5,
-        title: "Imagen Arquitectura",
-        description: "Juego de luces y sombras en estructuras",
+        title: "Estación de trenes - Acebal",
+        description: "Captura del anden, oficina de encomiendas.",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/005-DSC_5493-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/005-DSC_5493-Enhanced-NR.jpg`
     },
     {
         id: 6,
-        title: "Momento Arquitectura",
-        description: "Líneas modernas y estructuras contemporáneas",
+        title: "Stella Maris - Parque Urquiza, Rosario",
+        description: "Edición de enfoque visual",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/006-DSC_5434-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/006-DSC_5434-Enhanced-NR.jpg`
     },
     {
         id: 7,
-        title: "Imagen Arquitectura",
-        description: "Diseño arquitectónico en perfecta armonía",
+        title: "Arte callejera - Parque España, Rosario",
+        description: "Edicion de enfoque visual.",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/007-DSC_5462-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/007-DSC_5462-Enhanced-NR.jpg`
     },
     {
         id: 8,
-        title: "Captura Fotográfica Arquitectura",
-        description: "Espacios que inspiran y transforman",
+        title: "Torre Grande - Embalse",
+        description: "Toma con encuadre diagonal del puente y Torre en lago de Embalse.",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/008-DSC_3018.JPG`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/008-DSC_3018.JPG`
     },
     {
         id: 9,
-        title: "Momento Arquitectura",
-        description: "Geometrías que definen la arquitectura moderna",
+        title: "Estilo alpino patagónico - Bariloche",
+        description: "Centro Cívico Bariloche, capturado durante navidad 2024.",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/009-DSC_3885.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/009-DSC_3885.jpg`
     },
     {
         id: 10,
-        title: "Imagen Arquitectura",
-        description: "Juego de luces y sombras en estructuras",
+        title: "Estadio Mas Monumental River Plate - CBA, Argentina",
+        description: "Vista aerea del estadio y predios deportivos.",
         category: "arquitectura",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arquitectura/010-DSC_5004.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arquitectura/010-DSC_5004.jpg`
     },
-
-
     // ARTE - 3 imágenes
+    
     {
         id: 11,
-        title: "Momento Arte",
-        description: "Expresión artística a través del lente",
+        title: "Grullas de Origami - Jardin Japones",
+        description: "Adorno artistico en ingreso al salon principal, evento 1.000.000 de grullas.",
         category: "arte",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arte/001-DSC_0910-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arte/001-DSC_0910-Enhanced-NR.jpg`
     },
     {
         id: 12,
-        title: "Captura Fotográfica Arte",
-        description: "Expresión artística a través del lente",
+        title: "Candelabro moderno hierro",
+        description: "Captura artistica",
         category: "arte",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arte/002-DSC_2203.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arte/002-DSC_2203.jpg`
     },
     {
         id: 13,
-        title: "Imagen Arte",
-        description: "Creatividad visual sin límites",
+        title: "Arbol Navidad - Centro Civico Bariloche",
+        description: "Captura artistica con contraste en publico.",
         category: "arte",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/arte/003-DSC_3878.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/arte/003-DSC_3878.jpg`
     },
-
-
-    // ASTROFOTOGRAFÍA - 1 imágenes
+   // ASTROFOTOGRAFÍA - 1 imágenes
     {
         id: 14,
-        title: "Imagen Astrofotografia",
-        description: "Momentos celestiales únicos",
+        title: "Luna Llena - 7/8/2024",
+        description: "Captura y edicion para destacar contrastes y tonalidades de la superficie.",
         category: "astrofotografia",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/astrofotografia/001-DSC_9465.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/astrofotografia/001-DSC_9465.jpg`
     },
-
-
     // EVENTOS - 6 imágenes
     {
         id: 15,
-        title: "Captura Fotográfica Eventos",
-        description: "Emociones compartidas en grupo",
+        title: "Shavo Odadjian - SOAD Argentina 2025",
+        description: "Recital System of a Down, Shavo en el centro, Serj y John detras.",
         category: "eventos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/001-DSC_7930.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/001-DSC_7930.jpg`
     },
     {
         id: 16,
-        title: "Fotografía Eventos",
-        description: "Historias humanas en imágenes",
+        title: "Shavo Odadjian - SOAD Argentina 2025",
+        description: "Recital System of a Down, Shavo al frente y John detras.",
         category: "eventos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/002.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/002.jpg`
     },
     {
         id: 17,
-        title: "Captura Fotográfica Eventos",
-        description: "Conexiones y encuentros memorables",
+        title: "Cartel Neon/LED - Nerdearla",
+        description: "Captura artistica en evento.",
         category: "eventos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/003-DSC_1199.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/003-DSC_1199.jpg`
     },
     {
         id: 18,
-        title: "Escena Eventos",
-        description: "Conexiones y encuentros memorables",
+        title: "Serj Tankian y Daron Malakian - SOAD Argentina 2025",
+        description: "Recital System of a Down, Daron y Serj en guitarras.",
         category: "eventos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/004.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/004.jpg`
     },
     {
         id: 19,
-        title: "Fotografía Eventos",
-        description: "Momentos especiales documentados",
+        title: "Serj Tankian - SOAD Argentina 2025",
+        description: "Serj cantando.",
         category: "eventos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/005.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/005.jpg`
     },
     {
         id: 20,
-        title: "Escena Eventos",
-        description: "Celebraciones llenas de vida",
+        title: "Recital System of a Down, Daron en guitarra",
+        description: ".",
         category: "eventos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/eventos/006.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/eventos/006.jpg`
     },
-
-
     // MACRO - 2 imágenes
     {
         id: 21,
-        title: "Imagen Macro",
-        description: "Belleza en los elementos más pequeños",
+        title: "Moneda 2 Centavos 1883 - Macrofotografia",
+        description: "Fotografia Macro en detalle.",
         category: "macro",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/macro/001-DSC_8179.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/macro/001-DSC_8179.jpg`
     },
     {
         id: 22,
-        title: "Imagen Macro",
-        description: "Mundos ocultos revelados",
+        title: "Pildora en blister - Macrofotografia",
+        description: "Fotografia Macro en detalle.",
         category: "macro",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/macro/002-DSC_8213.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/macro/002-DSC_8213.jpg`
     },
-
-
     // NATURALEZA - 17 imágenes
     {
         id: 23,
-        title: "Momento Naturaleza",
-        description: "Ecosistemas locales únicos",
+        title: "Chimango en vuelo - Acebal",
+        description: "Captura fotografica de aves.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/001-DSC_0059-Enhanced-NR-2.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/001-DSC_0059-Enhanced-NR-2.jpg`
     },
     {
         id: 24,
-        title: "Momento Naturaleza",
-        description: "La riqueza de la fauna local",
+        title: "Carancho observando - Rutas de Santa Cruz",
+        description: "Captura fotografica de aves.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/002-DSC_8881.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/002-DSC_8881.jpg`
     },
     {
         id: 25,
-        title: "Momento Naturaleza",
-        description: "La riqueza de la fauna local",
+        title: "Hereford - Santa Cruz",
+        description: "Captura fotografica de animales.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/003-DSC_8856.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/003-DSC_8856.jpg`
     },
     {
         id: 26,
-        title: "Captura Fotográfica Naturaleza",
-        description: "La riqueza de la fauna local",
+        title: "Pava de Monte - Reserva Puertos",
+        description: "Captura fotografica de aves.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/004-DSC_0466-Enhanced-NR-2.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/004-DSC_0466-Enhanced-NR-2.jpg`
     },
     {
         id: 27,
-        title: "Momento Naturaleza",
-        description: "Encuentros especiales con la fauna",
+        title: "Azaleas - Jardin Japones",
+        description: "Captura fotografica de flora.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/005-DSC_0628.JPG`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/005-DSC_0628.JPG`
     },
     {
         id: 28,
-        title: "Momento Naturaleza",
-        description: "Momentos únicos con la naturaleza",
+        title: "Cotorra - Acebal",
+        description: "Captura fotografica de aves.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/006-DSC_0013.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/006-DSC_0013.jpg`
     },
     {
         id: 29,
-        title: "Escena Naturaleza",
-        description: "Vida silvestre en su hábitat natural",
+        title: "Caballo Andino - Sur Argentino",
+        description: "Captura fotografica de animales.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/007-2024Oct13_132750.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/007-2024Oct13_132750.jpg`
     },
     {
         id: 30,
-        title: "Escena Naturaleza",
-        description: "Encuentros especiales con la fauna",
+        title: "Zorzal - Sur Argentino",
+        description: "Captura fotografica de aves.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/008-2024Oct11_150354.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/008-2024Oct11_150354.jpg`
     },
     {
         id: 31,
-        title: "Imagen Naturaleza",
-        description: "La belleza de la vida silvestre",
+        title: "Chimango despegando - Acebal",
+        description: "Captura fotografica de aves.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/009-DSC_0058.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/009-DSC_0058.jpg`
     },
     {
         id: 32,
-        title: "Momento Naturaleza",
-        description: "Vida silvestre en su hábitat natural",
+        title: "Zorro andino - Sur Argentino",
+        description: "Captura fotografica de animales.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/010-DSC_4555.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/010-DSC_4555.jpg`
     },
     {
         id: 33,
-        title: "Imagen Naturaleza",
-        description: "Ecosistemas locales únicos",
+        title: "Zorzal - Sur Argentino",
+        description: "Captura fotografica de aves.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/011-DSC_4646-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/011-DSC_4646-Enhanced-NR.jpg`
     },
     {
         id: 34,
-        title: "Captura Fotográfica Naturaleza",
-        description: "Comportamiento natural captado",
+        title: "Gato haciendo lo que sabe hacer.",
+        description: "Captura fotografica de animales.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/012-DSC_1420.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/012-DSC_1420.jpg`
     },
     {
         id: 35,
-        title: "Momento Naturaleza",
-        description: "La belleza de la vida silvestre",
+        title: "Picabuey Jugueton - Acebal",
+        description: "Captura fotografica de aves.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/013-DSC_0078-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/013-DSC_0078-Enhanced-NR.jpg`
     },
     {
         id: 36,
-        title: "Captura Fotográfica Naturaleza",
-        description: "Vida silvestre en su hábitat natural",
+        title: "Chingolo hiperactivo - Sur Argentino",
+        description: "Captura fotografica de aves.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/014-DSC_8667-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/014-DSC_8667-Enhanced-NR.jpg`
     },
     {
         id: 37,
-        title: "Captura Fotográfica Naturaleza",
-        description: "Momentos únicos con la naturaleza",
+        title: "Yuri",
+        description: "Captura fotografica de animales.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/016-DSC_0271.JPG`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/016-DSC_0271.JPG`
     },
     {
         id: 38,
-        title: "Momento Naturaleza",
-        description: "Ecosistemas locales únicos",
+        title: "Caballo - Acebal",
+        description: "Captura fotografica de animales.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/017-DSC_5512-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/017-DSC_5512-Enhanced-NR.jpg`
     },
     {
         id: 39,
-        title: "Momento Naturaleza",
-        description: "Momentos únicos con la naturaleza",
+        title: "Herefords, campo y montaña - Rutas Santa Cruz",
+        description: "Captura fotografica de animales.",
         category: "naturaleza",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/naturaleza/018-DSC_8863-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/naturaleza/018-DSC_8863-Enhanced-NR.jpg`
     },
-
-
-    // OBJETOS - 5 imágenes
+        // OBJETOS - 5 imágenes
     {
         id: 40,
-        title: "Momento Objetos",
-        description: "Juegos de luz en objetos cotidianos",
+        title: "Auto Romain Grosjean - F1 Expo",
+        description: "Edición con enfoque selectivo.",
         category: "objetos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/001-DSC_5777.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/001-DSC_5777.jpg`
     },
     {
         id: 41,
-        title: "Imagen Objetos",
-        description: "La belleza oculta en lo simple",
+        title: "A330-200 - Ezeiza",
+        description: "Flota Aerolineas Argentina",
         category: "objetos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/002-DSC_3816.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/002-DSC_3816.jpg`
     },
     {
         id: 42,
-        title: "Captura Fotográfica Objetos",
-        description: "Arreglos creativos y únicos",
+        title: "Bandera Argentina flameando al atardecer.",
+        description: "Edición para destacar colores y tonalidades.",
         category: "objetos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/003-DSC_1493.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/003-DSC_1493.jpg`
     },
     {
         id: 43,
-        title: "Momento Objetos",
-        description: "La belleza oculta en lo simple",
+        title: "Hidroavion sobre Rio Parana - Pueblo Esther",
+        description: "Captura de avion realizando maniobras peligrosas sobre embarcaciones.",
         category: "objetos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/004-DSC_1468-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/004-DSC_1468-Enhanced-NR.jpg`
     },
     {
         id: 44,
-        title: "Imagen Objetos",
-        description: "Detalles que cobran vida propia",
+        title: "Interior F1 - Auto Romain Grosjean",
+        description: "Restos del vehiculo accidentado de Romain Grosjean. Espectacular accidente en el GP de Bahréin.",
         category: "objetos",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/objetos/005-DSC_5781.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/objetos/005-DSC_5781.jpg`
     },
-
-
     // PAISAJES - 24 imágenes
     {
         id: 45,
-        title: "Imagen Paisajes",
-        description: "La grandeza de los espacios abiertos",
+        title: "Monte Fitz Roy - Santa Cruz",
+        description: "Captura pico del Fitz Roy.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/001-DSC_8764.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/001-DSC_8764.jpg`
     },
     {
         id: 46,
-        title: "Imagen Paisajes",
-        description: "Composiciones naturales extraordinarias",
+        title: "Flora desde cerca - Reserva Refugio Spegazzini",
+        description: "Captura fotografica de flora.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/002-DSC_9222-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/002-DSC_9222-Enhanced-NR.jpg`
     },
     {
         id: 47,
-        title: "Captura Fotográfica Paisajes",
-        description: "Composiciones naturales extraordinarias",
+        title: "Glaciar - Santa Cruz",
+        description: "Contrastes y tonalidades.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/003-DSC_9214.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/003-DSC_9214.jpg`
     },
     {
         id: 48,
-        title: "Captura Fotográfica Paisajes",
-        description: "Momentos únicos en la naturaleza",
+        title: "Atardecer tras la montaña - Rutas Santa Cruz",
+        description: "Contorno montañas y apariencia de arbol en el centro.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/004-DSC_8923-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/004-DSC_8923-Enhanced-NR.jpg`
     },
     {
         id: 49,
-        title: "Fotografía Paisajes",
-        description: "Vistas panorámicas de belleza incomparable",
+        title: "Estrellas detras de la lluvia - La Cumbrecita",
+        description: "Larga exposición de nubes, destacando las estrellas durante fuerte lluvia en localidad lejana.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/005-2024Oct11_224444.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/005-2024Oct11_224444.jpg`
     },
     {
         id: 50,
-        title: "Imagen Paisajes",
-        description: "Paisajes que tocan el alma",
+        title: "Nubes descendiendo - Santa Cruz",
+        description: "Captura de nubes frias descendiendo de la montaña.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/006-DSC_8873-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/006-DSC_8873-Enhanced-NR.jpg`
     },
     {
         id: 51,
-        title: "Momento Paisajes",
-        description: "La grandeza de los espacios abiertos",
+        title: "Cerro nublado - Santa Cruz",
+        description: "Vista nublada hacia cerro.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/007-DSC_9273-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/007-DSC_9273-Enhanced-NR.jpg`
     },
     {
         id: 52,
-        title: "Momento Paisajes",
-        description: "La magia de los colores naturales",
+        title: "Franjas - Santa Cruz",
+        description: "Captura artistica. Franjas de colores formadas por cielo, montañas, nubes, sombras, sol, y ruta.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/008-DSC_9326-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/008-DSC_9326-Enhanced-NR.jpg`
     },
     {
         id: 53,
-        title: "Momento Paisajes",
-        description: "Paisajes que tocan el alma",
+        title: "Pantano - Reserva Puertos",
+        description: "Encuadre de pantano y flora.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/009-DSC_0401-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/009-DSC_0401-Enhanced-NR.jpg`
     },
     {
         id: 54,
-        title: "Fotografía Paisajes",
-        description: "Vistas panorámicas de belleza incomparable",
+        title: "Dique Segunda Usina - Embalse",
+        description: "Encuadre artistico.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/010-2024Oct13_162447.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/010-2024Oct13_162447.jpg`
     },
     {
         id: 55,
-        title: "Fotografía Paisajes",
-        description: "La grandeza de los espacios abiertos",
+        title: "Niebla en la montaña - Dique Segunda Usina, Embalse",
+        description: "Captura niebla misteriosa.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/011-2024Oct13_162425.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/011-2024Oct13_162425.jpg`
     },
     {
         id: 56,
-        title: "Captura Fotográfica Paisajes",
-        description: "La grandeza de los espacios abiertos",
+        title: "El Chalten y Fitz Roy - Santa Cruz",
+        description: "Encuadre de la localidad de El Chalten y el monte Fitz Roy de fondo.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/012-DSC_8761-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/012-DSC_8761-Enhanced-NR.jpg`
     },
     {
         id: 57,
-        title: "Momento Paisajes",
-        description: "Composiciones naturales extraordinarias",
+        title: "Luna sobre montañas - Sur Argentino",
+        description: "El horizonte y un poco mas. Encuadre para apreciar las distancias. Campo, lago, montañas y cielo.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/013-DSC_8686-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/013-DSC_8686-Enhanced-NR.jpg`
     },
     {
         id: 58,
-        title: "Momento Paisajes",
-        description: "Paisajes que tocan el alma",
+        title: "Frio Atardecer - Calafate",
+        description: "Larga exposición del lago, peninsula y montañas nevadas.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/014-DSC_8684-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/014-DSC_8684-Enhanced-NR.jpg`
     },
     {
         id: 59,
-        title: "Imagen Paisajes",
-        description: "Paisajes que tocan el alma",
+        title: "Glaciar Perito Moreno - Pque. Nacional Los Glaciares",
+        description: "Vista panoramica profunda y nubes bajas.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/015-DSC_8593.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/015-DSC_8593.jpg`
     },
     {
         id: 60,
-        title: "Momento Paisajes",
-        description: "Momentos únicos en la naturaleza",
+        title: "Paz - Camping",
+        description: "Larga exposicon de rio cercano a un camping en rutas de Córdoba.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/016-DSC_4175-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/016-DSC_4175-Enhanced-NR.jpg`
     },
     {
         id: 61,
-        title: "Imagen Paisajes",
-        description: "Composiciones naturales extraordinarias",
+        title: "Glaciar Spegazzini - Pque. Nacional Los Glaciares",
+        description: "Captura panoramica.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/017-DSC_9052-Pano-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/017-DSC_9052-Pano-Enhanced-NR.jpg`
     },
     {
         id: 62,
-        title: "Momento Paisajes",
-        description: "Paisajes que capturan la esencia del lugar",
+        title: "Cerro Tronador - Pampa Linda",
+        description: "Vista del Cerro Tronador desde comedor en Pampa Linda",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/018-DSC_4751.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/018-DSC_4751.jpg`
     },
     {
         id: 63,
-        title: "Captura Fotográfica Paisajes",
-        description: "La magia de los colores naturales",
+        title: "Cascada Garganta del Diablo - Cerro Tronador",
+        description: "Larga exposicion de las cascadas y el rio.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/019-DSC_4680.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/019-DSC_4680.jpg`
     },
     {
         id: 64,
-        title: "Momento Paisajes",
-        description: "La magia de los colores naturales",
+        title: "Campos floreados - Rio Negro",
+        description: "Campos floreados, lagos, montañas y hermosas nubes.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/020-DSC_4589.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/020-DSC_4589.jpg`
     },
     {
         id: 65,
-        title: "Captura Fotográfica Paisajes",
-        description: "Vistas panorámicas de belleza incomparable",
+        title: "Panoramica camino - Rutas Santa Cruz",
+        description: "Vista panoramica de ruta rodeada de campos y montañas. (algun que otro guanaco a lo lejos quizas)",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/021-DSC_8715-Pano-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/021-DSC_8715-Pano-Enhanced-NR.jpg`
     },
     {
         id: 66,
-        title: "Momento Paisajes",
-        description: "Horizontes que inspiran y conmueven",
+        title: "Atardecer Isla - Calafate",
+        description: "Larga exposicion del atardecer nublado, impresionantes tonalidades amarillas inundando el agua y montañas celestes.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/022-DSC_9354-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/022-DSC_9354-Enhanced-NR.jpg`
     },
     {
         id: 67,
-        title: "Momento Paisajes",
-        description: "La magia de los colores naturales",
+        title: "Cascada - Lago Argentino",
+        description: "Finas cascadas entre los frondosos bosques frios del Lago Argentino.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/023-DSC_9121-Enhanced-NR.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/023-DSC_9121-Enhanced-NR.jpg`
     },
     {
         id: 68,
-        title: "Momento Paisajes",
-        description: "La inmensidad de la naturaleza argentina",
+        title: "Glaciar acechando - Lago Argentino",
+        description: "Glaciares menores asomando entre las montañas y nubes.",
         category: "paisajes",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/paisajes/024-DSC_9268.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/paisajes/024-DSC_9268.jpg`
     },
-
-
-    // RETRATOS - 6 imágenes
+    // PEOPLE - 6 imágenes
     {
         id: 69,
-        title: "Imagen People",
-        description: "La belleza de la expresión humana",
+        title: "Ucrania - Oktoberfest VGB",
+        description: "Vestimenta tradicional ucraniana durante demostración.",
         category: "people",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/001-DSC_2444.JPG`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/001-DSC_2444.JPG`
     },
     {
         id: 70,
-        title: "Momento People",
-        description: "La esencia humana en cada imagen",
+        title: "Lancha - Rio San Antonio, Tigre",
+        description: "Fotografia (casi) deportiva.",
         category: "people",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/002-Tigre-DSC_5684.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/002-Tigre-DSC_5684.jpg`
     },
     {
         id: 71,
-        title: "Captura Fotográfica People",
-        description: "Expresiones que cuentan historias",
+        title: "Wakeboard - Rio San Antonio, Tigre",
+        description: "Fotografia (casi) deportiva.",
         category: "people",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/003-Tigre-DSC_5670.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/003-Tigre-DSC_5670.jpg`
     },
     {
         id: 72,
-        title: "Momento People",
-        description: "La belleza de la expresión humana",
+        title: "Retrato improvisado - La Cumbrecita",
+        description: "Retrato improvisado luego del oktoberfest, ruta camino a La Cumbrecita.",
         category: "people",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/004-DSC_2540.JPG`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/004-DSC_2540.JPG`
     },
     {
         id: 73,
-        title: "Imagen People",
-        description: "Momentos íntimos y personales",
+        title: "Bolas - New Sensations, La Rural",
+        description: "Retrato artistico en una de las atracciones de New Sensations.",
         category: "people",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/005-DSC_5975.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/005-DSC_5975.jpg`
     },
     {
         id: 74,
-        title: "Fotografía People",
-        description: "La belleza de la expresión humana",
+        title: "Oktoberfest 2024 - Villa General Belgrano",
+        description: "Captura durante desfile.",
         category: "people",
         image: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_400,h_280,c_fill,q_85,f_auto/portfolio/people/006-2024Oct11_125747.jpg`,
         fullImage: `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,c_limit,q_90,f_auto/portfolio/people/006-2024Oct11_125747.jpg`
-    }
+    },
 ];
 
 // Variables globales
