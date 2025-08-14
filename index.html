@@ -22,10 +22,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Precargar imagen hero crítica -->
+    <link rel="preload" href="images/me.jpg" as="image">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -194,7 +198,7 @@
                 <!-- Formulario con doble configuración: FormSubmit como principal, Netlify como backup -->
                 <form class="contact-form" id="contactForm" method="POST" action="https://formsubmit.co/daerbon@gmail.com" data-netlify="true">
                     <!-- FormSubmit configuration -->
-                    <input type="hidden" name="_next" value="https://vALT0r.github.io/portfolio-fotografico?mensaje=enviado">
+                    <input type="hidden" name="_next" value="https://daerbon.com.ar?mensaje=enviado">
                     <input type="hidden" name="_subject" value="Nueva consulta desde Daerbon Photography">
                     <input type="hidden" name="_captcha" value="false">
                     
