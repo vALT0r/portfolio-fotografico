@@ -5,7 +5,7 @@
 node_modules/
 .env
 .env.local
-images/
+images/upload/
 
 # Archivos temporales
 *.tmp
