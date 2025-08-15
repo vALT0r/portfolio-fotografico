@@ -6,30 +6,64 @@
 
 ## 💰 **ESTRUCTURA DE PRECIOS ARS 2025**
 
+*Basado en Tarifario Fotográfico Argentina - Categoría PRINCIPIANTES*
+
+### **⏰ TARIFAS BASE POR TIEMPO**
+- **Mínimo** (2 horas): $100.000 ARS
+- **Media Jornada** (4 horas): $160.000 ARS  
+- **Media Jornada Plus** (6 horas): $220.000 ARS
+- **Jornada Completa** (8 horas): $280.000 ARS
+- **Jornada Completa Plus** (12 horas): $400.000 ARS
+- **Hora Adicional**: $30.000 ARS
+
 ### **🏠 Servicios Inmobiliarios (PRIORIDAD)**
-- **Propiedad básica** (5-10 fotos): $15.000-25.000 ARS
-- **Propiedad premium** (15-20 fotos): $35.000-45.000 ARS  
-- **Alquiler temporal** (20+ fotos): $45.000-55.000 ARS
+*Adaptación de tarifas base para mercado local*
+- **Propiedad básica** (1-2 horas): $50.000-80.000 ARS
+- **Propiedad premium** (2-3 horas): $80.000-120.000 ARS  
+- **Alquiler temporal** (3-4 horas): $120.000-160.000 ARS
 
 ### **🎉 Eventos Familiares**
-- **Mini sesión** (30 min-1 hora): $15.000-30.000 ARS
-- **Cumpleaños, bautismos** (2-3 horas): $40.000-60.000 ARS
-- **Aniversarios** (3-4 horas): $50.000-80.000 ARS
+*Tarifas competitivas para mercado local*
+- **Cumpleaños infantiles** (2 horas): $70.000-100.000 ARS
+- **Bautismos, comuniones** (4 horas): $120.000-160.000 ARS
+- **Aniversarios, reuniones** (6 horas): $180.000-220.000 ARS
 
 ### **🏪 Fotografía Comercial**
-- **Productos para redes** (10-15 fotos): $25.000-50.000 ARS
-- **Menu restaurante** (20 fotos): $30.000-45.000 ARS
-- **Catálogo comercio** (por día): $60.000-90.000 ARS
+- **Productos para redes** (2 horas): $80.000-100.000 ARS
+- **Menu restaurante** (4 horas): $120.000-160.000 ARS
+- **Catálogo comercio** (8 horas): $220.000-280.000 ARS
 
 ### **⚽ Deportes Locales**
-- **Partido de fútbol**: $30.000-50.000 ARS
-- **Carreras**: $50.000-70.000 ARS
-- **Cobertura mensual club**: $80.000-120.000 ARS
+- **Partido de fútbol** (3 horas): $90.000-130.000 ARS
+- **Carreras deportivas** (4-6 horas): $160.000-220.000 ARS
+- **Cobertura mensual club**: $300.000-500.000 ARS
 
-### **🌾 Eventos Rurales**
-- **Fiestas patronales**: $40.000-70.000 ARS
-- **Eventos escolares**: $25.000-40.000 ARS
-- **Clubes deportivos**: $35.000-55.000 ARS
+### **📸 SERVICIOS ADICIONALES**
+- **Retoque Digital Básico**: $10.000 ARS (15 min aprox.)
+- **Retoque Digital Intermedio**: $20.000 ARS (30 min aprox.)
+- **Retoque Digital Avanzado**: $40.000 ARS (60 min aprox.)
+- **Fotografía Personal Digital**: $10.000 ARS c/u
+- **Uso cámara gama media**: $40.000 ARS (incluido en tarifas)
+
+---
+
+## 📊 **ESTRATEGIA DE PRECIOS**
+
+### **🎯 POSICIONAMIENTO**
+- **Categoría**: PRINCIPIANTE (según Tarifario Fotográfico Argentina)
+- **Ventaja competitiva**: Calidad profesional a precios de principiante
+- **Target**: Clientes locales que buscan calidad-precio
+
+### **💡 DESCUENTOS ESTRATÉGICOS**
+- **Primeros clientes**: 30% descuento para generar portfolio local
+- **Paquetes múltiples**: 20% descuento en 3+ sesiones
+- **Referencias**: 15% descuento por cada cliente referido
+- **Temporada baja**: Ofertas especiales enero-marzo
+
+### **📈 ESCALAMIENTO DE PRECIOS**
+**Año 1 (Principiante)**: Tarifas actuales  
+**Año 2 (Intermedio)**: +30% sobre tarifas base  
+**Año 3+ (Profesional)**: Tarifas completas del mercado profesional
 
 ---
 
@@ -128,26 +162,27 @@ Después de 10 meses aprendiendo fotografía, creé mi sitio web profesional don
 
 ### **Email Introductorio Inmobiliarias**
 ```
-Asunto: Fotografía inmobiliaria profesional - Acebal/Rosario
+Asunto: Fotografía inmobiliaria profesional - Precios competitivos Acebal/Rosario
 
 Estimados,
 
 Soy David Eric Bonucci, fotógrafo profesional de Acebal especializado en fotografía inmobiliaria.
 
-Ofrezco:
-• Fotografías profesionales de propiedades
-• Entrega en 24-48 horas
-• Precios competitivos desde $15.000 ARS
+Ofrezco servicios profesionales con tarifas competitivas:
+• Sesión básica (1-2 horas): desde $50.000 ARS
+• Sesión premium (2-3 horas): desde $80.000 ARS
+• Entrega en 24-48 horas máximo
 • Cobertura Acebal, San Lorenzo, Rosario
+• Retoque digital incluido
 
-Portfolio completo: [link]
+Portfolio completo: https://daerbon.com.ar
 WhatsApp: +54 341 357 8224
 
 Saludos,
 David Eric Bonucci - Daerbon Photography
 ```
 
-### **Presupuesto Tipo**
+### **Presupuesto Tipo Actualizado**
 ```
 PRESUPUESTO FOTOGRAFÍA INMOBILIARIA
 
@@ -156,15 +191,20 @@ Propiedad: [Dirección]
 Fecha: [DD/MM/AAAA]
 
 Servicio: Fotografía inmobiliaria profesional
-Cantidad: [X] fotografías en alta resolución
-Tiempo estimado: 1-2 horas
+Duración: [X] horas
+Cantidad: 15-25 fotografías en alta resolución
 Entrega: 24-48 horas vía email/WeTransfer
+
+OPCIONES:
+□ Sesión Básica (1-2 hs): $50.000-80.000 ARS
+□ Sesión Premium (2-3 hs): $80.000-120.000 ARS
+□ Retoque adicional (+$10.000-20.000 por imagen)
 
 TOTAL: $[X].000 ARS
 
 Incluye:
 ✅ Sesión fotográfica completa
-✅ Edición profesional
+✅ Retoque básico incluido
 ✅ Entrega digital en alta resolución
 ✅ Licencia de uso comercial
 
@@ -183,10 +223,16 @@ Válido por 30 días.
 - **Email**: daerbon@gmail.com
 - **WhatsApp**: +54 341 357 8224  
 - **Instagram**: [@daerbonph](https://instagram.com/daerbonph)
-- **Portfolio**: [https://vALT0r.github.io/portfolio-fotografico](https://vALT0r.github.io/portfolio-fotografico)
+- **Portfolio**: [https://daerbon.com.ar](https://daerbon.com.ar)
 - **Ubicación**: Acebal, Santa Fe, Argentina
 
 ---
 
 ## 🎯 **OBJETIVO PRINCIPAL**
-Generar $50.000-100.000 ARS mensuales en 6 meses mediante volumen alto de trabajos pequeños y medianos, precios competitivos y calidad consistente para generar referencias.
+**REALISTA:** Generar $150.000-300.000 ARS mensuales en 6-12 meses mediante:
+- **Volumen alto** de trabajos pequeños y medianos (2-4 horas)
+- **Tarifas competitivas** basadas en estándares para principiantes
+- **Calidad consistente** para generar referencias y recomendaciones
+- **Especialización** en inmobiliaria y eventos familiares locales
+
+**ESTRATEGIA:** Usar tarifas oficiales de principiantes con descuentos del 30-50% para penetrar mercado local, aumentando gradualmente según experiencia y demanda.
