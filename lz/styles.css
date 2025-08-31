@@ -70,13 +70,13 @@ body {
 }
 
 .btn i {
-    font-size: 4rem;
+    font-size: 16rem;
     transition: var(--transition);
     margin-bottom: 1rem;
 }
 
 .btn span {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -145,11 +145,11 @@ body {
     }
     
     .btn i {
-        font-size: 3.5rem;
+        font-size: 14rem;
     }
     
     .btn span {
-        font-size: 1.3rem;
+        font-size: 2.6rem;
     }
 }
 
@@ -161,11 +161,11 @@ body {
     }
     
     .btn i {
-        font-size: 3rem;
+        font-size: 12rem;
     }
     
     .btn span {
-        font-size: 1.2rem;
+        font-size: 2.4rem;
     }
 }
 
