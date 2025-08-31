@@ -139,9 +139,9 @@ body {
     
     .btn {
         width: 90vw;
-        height: 40vh;
+        height: 45vh;
         max-width: 400px;
-        min-height: 200px;
+        min-height: 300px;
     }
     
     .btn i {
@@ -156,8 +156,8 @@ body {
 @media (max-width: 480px) {
     .btn {
         width: 95vw;
-        height: 35vh;
-        min-height: 180px;
+        height: 40vh;
+        min-height: 280px;
     }
     
     .btn i {
