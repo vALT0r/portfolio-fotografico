@@ -7,282 +7,146 @@
 
 :root {
     --primary-color: #FF8000;
-    --secondary-color: #0E131F;
     --accent-color: #47C7FC;
-    --text-dark: #0E131F;
-    --text-light: #7f8c8d;
-    --background-light: #F2F3E2;
-    --white: #ffffff;
-    --black: rgba(14, 19, 31, 0.8);
-    --shadow: rgba(0, 0, 0, 0.1);
     --gradient: linear-gradient(135deg, #FF8000 0%, #47C7FC 100%);
-    --border-radius: 12px;
-    --transition: all 0.3s ease;
     --instagram-gradient: linear-gradient(135deg, #833ab4 0%, #fd1d1d 25%, #fcb045 50%, #833ab4 100%);
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--background-light);
+    margin: 0;
+    padding: 0;
+    background: var(--gradient);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-dark);
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
 }
 
 .container {
     width: 100%;
-    max-width: 800px;
-    padding: 2rem;
-    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Header */
-.header {
-    margin-bottom: 3rem;
+.buttons-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
-}
-
-.logo p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    font-weight: 400;
-}
-
-/* Welcome Section */
-.welcome-section {
-    margin-bottom: 3rem;
-}
-
-.welcome-section h2 {
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-}
-
-.welcome-section p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    font-weight: 400;
-}
-
-/* Options Container */
-.options-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-/* Option Cards */
-.option-card {
-    background: var(--white);
-    border-radius: var(--border-radius);
-    padding: 3rem 2rem;
+.btn {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    color: inherit;
-    box-shadow: 0 10px 30px var(--shadow);
     transition: var(--transition);
+    box-shadow: 0 15px 35px var(--shadow);
     position: relative;
     overflow: hidden;
-    border: 2px solid transparent;
-    min-height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.option-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.option-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
+.btn:active {
+    transform: scale(1.05);
+}
+
+.btn i {
+    font-size: 4rem;
     transition: var(--transition);
 }
 
-/* Portfolio Card */
-.portfolio-card::before {
-    background: var(--gradient);
+/* Portfolio Button */
+.portfolio-btn {
+    background: var(--white);
 }
 
-.portfolio-card:hover {
-    border-color: var(--primary-color);
-}
-
-.portfolio-card .icon-container {
+.portfolio-btn i {
     color: var(--primary-color);
 }
 
-/* Instagram Card */
-.instagram-card::before {
-    background: var(--instagram-gradient);
+.portfolio-btn:hover i {
+    color: var(--accent-color);
+    transform: scale(1.1);
 }
 
-.instagram-card:hover {
-    border-color: #833ab4;
+/* Instagram Button */
+.instagram-btn {
+    background: var(--white);
 }
 
-.instagram-card .icon-container {
+.instagram-btn i {
     background: var(--instagram-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Icon Container */
-.icon-container {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
-.option-card h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
-.option-card p {
-    font-size: 1rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
-    flex-grow: 1;
-}
-
-/* Card Footer */
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 500;
-    color: var(--text-dark);
-    margin-top: auto;
-}
-
-.card-footer i {
-    transition: var(--transition);
-}
-
-.option-card:hover .card-footer i {
-    transform: translateX(5px);
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    color: var(--text-light);
-    font-size: 0.9rem;
+.instagram-btn:hover i {
+    transform: scale(1.1);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 1.5rem;
+    .buttons-container {
+        flex-direction: column;
+        gap: 2rem;
     }
     
-    .logo h1 {
-        font-size: 2.5rem;
+    .btn {
+        width: 120px;
+        height: 120px;
     }
     
-    .welcome-section h2 {
-        font-size: 1.8rem;
-    }
-    
-    .options-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .option-card {
-        padding: 2.5rem 1.5rem;
-        min-height: 280px;
-    }
-    
-    .icon-container {
-        font-size: 3.5rem;
-        height: 80px;
-    }
-    
-    .option-card h3 {
-        font-size: 1.5rem;
+    .btn i {
+        font-size: 3rem;
     }
 }
 
 @media (max-width: 480px) {
-    .logo h1 {
-        font-size: 2rem;
+    .btn {
+        width: 100px;
+        height: 100px;
     }
     
-    .welcome-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .option-card {
-        padding: 2rem 1rem;
-        min-height: 250px;
-    }
-    
-    .icon-container {
-        font-size: 3rem;
-        height: 70px;
+    .btn i {
+        font-size: 2.5rem;
     }
 }
 
 /* Animaciones */
-@keyframes fadeInUp {
+@keyframes fadeInScale {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: scale(0.5);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
     }
 }
 
-.header,
-.welcome-section,
-.option-card {
-    animation: fadeInUp 0.6s ease forwards;
+.btn {
+    animation: fadeInScale 0.6s ease forwards;
 }
 
-.welcome-section {
+.portfolio-btn {
     animation-delay: 0.1s;
 }
 
-.option-card:nth-child(1) {
+.instagram-btn {
     animation-delay: 0.2s;
-}
-
-.option-card:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.footer {
-    animation: fadeInUp 0.6s ease forwards;
-    animation-delay: 0.4s;
 }
