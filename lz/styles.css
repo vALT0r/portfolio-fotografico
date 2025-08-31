@@ -70,7 +70,7 @@ body {
 }
 
 .btn i {
-    font-size: 8rem;
+    font-size: 7rem;
     transition: var(--transition);
     margin-bottom: 1rem;
 }
