@@ -150,12 +150,12 @@
                 <div class="about-text">
                     <h2 class="section-title">Sobre Mí</h2>
                     <p class="about-description">
-                        Soy David Eric Bonucci, de 37 años de edad, de Acebal, Santa Fe, Argentina. 
+                        Soy David Eric Bonucci, de <span id="dynamic-age">37</span> a&ntilde;os de edad, de Acebal, Santa Fe, Argentina. 
                         Desde 2024 exploro la fotografía con pasión y dedicación, buscando capturar no solo la belleza, 
                         sino también lo extraordinario, lo inalcanzable, lo invisible y lo exótico que nos rodea cada día.
                     </p>
                     <p class="about-description">
-                        Me dedico principalmente a <strong>arquitectura, paisajes, astrofotografía y naturaleza</strong>, con 
+                        Me dedico principalmente a <strong>arquitectura, paisajes, astrofotografía, naturaleza, deportes, carreras, exhibiciones y eventos sociales</strong>, con 
                         creciente interés en <strong>eventos locales</strong>. Mi enfoque es honesto y directo: estoy comenzando mi 
                         carrera profesional y busco clientes que valoren la calidad a precios accesibles. Honro el legado 
                         de mi padre, <strong>René Bonucci</strong>, quien se dedicaba al video y la fotografía en nuestra región.
@@ -192,7 +192,7 @@
                     </div>
                     
                     <div class="social-links">
-                        <a href="https://instagram.com/daerbonph" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://instagram.com/davidbonucci_" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link" style="opacity: 0.3;"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="social-link" style="opacity: 0.3;"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-link" style="opacity: 0.3;"><i class="fab fa-linkedin"></i></a>
@@ -244,11 +244,28 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Daerbon Photography - David Eric Bonucci. Acebal, Santa Fe, Argentina.</p>
+            <p>&copy; 2025-2026 Daerbon Photography - David Eric Bonucci. Acebal, Santa Fe, Argentina.</p>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+
+    <!-- Dynamic Age Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const birthDate = new Date("1987-12-18");
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            const ageElement = document.getElementById("dynamic-age");
+            if (ageElement) {
+                ageElement.textContent = age;
+            }
+        });
+    </script>
 </body>
 </html>
