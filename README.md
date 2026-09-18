@@ -1,4 +1,13 @@
-# Portfolio Fotográfico - Daerbon Photography
+# ⚠️ REPOSITORIO INACTIVO / ARCHIVADO
+
+> **ESTE REPOSITORIO YA NO ESTÁ EN PRODUCCIÓN**  
+> Ha sido reemplazado por la plataforma unificada en `davidbonucci-web` y su dominio oficial: **[davidbonucci.com](https://davidbonucci.com)**.  
+> Todo el tráfico de `daerbon.com.ar` ha sido redirigido vía Cloudflare Redirect Rules a `https://davidbonucci.com`.  
+> Este código se conserva únicamente como archivo histórico.
+
+---
+
+# Portfolio Fotográfico - Daerbon Photography (Histórico)
 
 Portfolio web moderno y responsive para **David Eric Bonucci (Daerbon)**, fotógrafo de Acebal, Santa Fe, Argentina. Diseñado para mostrar trabajo fotográfico con integración completa de Cloudinary y sistema avanzado de galerías.
 
